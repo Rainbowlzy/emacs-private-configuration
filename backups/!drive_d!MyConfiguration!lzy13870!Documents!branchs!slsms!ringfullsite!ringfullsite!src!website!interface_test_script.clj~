@@ -1,4 +1,0 @@
-(ns website.interface-test-script
-  (:require [website.interface-test :as sut]
-            [clojure.test :as t]))
-
