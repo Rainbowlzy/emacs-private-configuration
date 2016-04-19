@@ -41,7 +41,7 @@
 
 (dolist (f (directory-files "~/emacs/emacs-lisp/" t))
   (add-to-list 'load-path f))
-  
+
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell (shell-command-to-string "echo %PATH%")))
     (setenv "PATH" path-from-shell)
@@ -249,12 +249,6 @@
 
 	    (which-key-mode t)
 	    ;; (which-key-setup-side-window-right)
-            (projectile-global-mode)
-            (setq projectile-completion-system 'helm)
-            (setq projectile-indexing-method 'alien)
-            (helm-projectile-on)
-            (setq projectile-switch-project-action 'helm-projectile-find-file)
-            (setq projectile-switch-project-action 'helm-projectile)
 	    ))
 
 (add-hook 'emacs-lisp-mode-hook
@@ -276,6 +270,12 @@
 (add-hook 'cider-mode-hook (defun cider-mode-hook-func ()
 			     (interactive)
 			     (eldoc-mode t)
+                             (projectile-global-mode)
+                             (setq projectile-completion-system 'helm)
+                             (setq projectile-indexing-method 'alien)
+                             (helm-projectile-on)
+                             (setq projectile-switch-project-action 'helm-projectile-find-file)
+                             (setq projectile-switch-project-action 'helm-projectile)
 
 			     ;; clojure installation end.
 

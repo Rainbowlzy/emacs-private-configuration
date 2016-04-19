@@ -1,12 +1,15 @@
 ;;; -*- coding: utf-8 -*-
-(("d:/MyConfiguration/lzy13870/"
+(("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/memberdata.clj" . 719)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/core.clj" . 5108)
+ ("d:/MyConfiguration/lzy13870/Desktop/ringfullsite/ringfullsite/src/website/config.clj" . 1077)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/custom"))
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/recentf" . 600)
+ ("d:/MyConfiguration/lzy13870/"
   (dired-filename . "d:/MyConfiguration/lzy13870/.AndroidStudioPreview2.0"))
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/script.clj" . 3801)
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/interface-test.clj" . 17940)
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/require-cmds-init.el" . 8715)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/core.clj" . 164)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/pwd" . 10)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/memberdata.clj" . 719)
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/project.clj" . 47)
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/sls.clj" . 2530)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/ac-helm-20160318.1933/ac-helm-autoloads.el" . 404)
