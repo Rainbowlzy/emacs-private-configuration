@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TCWireless.Model
+{
+    public class ResourceInfo
+    {
+        private string _price;
+
+        private string _title;
+
+        private string _imageUrl;
+
+        public string Price
+        {
+            get
+            {
+                return this._price;
+            }
+            set
+            {
+                this._price = value;
+            }
+        }
+
+        public string Title
+        {
+            get
+            {
+                return this._title;
+            }
+            set
+            {
+                this._title = value;
+            }
+        }
+
+        public string ImageUrl
+        {
+            get
+            {
+                return this._imageUrl;
+            }
+            set
+            {
+                this._imageUrl = value;
+            }
+        }
+    }
+}

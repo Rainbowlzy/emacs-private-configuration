@@ -1,0 +1,59 @@
+第三方账号绑定
+
+	* 主要问题
+	* 
+		* 信息不全
+		* 头像是第三方地址
+		* 吴祥平
+		* 朋友代付（国内机票接口跟进，景区需求确定）（熊烽）
+		* 常住地大数据接口跟进 (丁文霞)
+		* 第三方会员的第三方信息获取（WEIXIN\QQ\WEIBO\ALIPAY）（PM李斐，项目 吴祥平）
+		* SocialBindBuildMemberIdProcessing（第三方会员绑定）
+		* 绑定完掉吴祥平另外一个接口保存第三方头像信息，JOB拉取头像数据
+		* SocialUserInfo（获取第三方信息）
+		* SocialBind方法
+		* 
+			* 找吴祥平添加
+			* 
+				* 参数
+				* 昵称
+				* 头像
+				* 性别
+				* 生日
+
+
+		* 微信开发文档：
+		* 
+			* https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317853&token=&lang=zh_CN
+
+		* 微博开发文档：
+		* 
+			* http://open.weibo.com/wiki/2/users/show 
+
+		* 腾讯开发文档： 
+		* 
+			* http://wiki.open.qq.com/wiki/v3/user/get_info
+
+		* 支付宝开发文档：
+		* 
+			* https://openhome.alipay.com/doc/viewApiDoc.htm?name=alipay.user.get&version=1.0&subVersion=1.0&packageCode=USER_INFO
+
+		* QQ：
+		* 
+			* 100550130
+
+		* 微博：
+		* 
+			* 973492961
+
+		* 微信：
+		* 
+			* wxc9cdd58cd74840bb
+
+		* 支付宝：
+		* 
+			* 2014121500019852
+
+		* 金国阳 Android 问 IOS
+
+

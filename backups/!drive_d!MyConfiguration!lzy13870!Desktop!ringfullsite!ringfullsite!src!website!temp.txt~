@@ -1,0 +1,24 @@
+timerLeftDesc	倒计时文案	字符串
+timerStart	服务器时间	字符串
+timerEnd	订单结束时间	字符串
+timerRightDesc	倒计时文案	字符串
+orderStatus	订单跟踪	
+orderNumber	订单编号	字符串
+orderAmount	订单金额	字符串
+productID	产品ID	字符串
+productType	产品类型	字符串
+productUrl	产品跳转url	字符串
+productName	产品名称	字符串
+isGetBySelf	是否邮寄	字符串
+peopleNumber	出游人数	字符串
+fetchDate	出发日期	字符串
+peopleName	联系人	字符串
+phoneNumber	手机号码	字符串
+bookingInfo	预定须知	数组
+orderDesc	客服描述名称	字符串
+orderUrl	客服跳转链接	字符串
+orderServicesUrl	顶部客服链接	字符串
+orderStatus	订单状态	字符串
+orderID	订单ID	字符串
+leftBtnName	左边按钮的文案	字符串
+rightBtnName	右边按钮的文案	字符串

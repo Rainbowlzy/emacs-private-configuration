@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="ApplicationHandler.ashx.cs" Class="TCWireless.TCMobileAPI.TravelConsultant.WeixinTourGuideHandler" %>

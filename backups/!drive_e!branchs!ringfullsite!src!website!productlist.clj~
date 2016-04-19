@@ -1,0 +1,28 @@
+(ns website.productlist)
+
+(require '[clojure.data.json :as json])
+(require '[clj-http.client :as client])
+(require '[clj-http.cookies :as cookies])
+
+(use '[clojure.java.io])
+(use '[clojure.java.shell :only [sh]])
+(use '[clojure.pprint :only [pprint]])
+(use '[clojure.string :only [join]])
+(use '[clojure.xml :only [parse tag content]])
+
+
+
+
+
+
+(def *url* "http://search.17usoft.com/line/services/lineService?method=getLineSingleList&start=1&count=10&pfId=10&chId=2&ip=10.0.2.15&doST=1&scId=226&stp=isEmphasis:1;tcPrice:0&rf=id,sid,title,subTitle,tcPrice,marketPrice,imgUrl,singleTypeName&random=0.326449620689475")
+
+(def *response* (parse (:body (client/get *url*))))
+
+(tag *response*)
+
+
+
+
+
+

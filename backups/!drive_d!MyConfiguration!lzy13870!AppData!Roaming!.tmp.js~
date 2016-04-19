@@ -1,0 +1,24 @@
+201204261002 {
+    "AccountID": "26c22a60-8df6-4592-8200-4243dbadec85",
+    "ComputerName": "LZY13870",
+    "MethodName": "GetMemberCode",
+    "MethodVersion": 1,
+    "Namespace": null,
+    "ReqTime": "\\/Date(1443509972416+0800)\\/",
+    "Version": "201204261002"
+}#
+tcsoa# TongCheng.SOA.Interface.VirtualCoupon.Entities.MemberCodeRequestEntity# tcsoa# TongCheng.SOA.Interface.VirtualCoupon.Entities, Version = 1.0.5687.24609, Culture = neutral, PublicKeyToken = null# tcsoa# {
+    "AccountId": "2f311a34-0b51-4501-9ddd-a42600b60a16",
+    "PageSizeMaxValue": 50,
+    "Password": "WXZCa42600b60a",
+    "BatchTypes": [3, 1],
+    "MemberId": 103343708,
+    "OrderAmount": null,
+    "OrderByType": 0,
+    "PageIndex": 1,
+    "PageSize": 50,
+    "ResourceCodes": [],
+    "Status": [1],
+    "TargetCode": "",
+    "TransactionAmount": null
+}

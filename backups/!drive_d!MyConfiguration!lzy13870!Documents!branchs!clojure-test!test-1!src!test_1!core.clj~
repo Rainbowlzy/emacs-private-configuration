@@ -1,0 +1,14 @@
+(ns test-1.core
+  (:require [clojure.xml]))
+
+(defn foo
+  [x]
+  (str x "Hello, World!"))
+
+
+
+;; (defn -main
+;;   [& args]
+;;   (apply println "Received args:" args))
+
+(foo 999)

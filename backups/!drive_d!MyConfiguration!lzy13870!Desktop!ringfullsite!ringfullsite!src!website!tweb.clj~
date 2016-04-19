@@ -1,0 +1,28 @@
+(ns tweb.core
+  (:require
+   [ring.adapter.jetty :as jetty]
+   [clojure.string :as str]
+   clojure.pprint))
+(defn parse-query-string
+  "Parse a query string to a hash-map"
+  [qs]
+  (if (> (count qs) 0) ; Don't operate on nils or empty strings
+    (apply hash-map (str/split qs #"[&=]"))))
+(defn wrap-query
+  "Add a :query parameter to incoming requests that contains a parsed
+  version of the query string as a hash-map"
+  [handler]
+  (fn [req]
+    (let [parsed-qs (parse-query-string (:query-string req))
+          new-req (assoc req :query parsed-qs)]
+      (handler new-req))))
+(defn handler [req]
+  (let [name (get (:query req) "name")]
+    {:status 200
+     :body (str "Hello, " (or name "World"))}))
+
+
+(defn -main []
+  ;; Run the server on port 3000
+  (jetty/run-jetty (wrap-query handler) {:port 3000}))
+(jetty/run-jetty (wrap-query handler) {:port 3000})

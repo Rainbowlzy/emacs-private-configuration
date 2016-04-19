@@ -1,0 +1,73 @@
+
+        /// <summary>
+        /// 价格日历
+        /// </summary>
+        /// <param name="Params">请求参数</param>
+        /// <returns>返回体</returns>
+        public IResponse GetPriceCalendar(QueryParams Params)
+        {
+            Response priceCalendar = Try(
+                () =>
+                    {
+                        SOAResponseEntity<NewSingleProductPriceResponse> soaEntity =
+                            AbroadQuerySoaInterface.GetNewSingleProductPriceDetail(Params);
+                        if (soaEntity.IsRequestFailed())
+                        {
+                            return new Response(
+                                RspType.InterfaceError,
+                                RspCode.RspCode_3001,
+                                "查询价格日历失败",
+                                soaEntity.ToJson());
+                        }
+                        List<GetPriceCalendarResponse> list = null;
+                        if (soaEntity.Body.SingleProdcutPriceFixedModel.Any())
+                        {
+                            list = soaEntity.Body.SingleProdcutPriceFixedModel.Fill(FillFixedPrice);
+                        }
+                        else if (soaEntity.Body.SingleProductPriceInfo.Any())
+                        {
+                            list = soaEntity.Body.SingleProductPriceInfo.Fill(FillSinglePrice);
+                        }
+                        if (!string.IsNullOrWhiteSpace(Params.startDate) && !string.IsNullOrWhiteSpace(Params.endDate)) // 计算
+                        {
+                            list =
+                                list.ToListEx(
+                                    p =>
+                                    p.Date.ToDateTime() >= Params.startDate.ToDateTime(DateTime.MinValue)
+                                    && p.Date.ToDateTime() <= Params.endDate.ToDateTime(DateTime.MaxValue));
+                        }
+                        else if (!string.IsNullOrWhiteSpace(Params.startDate)) // 还件
+                        {
+                            list =
+                                list.ToListEx(
+                                    p =>
+                                    p.Date.ToDateTime() >= Params.startDate.ToDateTime(DateTime.MinValue));
+                            int i = list.Count - Params.bookDaysMin + 1;
+                            list.Reverse();
+                            if (i > 0)
+                            {
+                                list = list.ToListEx().Take(i).ToListEx();
+                            }
+                            list.Reverse();
+                            if (Params.bookDaysMin == Params.bookDaysMax && Params.bookDaysMax == 1)
+                            {
+                                list = list.ToListEx(p => p.Date.ToDateTime().Equals(Params.startDate.ToDateTime()));
+                            }
+                        }
+                        else // 取件
+                        {
+                            int i = list.ToListEx().Count - Params.bookDaysMin;
+                            if (i > 0)
+                            {
+                                list = list.ToListEx().Take(i).ToListEx();
+                            }
+                        }
+                        return new Response(
+                            RspType.Success,
+                            RspCode.RspCode_0000,
+                            "查询成功",
+                            new { calendarList = list.ToListEx() },
+                            soaEntity.ToJson());
+                    });
+            return priceCalendar ?? new Response(RspType.InterfaceError, RspCode.RspCode_3001, "异常");
+        }

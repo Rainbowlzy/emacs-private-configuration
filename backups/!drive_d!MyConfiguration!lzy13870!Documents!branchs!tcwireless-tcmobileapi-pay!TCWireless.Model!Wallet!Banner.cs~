@@ -1,0 +1,72 @@
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace TCWireless.Domain.TongTongBao
+{
+    public class Banner
+    {
+        private string _id = string.Empty;
+
+        private string _title = string.Empty;
+
+        private string _imgUrl = string.Empty;
+
+        private string _redirectUrl = string.Empty;
+
+        //[JsonProperty(PropertyName = "redPacketADList")]
+        [JsonProperty(PropertyName = "id")]
+        public string Id
+        {
+            get
+            {
+                return this._id;
+            }
+            set
+            {
+                this._id = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "title")]
+        public string Title
+        {
+            get
+            {
+                return this._title;
+            }
+            set
+            {
+                this._title = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "imgUrl")]
+        public string ImgUrl
+        {
+            get
+            {
+                return this._imgUrl;
+            }
+            set
+            {
+                this._imgUrl = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "redirectUrl")]
+        public string RedirectUrl
+        {
+            get
+            {
+                return this._redirectUrl;
+            }
+            set
+            {
+                this._redirectUrl = value;
+            }
+        }
+    }
+}

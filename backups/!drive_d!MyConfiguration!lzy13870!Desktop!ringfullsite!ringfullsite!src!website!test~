@@ -1,0 +1,174 @@
+
+public class response { 
+private string _destTokens;
+public string destTokens { get { return _destTokens; } set { _destTokens = value; } }
+private string _totalCount;
+public string totalCount { get { return _totalCount; } set { _totalCount = value; } }
+private line[] _lineList;
+public line[] lineList { get { return _lineList; } set { _lineList = value; } }
+public class line { 
+private string _id;
+public string id { get { return _id; } set { _id = value; } }
+private string _title;
+public string title { get { return _title; } set { _title = value; } }
+private string _subTitle;
+public string subTitle { get { return _subTitle; } set { _subTitle = value; } }
+private string _tcPrice;
+public string tcPrice { get { return _tcPrice; } set { _tcPrice = value; } }
+private string _marketPrice;
+public string marketPrice { get { return _marketPrice; } set { _marketPrice = value; } }
+private string _clearPrice;
+public string clearPrice { get { return _clearPrice; } set { _clearPrice = value; } }
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+public class city { 
+private string _id;
+public string id { get { return _id; } set { _id = value; } }
+private string _name;
+public string name { get { return _name; } set { _name = value; } }
+private string _ctId;
+public string ctId { get { return _ctId; } set { _ctId = value; } }
+private string _ct;
+public string ct { get { return _ct; } set { _ct = value; } } } 
+private city[] _portList;
+public city[] portList { get { return _portList; } set { _portList = value; } }
+public class city {  } 
+private string _sdate;
+public string sdate { get { return _sdate; } set { _sdate = value; } }
+private string _edate;
+public string edate { get { return _edate; } set { _edate = value; } }
+private string _imgUrl;
+public string imgUrl { get { return _imgUrl; } set { _imgUrl = value; } }
+private string _cmtCount;
+public string cmtCount { get { return _cmtCount; } set { _cmtCount = value; } }
+private string _cmtDp;
+public string cmtDp { get { return _cmtDp; } set { _cmtDp = value; } }
+private string _favRate;
+public string favRate { get { return _favRate; } set { _favRate = value; } }
+private string _ordCount;
+public string ordCount { get { return _ordCount; } set { _ordCount = value; } }
+private string _satDeg;
+public string satDeg { get { return _satDeg; } set { _satDeg = value; } }
+private string _gdNum;
+public string gdNum { get { return _gdNum; } set { _gdNum = value; } }
+private string _gdDate;
+public string gdDate { get { return _gdDate; } set { _gdDate = value; } }
+private string _isEmphasis;
+public string isEmphasis { get { return _isEmphasis; } set { _isEmphasis = value; } }
+private string _singleType;
+public string singleType { get { return _singleType; } set { _singleType = value; } }
+private string _singleTypeName;
+public string singleTypeName { get { return _singleTypeName; } set { _singleTypeName = value; } }
+private string _singleCategory;
+public string singleCategory { get { return _singleCategory; } set { _singleCategory = value; } }
+private string _singleCategoryName;
+public string singleCategoryName { get { return _singleCategoryName; } set { _singleCategoryName = value; } }
+private string _singleTime;
+public string singleTime { get { return _singleTime; } set { _singleTime = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private string _recommendReason;
+public string recommendReason { get { return _recommendReason; } set { _recommendReason = value; } }
+private string _takeMechinePointCount;
+public string takeMechinePointCount { get { return _takeMechinePointCount; } set { _takeMechinePointCount = value; } }
+private string _minAdvanceDay;
+public string minAdvanceDay { get { return _minAdvanceDay; } set { _minAdvanceDay = value; } }
+private string _minAdvanceTime;
+public string minAdvanceTime { get { return _minAdvanceTime; } set { _minAdvanceTime = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } }
+public class price { 
+private string _id;
+public string id { get { return _id; } set { _id = value; } }
+private string _supplierId;
+public string supplierId { get { return _supplierId; } set { _supplierId = value; } }
+private string _priceDsc;
+public string priceDsc { get { return _priceDsc; } set { _priceDsc = value; } }
+private string _tcPrice;
+public string tcPrice { get { return _tcPrice; } set { _tcPrice = value; } }
+private string _marketPrice;
+public string marketPrice { get { return _marketPrice; } set { _marketPrice = value; } }
+private string _clearPrice;
+public string clearPrice { get { return _clearPrice; } set { _clearPrice = value; } }
+private string _advanceDay;
+public string advanceDay { get { return _advanceDay; } set { _advanceDay = value; } }
+private string _advanceTime;
+public string advanceTime { get { return _advanceTime; } set { _advanceTime = value; } }
+private string _priceRemark;
+public string priceRemark { get { return _priceRemark; } set { _priceRemark = value; } }
+private string _verifyType;
+public string verifyType { get { return _verifyType; } set { _verifyType = value; } }
+private string _receiveType;
+public string receiveType { get { return _receiveType; } set { _receiveType = value; } }
+private string _receiveName;
+public string receiveName { get { return _receiveName; } set { _receiveName = value; } }
+private string _beginDate;
+public string beginDate { get { return _beginDate; } set { _beginDate = value; } }
+private string _endDate;
+public string endDate { get { return _endDate; } set { _endDate = value; } }
+private string _dateType;
+public string dateType { get { return _dateType; } set { _dateType = value; } }
+private string _channelId;
+public string channelId { get { return _channelId; } set { _channelId = value; } } }  } 
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+private city[] _portList;
+public city[] portList { get { return _portList; } set { _portList = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } }
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+private city[] _portList;
+public city[] portList { get { return _portList; } set { _portList = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } }
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+private city[] _portList;
+public city[] portList { get { return _portList; } set { _portList = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } }
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private string _sceneryAddress;
+public string sceneryAddress { get { return _sceneryAddress; } set { _sceneryAddress = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } }
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } }
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } }
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } }
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } }
+private city[] _dcList;
+public city[] dcList { get { return _dcList; } set { _dcList = value; } }
+private recommendReason[] _recommendReasonList;
+public recommendReason[] recommendReasonList { get { return _recommendReasonList; } set { _recommendReasonList = value; } }
+private price[] _pricelist;
+public price[] pricelist { get { return _pricelist; } set { _pricelist = value; } } } 

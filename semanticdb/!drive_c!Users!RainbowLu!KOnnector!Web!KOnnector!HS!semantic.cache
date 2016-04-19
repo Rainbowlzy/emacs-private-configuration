@@ -1,0 +1,1348 @@
+;; Object HS/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "HS/"
+  :tables
+  (list
+    (semanticdb-table "HSthree.aspx"
+      :major-mode 'html-mode
+      :tags 
+        '( ("市场走访-超市/卖场(H/S)" section nil nil [369 524])
+            (".checkbox { display: none; }
+
+            .table-l > tbody > tr > td:last-child div { float: left; }
+
+            .table-l > tbody > tr > td { text-align: left; }
+
+            .table-l > tbody > tr > td:last-child {
+                text-align: center;
+                vertical-align: middle;
+            }" section nil nil [524 932])
+            ("SPARKLING产品铺货" section nil nil [932 2995])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [2995 3037])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [3037 3082])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [3082 3127])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [3127 3182])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [3182 3225])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [3225 3272])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [3272 3311])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [3311 3356])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [3356 3402])
+            ("var productList = [{
+    \"Products\": [{
+        \"ProductName\": \"可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+        \"ProductENName\": \"Coke CAN 330ml\",
+        \"ProductNameAsTagName\": \"CokeCan330\"
+    }, {
+        \"ProductName\": \"雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+        \"ProductENName\": \"Sprite CAN 330ml\",
+        \"ProductNameAsTagName\": \"SpriteCan330\"
+    }, {
+        \"ProductName\": \"芬达罐装 \\n                            Fanta CAN 330ml\\n                        \",
+        \"ProductENName\": \"Fanta CAN 330ml\",
+        \"ProductNameAsTagName\": \"FantaCan330\"
+    }, {
+        \"ProductName\": \"+C罐装 \\n                            RTC CAN 330ml\\n                        \",
+        \"ProductENName\": \"RTC CAN 330ml\",
+        \"ProductNameAsTagName\": \"RTCCan330\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐4罐装\\n                            Coke Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Coke Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan4\"
+    }, {
+        \"ProductName\": \"雪碧4罐装 \\n                            Sprite Multi-Pack 4-CAN\\n                        \",
+        \"ProductENName\": \"Sprite Multi-Pack 4-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan4\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐6罐装\\n                                    Coke Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan6\"
+    }, {
+        \"ProductName\": \"雪碧6罐装 \\n                                    Sprite Multi-Pack 6-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 6-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan6\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐8罐装\\n                                    Coke Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Coke Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"CokeMultiPackCan8\"
+    }, {
+        \"ProductName\": \"雪碧8罐装 \\n                                    Sprite Multi-Pack 8-CAN\\n                                \",
+        \"ProductENName\": \"Sprite Multi-Pack 8-CAN\",
+        \"ProductNameAsTagName\": \"SpriteMultiPackCan8\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Coke PET 500/600ml\",
+        \"ProductNameAsTagName\": \"CokePET56\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Sprite PET 500/600ml\",
+        \"ProductNameAsTagName\": \"SpritePET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"芬达\\n                            Fanta PET 500/600ml\\n                        \",
+        \"ProductENName\": \"Fanta PET 500/600ml\",
+        \"ProductNameAsTagName\": \"FantaPET56\"
+    }, {
+        \"ProductName\": \"芬达任意其他口味\\n                            Fanta Any Other flavor\\n                        \",
+        \"ProductENName\": \"Fanta Any Other flavor\",
+        \"ProductNameAsTagName\": \"FantaOtherPET56\"
+    }, {
+        \"ProductName\": \"+C\\n                            RTC PET 500/600ml\\n                        \",
+        \"ProductENName\": \"RTC PET 500/600ml\",
+        \"ProductNameAsTagName\": \"RTCPET56\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 888ml\\n                        \",
+        \"ProductENName\": \"Coke MS 888ml\",
+        \"ProductNameAsTagName\": \"CokeMS888\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 888ml\\n                        \",
+        \"ProductENName\": \"Sprite MS 888ml\",
+        \"ProductNameAsTagName\": \"SpriteMS888\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 888ml\\n                        \",
+        \"ProductENName\": \"Fanta MS 888ml\",
+        \"ProductNameAsTagName\": \"FantaMS888\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"CokeMS12515\"
+    }, {
+        \"ProductName\": \"雪碧\\n                            Sprite MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS12515\"
+    }, {
+        \"ProductName\": \"芬达\\n                            Fanta MS 1.25/1.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 1.25/1.5L\",
+        \"ProductNameAsTagName\": \"FantaMS12515\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2L\\n                        \",
+        \"ProductENName\": \"Coke MS 2L\",
+        \"ProductNameAsTagName\": \"CokeMS2L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2L\",
+        \"ProductNameAsTagName\": \"SpriteMS2L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2L\",
+        \"ProductNameAsTagName\": \"FantaMS2L\"
+    }]
+}, {
+    \"Products\": [{
+        \"ProductName\": \"可乐\\n                            Coke MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Coke MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"CokeMS2325L\"
+    }, {
+        \"ProductName\": \"雪碧 \\n                            Sprite MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Sprite MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"SpriteMS2325L\"
+    }, {
+        \"ProductName\": \"芬达 \\n                            Fanta MS 2.3L/2.5L\\n                        \",
+        \"ProductENName\": \"Fanta MS 2.3L/2.5L\",
+        \"ProductNameAsTagName\": \"FantaMS2325L\"
+    }]
+}];
+ready(function() {
+    showProductList(1);
+});" section nil nil [3402 9350]))          
+      :file "HSthree.aspx"
+      :pointmax 9350
+      :fsize 9774
+      :lastmodtime '(21956 21554 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_c!Users!RainbowLu!KOnnector!Web!KOnnector!HS!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

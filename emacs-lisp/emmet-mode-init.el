@@ -1,0 +1,1 @@
+(provide 'emmet-mode-init)

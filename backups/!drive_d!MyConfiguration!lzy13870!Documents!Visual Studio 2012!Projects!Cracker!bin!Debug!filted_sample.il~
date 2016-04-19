@@ -1,0 +1,207 @@
+
+//  Microsoft (R) .NET Framework IL Disassembler.  Version 4.0.30319.17929
+
+
+
+
+// Metadata version: v4.0.30319
+.assembly extern mscorlib
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 4:0:0:0
+}
+.assembly extern System
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 4:0:0:0
+}
+.assembly Cracker
+{
+  .custom instance void [mscorlib]System.Reflection.AssemblyCopyrightAttribute::.ctor(string) = ( 01 00 12 43 6F 70 79 72 69 67 68 74 20 C2 A9 20   // ...Copyright .. 
+                                                                                                  20 32 30 31 36 00 00 )                            //  2016..
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+                                                                                                             63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01 )       // ceptionThrows.
+  .custom instance void [mscorlib]System.Reflection.AssemblyTitleAttribute::.ctor(string) = ( 01 00 07 43 72 61 63 6B 65 72 00 00 )             // ...Cracker..
+  .custom instance void [mscorlib]System.Reflection.AssemblyDescriptionAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyConfigurationAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyCompanyAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyProductAttribute::.ctor(string) = ( 01 00 07 43 72 61 63 6B 65 72 00 00 )             // ...Cracker..
+  .custom instance void [mscorlib]System.Runtime.Versioning.TargetFrameworkAttribute::.ctor(string) = ( 01 00 1A 2E 4E 45 54 46 72 61 6D 65 77 6F 72 6B   // ....NETFramework
+                                                                                                        2C 56 65 72 73 69 6F 6E 3D 76 34 2E 35 01 00 54   // ,Version=v4.5..T
+                                                                                                        0E 14 46 72 61 6D 65 77 6F 72 6B 44 69 73 70 6C   // ..FrameworkDispl
+                                                                                                        61 79 4E 61 6D 65 12 2E 4E 45 54 20 46 72 61 6D   // ayName..NET Fram
+                                                                                                        65 77 6F 72 6B 20 34 2E 35 )                      // ework 4.5
+  .custom instance void [mscorlib]System.Reflection.AssemblyTrademarkAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComVisibleAttribute::.ctor(bool) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 31 38 31 33 38 39 39 2D 32 64 38 62   // ..$31813899-2d8b
+                                                                                                  2D 34 65 37 65 2D 38 37 65 31 2D 62 61 32 63 31   // -4e7e-87e1-ba2c1
+                                                                                                  62 65 39 38 66 62 65 00 00 )                      // be98fbe..
+  .custom instance void [mscorlib]System.Reflection.AssemblyFileVersionAttribute::.ctor(string) = ( 01 00 07 31 2E 30 2E 30 2E 30 00 00 )             // ...1.0.0.0..
+
+  // --- �����Զ������Ի��Զ���ӣ���Ҫȡ��ע�� -------
+  //  .custom instance void [mscorlib]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [mscorlib]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ( 01 00 07 01 00 00 00 00 ) 
+
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 ) 
+  .hash algorithm 0x00008004
+  .ver 1:0:0:0
+}
+.module Cracker.exe
+// MVID: {6D045057-2F52-4FBD-870F-6B90BA2B43DE}
+.imagebase 0x00400000
+.file alignment 0x00000200
+.stackreserve 0x00100000
+.subsystem 0x0003       // WINDOWS_CUI
+.corflags 0x00020003    //  ILONLY 32BITPREFERRED
+// Image base: 0x002A0000
+
+
+// =============== CLASS MEMBERS DECLARATION ===================
+
+.class private auto ansi beforefieldinit Cracker.Program
+       extends [mscorlib]System.Object
+{
+  .method private hidebysig static void  Main(string[] args) cil managed
+  {
+    .entrypoint
+    // �����С       19 (0x13)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  newobj     instance void Cracker.TargetEntity::.ctor()
+    IL_0006:  call       void [mscorlib]System.Console::WriteLine(object)
+    IL_000b:  nop
+    IL_000c:  call       string [mscorlib]System.Console::ReadLine()
+    IL_0011:  pop
+    IL_0012:  ret
+  } // end of method Program::Main
+
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // �����С       7 (0x7)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [mscorlib]System.Object::.ctor()
+    IL_0006:  ret
+  } // end of method Program::.ctor
+
+} // end of class Cracker.Program
+
+.class public auto ansi Cracker.TargetEntity
+       extends [mscorlib]System.Object
+{
+  .class auto ansi sealed nested private beforefieldinit '<>c__DisplayClass1'
+         extends [mscorlib]System.Object
+  {
+    .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+    .field public class [System]System.Net.Sockets.Socket client
+    .method public hidebysig specialname rtspecialname 
+            instance void  .ctor() cil managed
+    {
+      // �����С       7 (0x7)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [mscorlib]System.Object::.ctor()
+      IL_0006:  ret
+    } // end of method '<>c__DisplayClass1'::.ctor
+
+    .method public hidebysig instance void 
+            '<.cctor>b__0'(object o) cil managed
+    {
+      // �����С       82 (0x52)
+      .maxstack  3
+      .locals init ([0] uint8[] buf)
+      IL_0000:  nop
+      IL_0001:  ldc.i4     0x400
+      IL_0006:  newarr     [mscorlib]System.Byte
+      IL_000b:  stloc.0
+      IL_000c:  ldarg.0
+      IL_000d:  ldfld      class [System]System.Net.Sockets.Socket Cracker.TargetEntity/'<>c__DisplayClass1'::client
+      IL_0012:  ldloc.0
+      IL_0013:  callvirt   instance int32 [System]System.Net.Sockets.Socket::Receive(uint8[])
+      IL_0018:  pop
+      IL_0019:  call       class [mscorlib]System.Text.Encoding [mscorlib]System.Text.Encoding::get_Default()
+      IL_001e:  ldloc.0
+      IL_001f:  callvirt   instance string [mscorlib]System.Text.Encoding::GetString(uint8[])
+      IL_0024:  call       void [mscorlib]System.Console::WriteLine(string)
+      IL_0029:  nop
+      IL_002a:  ldarg.0
+      IL_002b:  ldfld      class [System]System.Net.Sockets.Socket Cracker.TargetEntity/'<>c__DisplayClass1'::client
+      IL_0030:  call       class [mscorlib]System.Text.Encoding [mscorlib]System.Text.Encoding::get_Default()
+      IL_0035:  ldstr      "Got."
+      IL_003a:  callvirt   instance uint8[] [mscorlib]System.Text.Encoding::GetBytes(string)
+      IL_003f:  callvirt   instance int32 [System]System.Net.Sockets.Socket::Send(uint8[])
+      IL_0044:  pop
+      IL_0045:  ldarg.0
+      IL_0046:  ldfld      class [System]System.Net.Sockets.Socket Cracker.TargetEntity/'<>c__DisplayClass1'::client
+      IL_004b:  callvirt   instance void [System]System.Net.Sockets.Socket::Close()
+      IL_0050:  nop
+      IL_0051:  ret
+    } // end of method '<>c__DisplayClass1'::'<.cctor>b__0'
+
+  } // end of class '<>c__DisplayClass1'
+
+  .method private hidebysig specialname rtspecialname static 
+          void  .cctor() cil managed
+  {
+    // �����С       88 (0x58)
+    .maxstack  3
+    .locals init ([0] class [System]System.Net.Sockets.Socket socket,
+             [1] class Cracker.TargetEntity/'<>c__DisplayClass1' 'CS$<>8__locals2',
+             [2] bool CS$4$0000)
+    IL_0000:  nop
+    IL_0001:  ldc.i4.2
+    IL_0002:  ldc.i4.1
+    IL_0003:  ldc.i4.6
+    IL_0004:  newobj     instance void [System]System.Net.Sockets.Socket::.ctor(valuetype [System]System.Net.Sockets.AddressFamily,
+                                                                                valuetype [System]System.Net.Sockets.SocketType,
+                                                                                valuetype [System]System.Net.Sockets.ProtocolType)
+    IL_0009:  stloc.0
+    IL_000a:  ldloc.0
+    IL_000b:  ldsfld     class [System]System.Net.IPAddress [System]System.Net.IPAddress::Any
+    IL_0010:  ldc.i4     0x1cb6
+    IL_0015:  newobj     instance void [System]System.Net.IPEndPoint::.ctor(class [System]System.Net.IPAddress,
+                                                                            int32)
+    IL_001a:  callvirt   instance void [System]System.Net.Sockets.Socket::Bind(class [System]System.Net.EndPoint)
+    IL_001f:  nop
+    IL_0020:  ldloc.0
+    IL_0021:  ldc.i4     0x1cb6
+    IL_0026:  callvirt   instance void [System]System.Net.Sockets.Socket::Listen(int32)
+    IL_002b:  nop
+    IL_002c:  br.s       IL_0054
+
+    newobj     instance void Cracker.TargetEntity/'<>c__DisplayClass1'::.ctor()
+    IL_0033:  stloc.1
+    IL_0034:  nop
+    IL_0035:  ldloc.1
+    IL_0036:  ldloc.0
+    IL_0037:  callvirt   instance class [System]System.Net.Sockets.Socket [System]System.Net.Sockets.Socket::Accept()
+    IL_003c:  stfld      class [System]System.Net.Sockets.Socket Cracker.TargetEntity/'<>c__DisplayClass1'::client
+    IL_0041:  ldloc.1
+    IL_0042:  ldftn      instance void Cracker.TargetEntity/'<>c__DisplayClass1'::'<.cctor>b__0'(object)
+    IL_0048:  newobj     instance void [mscorlib]System.Threading.WaitCallback::.ctor(object,
+                                                                                      native int)
+    IL_004d:  call       bool [mscorlib]System.Threading.ThreadPool::QueueUserWorkItem(class [mscorlib]System.Threading.WaitCallback)
+    IL_0052:  pop
+    IL_0053:  nop
+    IL_0054:  ldc.i4.1
+    IL_0055:  stloc.2
+    IL_0056:  br.s       IL_002e
+  } // end of method TargetEntity::.cctor
+
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // �����С       7 (0x7)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [mscorlib]System.Object::.ctor()
+    IL_0006:  ret
+  } // end of method TargetEntity::.ctor
+
+} // end of class Cracker.TargetEntity
+
+
+// =============================================================
+
+// *********** �������� ***********************
+// ����: ������ Win32 ��Դ�ļ� sample.res

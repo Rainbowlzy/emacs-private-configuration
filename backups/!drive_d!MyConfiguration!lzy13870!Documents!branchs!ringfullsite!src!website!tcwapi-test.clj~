@@ -1,0 +1,84 @@
+(ns website.temp)
+
+(require '[clojure.data.json :as json])
+(require '[clj-http.client :as client])
+(require '[clj-http.cookies :as cookies])
+(use '[clojure.java.io :only [output-stream]])
+(use '[clojure.java.shell :only [sh]])
+
+;; (defn dir1[]
+;;   (let [d "d:/myconfiguration/lzy13870/documents/branchs/ringfullsite/src/website/temp.clj"]
+;;     (with-open [rdr (clojure.java.io/reader d)]
+;;       (printf "%s\n" (clojure.string/join "\n" (line-seq rdr))))))
+
+;; (defn dir[]
+;;   (let [d "d:/myconfiguration/lzy13870/documents/branchs/ringfullsite/src/website/temp.clj"]
+;;     (with-open [rdr (clojure.java.io/reader d)]
+;;       (reduce conj [] (line-seq rdr)))))
+
+;; (dir)
+
+;; (client/get "http://www.baidu.com")
+
+(defn find-db-name [sql]
+  (re-find #"\w+" (re-find #"\w+\.dbo\.\w+\d*\w+" sql))
+  )
+
+
+
+
+;; M-.: Jump to the definition of a var
+;; M-TAB or C-c TAB: Autocomplete symbol at point
+;; C-x C-e: Eval the form under the point
+;; C-c C-k: Compile the current buffer
+;; C-c C-l: Load current buffer and force required namespaces to reload
+;; C-M-x: Compile the whole top-level form under the point.
+;; C-c S-i: Inspect a value
+;; C-c C-m: Macroexpand the call under the point
+;; C-c C-d C-d: Look up documentation for a var
+;; C-c C-z: Switch from a Clojure buffer to the repl buffer
+;; C-c M-p: Switch the repl namespace to match the current buffer
+;; C-c C-w c: List all callers of a given function
+
+
+
+;; (def cs (clj-http.cookies/cookie-store))
+
+(let [params (load-file "d:/MyConfiguration/lzy13870/sql/sample.clj")]
+  (defn json-read-not-empty [s] (if s (clojure.data.json/read-str s :key-fn keyword) s))
+  (defn post-call[url json]
+    ;; (try
+    (->
+
+     
+     (clj-http.client/post
+      url
+      {:form-params {:txtPostURL url
+                     :txtPostXML json}
+       :headers {"Host" "10.14.41.154:88"
+                 "Connection" "keep-alive"
+                 "Cache-Control" "max-age=0"
+                 "Accept" "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+                 "Origin" "http://10.14.41.154:88"
+                 "Upgrade-Insecure-Requests" "1"
+                 "User-Agent" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"
+                 "Content-Type" "application/x-www-form-urlencoded"
+                 "Referer" "http://10.14.41.154:88/"
+                 "Accept-Encoding" "gzip, deflate"
+                 "Accept-Language" "zh-CN,zh;q=0.8,en;q=0.6,sq;q=0.4,zh-TW;q=0.2,fr;q=0.2,de-DE;q=0.2,de;q=0.2,es;q=0.2"
+                 }})
+     :body
+     ;; json-read-not-empty
+     )
+    )
+
+    
+    ;; (catch Exception e (str "caught exception : \n" e))))
+    ;; (post-call (params :url) (params :sql) (params :cookie))
+    (post-call
+     "http://http://10.14.41.154:88/"
+     ;; "http://10.1.201.72/memberextend/membership/MemberCenterHandle.ashx"
+     (slurp "d:/MyConfiguration/lzy13870/AppData/Roaming/760request.js")
+     )
+    )
+

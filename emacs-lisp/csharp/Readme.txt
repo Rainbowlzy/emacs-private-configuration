@@ -1,0 +1,1 @@
+This is a mod of CSDE by Dino Chiesa.  Includes CSDE Shell. From 2008 August.

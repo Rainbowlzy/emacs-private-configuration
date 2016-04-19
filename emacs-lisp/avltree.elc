@@ -1,0 +1,95 @@
+;ELC
+;;; Compiled by nicolas@feanor.homelinux.com on Wed Dec 31 04:23:46 2008
+;;; from file /home/test/elisp/libs/elib-1/avltree.el
+;;; in Emacs version 22.3.1
+;;; with all optimizations.
+
+;;; This file uses dynamic docstrings, first added in Emacs 19.29.
+(if (and (boundp 'emacs-version)
+	 (< (aref emacs-version (1- (length emacs-version))) ?A)
+	 (or (and (boundp 'epoch::version) epoch::version)
+	     (string-lessp emacs-version "19.29")))
+    (error "`avltree.el' was compiled for Emacs 19.29 or later"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(byte-code "\300\301!\210\300\302!\210\303\304!\207" [require elib-node stack-m provide avltree] 2)
+(defalias 'elib-avl-node-create '(macro . #[(left right data balance) "\304	\n\257\207" [left right data balance vector] 5]))
+(defalias 'elib-avl-node-balance '(macro . #[(node) "\301\302BB\207" [node aref (3)] 3]))
+(defalias 'elib-avl-node-set-balance '(macro . #[(node newbal) "\302\303	F\207" [node newbal aset 3] 4]))
+(defalias 'elib-avl-root '(macro . #[(tree) "\301\302\303DDD\207" [tree elib-node-left car cdr] 4]))
+(defalias 'elib-avl-dummyroot '(macro . #[(tree) "\301\302DD\207" [tree car cdr] 3]))
+(defalias 'elib-avl-cmpfun '(macro . #[(tree) "\301\211DD\207" [tree cdr] 3]))
+(defalias 'elib-avl-del-balance1 #[(node branch) "	H\306\211\306\211\f\306
+\n\307H\310W\203!\n\307\310I\210\311\202\315\n\307H\310U\2032\n\307\312I\210\306\202\315\n\312H\211\307H\211\310Y\203y\n\312\310HI\210\310\nI\210\f\310U\203b\n\307\312I\210\307\313I\210\306
+\202o\n\307\310I\210\307\310I\210\311
+	I\210
+\202\315\310H\211\307H\f\310
+\312HI\210
+\312I\210\n\312
+\310HI\210
+\310\nI\210\f\310V\203\251\n\307\313I\210\202\256\n\307\310I\210\f\310W\203\275\307\312I\210\202\302\307\310I\210	
+I\210
+\307\310I\210\311.\207" [node branch br p1 b1 p2 nil 3 0 t 1 -1 b2 result] 5])
+(defalias 'elib-avl-del-balance2 #[(node branch) "	H\306\211\306\211\f\306
+\n\307H\310V\203!\n\307\310I\210\311\202\315\n\307H\310U\2032\n\307\312I\210\306\202\315\n\310H\211\307H\211\310X\203y\n\310\313HI\210\313\nI\210\f\310U\203b\n\307\312I\210\307\313I\210\306
+\202o\n\307\310I\210\307\310I\210\311
+	I\210
+\202\315\313H\211\307H\f\313
+\310HI\210
+\310I\210\n\310
+\313HI\210
+\313\nI\210\f\310W\203\251\n\307\313I\210\202\256\n\307\310I\210\f\310V\203\275\307\312I\210\202\302\307\310I\210	
+I\210
+\307\310I\210\311.\207" [node branch br p1 b1 p2 nil 3 0 t -1 1 b2 result] 5])
+(defalias 'elib-avl-do-del-internal #[(node branch q) "	H\211\304H\203\305\n\304#\205(\306	\"\202(\307\n\307HI\210	\n\310HI\210\311)\207" [node branch br q 1 elib-avl-do-del-internal elib-avl-del-balance2 2 0 t] 5])
+(defalias 'elib-avl-do-delete #[(cmpfun root branch data) "	H\211\204\f\305\202l\f\n\306H\"\203%\307\n\310\f$\205l\311	\"\202l\n\306H\f\"\203>\307\n\312\f$\205l\313	\"\202l\n\312H\204O	\n\310HI\210\314\202l\n\310H\204`	\n\312HI\210\314\202l\315\n\310\n#\205l\311	\")\207" [root branch br cmpfun data nil 2 elib-avl-do-delete 0 elib-avl-del-balance1 1 elib-avl-del-balance2 t elib-avl-do-del-internal] 6])
+(defalias 'elib-avl-enter-balance1 #[(node branch) "	H\306\211\306\211\f\n\307H\310W\203\n\307\310I\210\306\202\247\n\307H\310U\203/\n\307\311I\210\312\202\247\n\311H\211\307H\310V\203T\n\311\310HI\210\310\nI\210\n\307\310I\210	I\210\202\237\310H\211\307H\310\f\311HI\210\f\311I\210\n\311\f\310HI\210\f\310\nI\210
+\310V\203\202\n\307\313I\210\202\207\n\307\310I\210
+\310W\203\225\307\311I\210\202\232\307\310I\210	\fI\210	H\307\310I\210\306-\207" [node branch br p1 p2 b2 nil 3 0 1 t -1 result] 5])
+(defalias 'elib-avl-enter-balance2 #[(node branch) "	H\306\211\306\n\307H\310V\203\n\307\310I\210\306\202\244\n\307H\310U\203,\n\307\311I\210\312\202\244\n\310H\211\307H\310W\203Q\n\310\313HI\210\313\nI\210\n\307\310I\210	I\210\202\234\313H\211\307H\313\f\310HI\210\f\310I\210\n\310\f\313HI\210\f\313\nI\210
+\310W\203\n\307\313I\210\202\204\n\307\310I\210
+\310V\203\222\307\311I\210\202\227\307\310I\210	\fI\210	H\307\310I\210\306,\207" [node branch br p1 p2 b2 nil 3 0 -1 t 1] 5])
+(defalias 'elib-avl-do-enter #[(cmpfun root branch data) "	H\211\204	\305\306\211\307$I\210\310\202N\f\n\311H\"\203/\312\f\n\307$\205N\313	\"\202N\f\n\311H\"\203H\312\f\n\314$\205N\315	\"\202N\n\311I\210\306)\207" [root branch br data cmpfun vector nil 0 t 2 elib-avl-do-enter elib-avl-enter-balance2 1 elib-avl-enter-balance1] 8])
+(defalias 'elib-avl-mapc #[(map-function root) "\305 \306\307\n\310\"\210\205C	\203'\311H\203'\307\n\"\210\311H\211\202
+\f!\210\312H\203:\312H\306\202\f\313\n!\310\202\f+\207" [root go-left stack node map-function elib-stack-create t elib-stack-push nil 0 1 elib-stack-pop] 4])
+(defalias 'elib-avl-do-copy #[(root) "\205\301\302\303H!\302\304H!\305H\306H$\207" [root vector elib-avl-do-copy 0 1 2 3] 6])
+#@154 Create an empty avl tree.
+COMPARE-FUNCTION is a function which takes two arguments, A and B,
+and returns non-nil if A is less than B, and nil otherwise.
+(defalias 'avltree-create #[(compare-function) "\301\302\303\211\211\304$BB\207" [compare-function AVLTREE vector nil 0] 6 (#$ . 5000)])
+#@48 Return t if OBJ is an avl tree, nil otherwise.
+(defalias 'avltree-p #[(obj) "\242\301=\207" [obj AVLTREE] 2 (#$ . 5297)])
+#@56 Return the comparision function for the avl tree TREE.
+(defalias 'avltree-compare-function #[(tree) "AA\207" [tree] 1 (#$ . 5426)])
+#@50 Return t if TREE is emtpy, otherwise return nil.
+(defalias 'avltree-empty #[(tree) "A@\301H?\207" [tree 0] 2 (#$ . 5565)])
+#@48 In the avl tree TREE insert DATA.
+Return DATA.
+(defalias 'avltree-enter #[(tree data) "\302AAA@\303	$\210	\207" [tree data elib-avl-do-enter 0] 5 (#$ . 5695)])
+#@112 From the avl tree TREE, delete DATA.
+Return the element in TREE which matched DATA, nil if no element matched.
+(defalias 'avltree-delete #[(tree data) "\302AAA@\303	$\207" [tree data elib-avl-do-delete 0] 5 (#$ . 5864)])
+#@220 Return the element in the avl tree TREE which matches DATA.
+Matching uses the compare function previously specified in `avltree-create'
+when TREE was created.
+
+If there is no such element in the tree, the value is nil.
+(defalias 'avltree-member #[(tree data) "A@\305HAA\306\203;	\204;\n\f\307H\"\203%\305H\211\202
+\n\307H\f\"\2036\310H\211\202
+\311\202\f\205B\307H+\207" [tree found compare-function node data 0 nil 2 1 t] 5 (#$ . 6094)])
+#@58 Apply MAP-FUNCTION to all elements in the avl tree TREE.
+(defalias 'avltree-map #[(__map-function__ tree) "\301\302A@\303H\"\207" [tree elib-avl-mapc #[(node) "\302	\302H!I\207" [node __map-function__ 2] 5] 0] 4 (#$ . 6562)])
+#@60 Return the first element in TREE, or nil if TREE is empty.
+(defalias 'avltree-first #[(tree) "A@\302H\211\205	\302H\203	\302H\211\202	\303H)\207" [tree node 0 2] 3 (#$ . 6797)])
+#@59 Return the last element in TREE, or nil if TREE is empty.
+(defalias 'avltree-last #[(tree) "A@\302H\211\205	\303H\203	\303H\211\202	\304H)\207" [tree node 0 1 2] 3 (#$ . 6990)])
+#@37 Return a copy of the avl tree TREE.
+(defalias 'avltree-copy #[(tree) "\302AA!\211A@\303\304A@\303H!I\210	)\207" [tree new-tree avltree-create 0 elib-avl-do-copy] 6 (#$ . 7183)])
+#@55 Return a sorted list containing all elements of TREE.
+(defalias 'avltree-flatten #[(tree) "\302\303\304	A@\305H\"\210)\237\207" [treelist tree nil elib-avl-mapc #[(node) "\302H	B\211\207" [node treelist 2] 2] 0] 4 (#$ . 7370)])
+#@40 Return the number of elements in TREE.
+(defalias 'avltree-size #[(tree) "\302\303\304	A@\302H\"\210)\207" [treesize tree 0 elib-avl-mapc #[(data) "T	\207" [treesize data] 1]] 4 (#$ . 7608)])
+#@26 Clear the avl tree TREE.
+(defalias 'avltree-clear #[(tree) "A@\301\302I\207" [tree 0 nil] 3 (#$ . 7809)])

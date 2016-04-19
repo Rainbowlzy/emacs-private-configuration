@@ -1,0 +1,16 @@
+;; Object RainbowLu/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "RainbowLu/"
+  :tables
+  (list
+    (semanticdb-table "tmp.js"
+      :major-mode 'js-mode
+      :tags nil
+      :file "tmp.js"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(21954 61553 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_c!Users!RainbowLu!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

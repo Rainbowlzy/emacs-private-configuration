@@ -1,0 +1,131 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TCWireless.Model.Product
+{
+    public class GetDetailForSubmitResponse
+    {
+        /// <summary>
+        /// 错误码
+        /// 
+        /// </summary>
+        public int ErrorCode { get; set; }
+
+        /// <summary>
+        /// 错误描述
+        /// 
+        /// </summary>
+        public string ErrorDes { get; set; }
+
+        /// <summary>
+        /// 产品名称
+        /// 
+        /// </summary>
+        public string ProductName { get; set; }
+
+        /// <summary>
+        /// 押金模式（1：预付，2：到付）
+        /// 
+        /// </summary>
+        public int IsPrePay { get; set; }
+
+        /// <summary>
+        /// 支付方式（1：预付，2：到付）
+        /// 
+        /// </summary>
+        public int PayType { get; set; }
+
+        /// <summary>
+        /// 预定说明备注
+        /// 
+        /// </summary>
+        public string ReserveRemark { get; set; }
+
+        /// <summary>
+        /// 起订人数
+        /// 
+        /// </summary>
+        public int BookPerson { get; set; }
+
+        /// <summary>
+        /// 起订单位（0：人）
+        /// 
+        /// </summary>
+        public int BookType { get; set; }
+
+        /// <summary>
+        /// 品类
+        /// 
+        /// </summary>
+        public int ProdcutType { get; set; }
+
+        /// <summary>
+        /// 品类描述
+        /// 
+        /// </summary>
+        public string ProdcutTypeDes { get; set; }
+
+        /// <summary>
+        /// 提前预定的天数
+        /// 
+        /// </summary>
+        public int AdvanceDays { get; set; }
+
+        /// <summary>
+        /// 提前预定的时间
+        /// 
+        /// </summary>
+        public string AdvanceTime { get; set; }
+
+        /// <summary>
+        /// 预定说明
+        /// 
+        /// </summary>
+        public string Instruction { get; set; }
+
+        /// <summary>
+        /// 最小起订天数
+        /// 
+        /// </summary>
+        public int BookDaysMin { get; set; }
+
+        /// <summary>
+        /// 最大起订天数
+        /// 
+        /// </summary>
+        public int BookDaysMax { get; set; }
+
+        /// <summary>
+        /// 最大起订设备数
+        /// 
+        /// </summary>
+        public int BookingMaxNumber { get; set; }
+
+        /// <summary>
+        /// 品类系列分类
+        /// 
+        /// </summary>
+        public int ProdcutCategory { get; set; }
+
+        /// <summary>
+        /// 品类系列分类描述
+        /// 
+        /// </summary>
+        public string ProdcutCategoryDes { get; set; }
+
+        /// <summary>
+        /// 领取地点
+        /// 
+        /// </summary>
+        public List<string> ReceivePlace { get; set; }
+
+        /// <summary>
+        /// 送还地点
+        /// 
+        /// </summary>
+        public List<string> ReturnPlace { get; set; }
+    }
+}

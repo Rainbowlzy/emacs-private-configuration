@@ -1,0 +1,31 @@
+(ns clj-tank.core
+  (:require [swank.swank]))
+(require '[clj-time.core :as t])
+(require '[clj-time.coerce :as c])
+(require '[clj-time.local :as l])
+
+(defn foo
+  "I don't do a whole lot."
+  [x]
+  (println x "Hello, World!"))
+
+(defn time-cost
+  [fn]
+  (let [begin (l/local-now)]
+    (fn)
+    (- (c/to-long (l/local-now)) (c/to-long begin))))
+
+
+
+(foo "Rainbow Lu")
+(defn -main[&args] (print "hello"))
+(time-cost #(foo "hello"))
+
+(swank.swank/start-server)
+
+
+
+(#(print "hello"))
+
+
+

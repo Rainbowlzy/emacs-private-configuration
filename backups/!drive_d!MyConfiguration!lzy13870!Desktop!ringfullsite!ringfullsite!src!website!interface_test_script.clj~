@@ -1,0 +1,7 @@
+(ns website.interface-test-script
+  (:use [website.interface-test])
+  (:require [website.interface-test]
+            [clojure.test :as t]))
+
+
+(->> (call-default "getabroadproductlist" {:pageSize 99999 :page 1}) body)

@@ -1,0 +1,12 @@
+;; (ns nrepl-boostrap.core)
+(ns nrepl-boostrap.core
+  (:require [clojure.tools.nrepl.server :as nrepl-server]
+            [cider.nrepl :refer (cider-nrepl-handler)]))
+
+(defn -main
+  []
+  (nrepl-server/start-server :port 7888 :handler cider-nrepl-handler))
+;; (defn foo
+;;   "I don't do a whole lot."
+;;   [x]
+;;   (println x "Hello, World!"))

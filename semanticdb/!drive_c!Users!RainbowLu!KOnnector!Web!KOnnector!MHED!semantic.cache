@@ -1,0 +1,1653 @@
+;; Object MHED/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "MHED/"
+  :tables
+  (list
+    (semanticdb-table "MHthree.aspx"
+      :major-mode 'html-mode
+      :tags 
+        '( ("市场走访-中高档餐饮(M/H E&D)" section nil nil [356 569])
+            ("SPARKLING产品铺货" section (:members 
+              ( ("X" anchor nil nil [11472 11475])
+                ("X" anchor nil nil [21713 21716])
+                ("X" anchor nil nil [23020 23023]))              ) nil [569 23994])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [23994 24059])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [24059 24127])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [24127 24205])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [24205 24267])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [24267 24333])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [24333 24403])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [24403 24465])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [24465 24513])
+            ("--%>
+<script src=\"../js/Package.js\" >" section nil nil [24513 24581])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [24581 24623])
+            ("loadfooter(\"MHED\");
+    //    uploadImg();
+    //    Concurrent.Thread.create(uploadImg); //创建
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $(\"#KOnum\").hide();
+        $(\"#KBnum\").hide();
+        $.post(\"MHthree.aspx\", { \"action\": \"onload\" }, function (e) {
+            if (e != '') {
+                var data = $.parseJSON(e);
+
+                if (data.CokeCAN330mlAvailability)
+                    $('input[for = \"CokeCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokeCAN300MLPrice\"]').val(Number(data.CokeSpriteCAN300MLPrice).toFixed(2));
+
+                if (data.SpriteCAN330mlAvailability)
+                    $('input[for = \"SpriteCAN300MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpriteCAN300MLPrice\"]').val(Number(data.SpriteCAN300MLPrice).toFixed(2));
+
+                if (data.CokeMS12515LAvailability)
+                    $('input[for = \"CokePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET625750MLPrice\"]').val(Number(data.CokeSpritePET625750MLPrice).toFixed(2));
+
+                if (data.SpriteMS12515LAvailability)
+                    $('input[for = \"SpritePET625750MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET625750MLPrice\"]').val(Number(data.SpriteMS625750MLPrice).toFixed(2));
+
+                if (data.CokeMS2L2LAddAvailability)
+                    $('input[for = \"CokePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"CokePET2L2LAddPrice\"]').val(Number(data.CokeSpritePET2L2LAddPrice).toFixed(2));
+
+                if (data.SpriteMS2L2LAddAvailability)
+                    $('input[for = \"SpritePET2L2LAddPrice\"]').attr(\"checked\", true);
+                $('input[name=\"SpritePET2L2LAddPrice\"]').val(Number(data.SpriteMS2L2LAddPrice).toFixed(2));
+
+                //kb
+                if (data.PepsiCANAvailability)
+                    $('input[for = \"PepsiCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"PepsiCANPrice\"]').val(Number(data.Pepsi7upMirandaCANPrice).toFixed(2));
+
+                if (data.S7UPCANAvailability)
+                    $('input[for = \"S7upCANPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7upCANPrice\"]').val(Number(data.S7UPCANPrice).toFixed(2));
+
+                if (data.Pepsi625MLAvailability)
+                    $('input[for = \"Pepsi625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi625MLPrice\"]').val(Number(data.Pepsi7upMiranda625MLPrice).toFixed(2));
+
+                if (data.S7UP625MLAvailability)
+                    $('input[for = \"S7up625MLPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up625MLPrice\"]').val(Number(data.S7UPCANPrice625MLPrice).toFixed(2));
+
+                if (data.Pepsi2LAvailability)
+                    $('input[for = \"Pepsi2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"Pepsi2LPrice\"]').val(Number(data.Pepsi7upMiranda2LPrice).toFixed(2));
+
+
+                if (data.S7UP2LAvailability)
+                    $('input[for = \"S7up2LPrice\"]').attr(\"checked\", true);
+                $('input[name=\"S7up2LPrice\"]').val(Number(data.S7UPCANPrice2LPrice).toFixed(2));
+            }
+
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+
+            CloseBox();
+        });
+    }
+
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }
+
+        //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+        //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+        //        else
+        okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        $(document).scrollTop(0);
+        flag = false;
+    }
+
+    function okSubmit() {
+        var options = {
+            url: 'MHthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+    function showStart() {
+        ShowBox($(document).height());
+        // writeMes('正在提交中...');
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'MHthreejinpin.aspx?id=' + id;
+            saveTaskDetail(\"MHED\", \"MHthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        location.href = 'MHone.aspx';
+    }
+
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(4);
+    });" section nil nil [24623 31094]))          
+      :file "MHthree.aspx"
+      :pointmax 31094
+      :fsize 32066
+      :lastmodtime '(21956 22026 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_c!Users!RainbowLu!KOnnector!Web!KOnnector!MHED!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

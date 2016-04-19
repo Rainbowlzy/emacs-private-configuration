@@ -1,0 +1,16 @@
+python
+find / -name ~
+sudo find / -name ~
+cmake .
+ls -la
+cd cpp
+ls -la
+cd tutorial_code/
+ls -la
+cd calib3d/
+ls -la
+cd ..
+cd ..
+ls -la
+more pca.cpp 
+Clojure.Main.exe 

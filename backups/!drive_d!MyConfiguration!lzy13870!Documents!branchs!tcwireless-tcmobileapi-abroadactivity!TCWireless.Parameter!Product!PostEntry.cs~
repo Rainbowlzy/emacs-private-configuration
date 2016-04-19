@@ -1,0 +1,27 @@
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TCWireless.Parameter.Product
+{
+    public class PostEntry
+    {
+        [JsonProperty(PropertyName = "PostAdress")]
+        public string PostAdress { get; set; }
+
+        [JsonProperty(PropertyName = "PostAmount")]
+        public string PostAmount { get; set; }
+
+        [JsonProperty(PropertyName = "PostCode")]
+        public string PostCode { get; set; }
+
+        [JsonProperty(PropertyName = "PostPerson")]
+        public string PostPerson { get; set; }
+
+        [JsonProperty(PropertyName = "PostWay")]
+        public string PostWay { get; set; }
+    }
+}

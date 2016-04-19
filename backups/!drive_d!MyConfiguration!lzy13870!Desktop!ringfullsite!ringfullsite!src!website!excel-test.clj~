@@ -1,0 +1,49 @@
+(ns website.excel-test
+  (:use [dk.ative.docjure.spreadsheet]
+        [clojure.pprint])
+  (:require [clojure.pprint :as ppt]))
+
+
+(for [en 
+      (->> (load-workbook "d:/MyConfiguration/lzy13870/Documents/副本热搜词跳转链接3 14 (4).xlsx")
+           (select-sheet "Sheet1")
+           (select-columns {:B :title,:C :url})
+           )]
+  (let[repl-left #(clojure.string/replace %1 #"\{" "{{")
+       repl-right #(clojure.string/replace %1 #"\}" "}}")
+       repl-quot #(clojure.string/replace %1 #"\"" "\\\\\"")
+       url (repl-quot (repl-left (repl-right (:url en))))]
+    (println (str "new KWord(\"" (:title en) "\", fontColor, borderColor, backColor, \"" url "\"),"))))
+
+
+(def istest? (fn[ent] (= (:istest ent) 0.0)))
+(def contains-elem? (fn[coll item] (> (.indexOf coll item) 0)))
+(let[
+
+     excel-file-path "d:/MyConfiguration/lzy13870/Desktop/数据报表/海外玩乐页面浏览&事件报表（创建单）20160301.xlsx"
+     excel-file (load-workbook excel-file-path)
+     all-orders (->> excel-file
+                     (select-sheet "全部订单")
+                     (select-columns {:A :orderId,:C :istest, :D :deviceId, :E :sessionId})
+                     (filter istest?)
+                     )
+     all-order-ids (for [v all-orders] (->> v :orderId))
+     contains-order? (fn[order-id] (contains-elem? all-order-ids order-id))
+     in-orders? (fn[item] (contains-order? (:orderId item)))
+     all-events (->> excel-file
+                     (select-sheet "事件")
+                     (select-columns {:A :orderId,:D :deviceId, :G :sessionId})
+                     (filter in-orders?))
+     page-browsers (->> excel-file
+                        (select-sheet "页面浏览")
+                        (select-columns {:A :orderId,:N :clientTime,:J :pageId,:K :orgPageId, :F :deviceId, :H :sessionId})
+                        (filter in-orders?))
+     ]
+  (ppt/pprint (filter nil?
+                      (for [en page-browsers]
+                        (assoc en :preOrgPageId (->> page-browsers
+                                                     (filter #(= (:pageId %) (:orgPageId en)))
+                                                     :pageId)))
+                      )))
+
+

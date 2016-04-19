@@ -1,0 +1,3000 @@
+;; Object GT/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "GT/"
+  :tables
+  (list
+    (semanticdb-table "three.aspx"
+      :major-mode 'html-mode
+      :tags 
+        '( ("市场走访-传统食杂(GT Urban)" section nil nil [374 644])
+            ("SPARKLING产品铺货" section (:members 
+              ( ("X" anchor nil nil [22232 22235])
+                ("X" anchor nil nil [39265 39268])
+                ("X" anchor nil nil [40676 40679]))              ) nil [644 42350])
+            ("loadfooter(\"GT\");
+        //$(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+
+        $(\"input[type='text']\").each(function() {
+            if ($(this).parent().is(\"div\")) {
+                $(this).decimalinput();
+                $(this).attr(\"onclick\", \"numberClick(this)\");
+            }
+        })
+
+        //页面加载事件设置初始值
+        window.onload = function() {
+            ShowBox($(document).height());
+            $(\"#KOnum\").hide();
+            $(\"#KBnum\").hide();
+
+            $.post(\"three.aspx\", {
+                \"action\": \"onload\"
+            }, function(e) {
+                // alert(e);
+                if (e != \"\") {
+                    var data = $.parseJSON(e);
+
+                    console.log(data);
+                    //这里写加载页面值的js
+                    //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);
+                    if (data.PepsicolaCAN)
+                        $('input[name = \"PepsicolaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsicolaCANPrice\"]').val(Number(data.PepsiCANPrice).toFixed(2));
+
+                    if (data.QX7upCAN)
+                        $('input[name = \"upCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"upCANPrice\"]').val(Number(data.QXupCANPrice).toFixed(2));
+
+                    if (data.MirandaCAN)
+                        $('input[name = \"MirandaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCANPrice\"]').val(Number(data.MirandaCANPrice).toFixed(2));
+
+                    if (data.PepsiCola600ml)
+                        $('input[name = \"Pepsi600mlcola\"]').attr(\"checked\", true);
+                    $('input[name=\"Pepsi600mlcolaPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+
+                    if (data.QX7up600ml)
+                        $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+
+                    if (data.Miranda600ml)
+                        $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+
+                    if (data.PepsiCola125L)
+                        $('input[name = \"PepsiCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola125mlPrice\"]').val(Number(data.Pepsi125MLPrice).toFixed(2));
+
+                    if (data.QX7up125L)
+                        $('input[name = \"upCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"upCola125mlPrice\"]').val(Number(data.QXup125MLPrice).toFixed(2));
+
+                    if (data.Miranda125L)
+                        $('input[name = \"MirandaCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCola125mlPrice\"]').val(Number(data.Miranda125MLPrice).toFixed(2));
+
+                    if (data.PepsiCola2L)
+                        $('input[name = \"PepsiCola2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola2mlPrice\"]').val(Number(data.Pepsi2LPrice).toFixed(2));
+
+                    if (data.QX7up2L)
+                        $('input[name = \"up2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up2mlPrice\"]').val(Number(data.QXup2LPrice).toFixed(2));
+
+                    if (data.Miranda2L)
+                        $('input[name = \"Miranda2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda2mlPrice\"]').val(Number(data.Miranda2LPrice).toFixed(2));
+
+                    if (data.CokePET300ML)
+                        $('input[name = \"CokePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET300mlPrice\"]').val(Number(data.Coke300mlPrice).toFixed(2));
+
+
+                    if (data.SpritePET300ML)
+                        $('input[name = \"SpritePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET300mlPrice\"]').val(Number(data.Sprite300mlPrice).toFixed(2));
+
+                    //FantaCAN330ml
+
+                    //if (data.FantaPET300ML)
+                    //    $('input[name = \"FantaPET300ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET300mlPrice\"]').val(Number(data.Fanta300mlPrice).toFixed(2));
+
+
+                    if (data.CokeCAN330ml)
+                        $('input[name = \"CokeCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeCAN330mlPrice\"]').val(Number(data.Coke330mlPrice).toFixed(2));
+
+
+                    //if (data.FantaCAN330ml)
+                    //    $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Fanta330mlPrice).toFixed(2));
+
+
+                    if (data.SpriteCAN330ml)
+                        $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Sprite330mlPrice).toFixed(2));
+
+                    //CokePET500600ml
+                    if (data.CokePET500600ml)
+                        $('input[name = \"CokePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+
+                    if (data.SpritePET500600ml)
+                        $('input[name = \"SpritePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+
+                    if (data.FantaPET500600ml)
+                        $('input[name = \"FantaPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+
+                    if (data.RTCPET500600ml)
+                        $('input[name = \"RTCPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"RTCPET500600mlPrice\"]').val(Number(data.RTCPET500600mlPrice).toFixed(2));
+
+
+                    if (data.CokePET12515L)
+                        $('input[name = \"CokePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET12515LPrice\"]').val(Number(data.Coke12515LPrice).toFixed(2));
+
+
+                    if (data.SpritePET12515L)
+                        $('input[name = \"SpritePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET12515LPrice\"]').val(Number(data.Sprite12515LPrice).toFixed(2));
+
+                    //if (data.FantaPET12515L)
+                    //    $('input[name = \"FantaPET12515L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET12515LPrice\"]').val(Number(data.Fanta12515LPrice).toFixed(2));
+
+                    if (data.CokeMS888ml)
+                        $('input[name = \"CokePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET888mlPrice\"]').val(Number(data.CokeMS888mlPrice).toFixed(2));
+
+                    if (data.SpriteMS888ml)
+                        $('input[name = \"SpritePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET888mlPrice\"]').val(Number(data.SpriteMS888mlPrice).toFixed(2));
+
+
+
+                    if (data.CokePET2L)
+                        $('input[name = \"CokePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET2LPrice\"]').val(Number(data.Coke2LPrice).toFixed(2));
+
+                    if (data.SpritePET2L)
+                        $('input[name = \"SpritePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET2LPrice\"]').val(Number(data.Sprite2LPrice).toFixed(2));
+
+                    //if (data.FantaPET2L)
+                    //    $('input[name = \"FantaPET2L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET2LPrice\"]').val(Number(data.Fanta2LPrice).toFixed(2));
+
+                    //OtherGQX
+                }
+                $(\".checkbox\").each(function(i) {
+                    //                if (!$(this).is(\":checked\")) {
+                    //                    $(this).parent().removeClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").val('');
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#EAEAEA\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").attr(\"disabled\", true);
+                    //                } else {
+                    //                    $(this).parent().addClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                    //                }
+                    var ivalue = $(this).parent().parent().siblings().find(\"input\").val();
+                    if (ivalue != \"\" && ivalue != 0) {
+                        $(this).parent().parent().siblings().find(\"input\").removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                    } else {
+                        $(this).parent().parent().siblings().find(\"input\").val('');
+                        $(this).parent().parent().siblings().find(\"input\").addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                    }
+                    if (!$(this).is(\":checked\")) {
+                        $(this).parent().removeClass(\"active\");
+                    } else {
+                        $(this).parent().addClass(\"active\");
+                    }
+
+                });
+                CloseBox();
+            });
+        }
+
+        function OnSubmit() {
+
+            var num = 0;
+            var istrue = true;
+            var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+            _inputs.each(function(i) {
+                var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                var value = $(this).val();
+                if (value == '' && ch) {
+                    istrue = false;
+                    num = i;
+                }
+            });
+            _inputs.css(\"border\", \"0px solid red\");
+            if (!istrue) {
+                _inputs.eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                $(\"input[type='text']\").eq(num).blur();
+                return;
+            }
+
+            //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+            //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+            //        else
+            okSubmit(); //return;       
+        }
+
+
+        function setRightSelect() {
+            var _TFL = $(\".tab-btn.fl\");
+            var _TFR = $(\".tab-btn.fr\");
+            _TFR.addClass(\"active\");
+            $(\".koavailabilitybody\").hide();
+            _TFL.removeClass(\"active\");
+            $(\".cAvailabilitybody\").show();
+            $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+            $(document).scrollTop(0);
+            flag = false;
+        }
+
+
+        function okSubmit() {
+            var options = {
+                //target: '#showmsg',
+                url: 'three.aspx',
+                beforeSubmit: showStart,
+                success: showSuccess,
+                dataType: 'json'
+            };
+            $(\"form\").ajaxSubmit(options);
+        }
+
+        function showStart() {
+            ShowBox($(document).height());
+            //writeMes(\"正在提交...\");
+            return true;
+        }
+
+        function showSuccess(data) {
+            CloseBox();
+            if (data.success) {
+                //var id = $(\"input[name='id']\").val();
+                //location.href = 'threejinpin.aspx?id=' + id;
+                saveTaskDetail(\"GT\", \"three.aspx;\");
+            } else {
+                alert(data.msg);
+            }
+        }
+
+        function backUrl() {
+            // var id = $(\"input[name='id']\").val();
+            location.href = 'one.aspx';
+        }
+
+        var productList = [{
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 300ml\\n                        \",
+                \"ProductENName\": \"Coke PET 300ml\",
+                \"ProductNameAsTagName\": \"CokePET300ml\"
+            }, {
+                \"ProductName\": \"\\n                           雪碧 \\n                            Sprite PET 300ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 300ml\",
+                \"ProductNameAsTagName\": \"SpritePET300ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+                \"ProductENName\": \"Coke CAN 330ml\",
+                \"ProductNameAsTagName\": \"CokeCAN330ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+                \"ProductENName\": \"Sprite CAN 330ml\",
+                \"ProductNameAsTagName\": \"SpriteCAN330ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Coke PET 500/600ml\",
+                \"ProductNameAsTagName\": \"CokePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 500/600ml\",
+                \"ProductNameAsTagName\": \"SpritePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            芬达 \\n                            Fanta PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Fanta PET 500/600ml\",
+                \"ProductNameAsTagName\": \"FantaPET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            +C \\n                            RTC PET 500/600ml\\n                        \",
+                \"ProductENName\": \"RTC PET 500/600ml\",
+                \"ProductNameAsTagName\": \"RTCPET500600ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 888ml\\n                        \",
+                \"ProductENName\": \"Coke MS 888ml\",
+                \"ProductNameAsTagName\": \"CokePET888ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 888ml\\n                        \",
+                \"ProductENName\": \"Sprite MS 888ml\",
+                \"ProductNameAsTagName\": \"SpritePET888ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Coke MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"CokePET12515L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"SpritePET12515L\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                             Coke MS 2L\\n                        \",
+                \"ProductENName\": \" Coke MS 2L\",
+                \"ProductNameAsTagName\": \"CokePET2L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 2L\\n                        \",
+                \"ProductENName\": \"Sprite MS 2L\",
+                \"ProductNameAsTagName\": \"SpritePET2L\"
+            }]
+        }];" section nil nil [42350 42396])
+            ("loadfooter(\"GT\");
+        //$(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+
+        $(\"input[type='text']\").each(function() {
+            if ($(this).parent().is(\"div\")) {
+                $(this).decimalinput();
+                $(this).attr(\"onclick\", \"numberClick(this)\");
+            }
+        })
+
+        //页面加载事件设置初始值
+        window.onload = function() {
+            ShowBox($(document).height());
+            $(\"#KOnum\").hide();
+            $(\"#KBnum\").hide();
+
+            $.post(\"three.aspx\", {
+                \"action\": \"onload\"
+            }, function(e) {
+                // alert(e);
+                if (e != \"\") {
+                    var data = $.parseJSON(e);
+
+                    console.log(data);
+                    //这里写加载页面值的js
+                    //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);
+                    if (data.PepsicolaCAN)
+                        $('input[name = \"PepsicolaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsicolaCANPrice\"]').val(Number(data.PepsiCANPrice).toFixed(2));
+
+                    if (data.QX7upCAN)
+                        $('input[name = \"upCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"upCANPrice\"]').val(Number(data.QXupCANPrice).toFixed(2));
+
+                    if (data.MirandaCAN)
+                        $('input[name = \"MirandaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCANPrice\"]').val(Number(data.MirandaCANPrice).toFixed(2));
+
+                    if (data.PepsiCola600ml)
+                        $('input[name = \"Pepsi600mlcola\"]').attr(\"checked\", true);
+                    $('input[name=\"Pepsi600mlcolaPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+
+                    if (data.QX7up600ml)
+                        $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+
+                    if (data.Miranda600ml)
+                        $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+
+                    if (data.PepsiCola125L)
+                        $('input[name = \"PepsiCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola125mlPrice\"]').val(Number(data.Pepsi125MLPrice).toFixed(2));
+
+                    if (data.QX7up125L)
+                        $('input[name = \"upCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"upCola125mlPrice\"]').val(Number(data.QXup125MLPrice).toFixed(2));
+
+                    if (data.Miranda125L)
+                        $('input[name = \"MirandaCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCola125mlPrice\"]').val(Number(data.Miranda125MLPrice).toFixed(2));
+
+                    if (data.PepsiCola2L)
+                        $('input[name = \"PepsiCola2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola2mlPrice\"]').val(Number(data.Pepsi2LPrice).toFixed(2));
+
+                    if (data.QX7up2L)
+                        $('input[name = \"up2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up2mlPrice\"]').val(Number(data.QXup2LPrice).toFixed(2));
+
+                    if (data.Miranda2L)
+                        $('input[name = \"Miranda2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda2mlPrice\"]').val(Number(data.Miranda2LPrice).toFixed(2));
+
+                    if (data.CokePET300ML)
+                        $('input[name = \"CokePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET300mlPrice\"]').val(Number(data.Coke300mlPrice).toFixed(2));
+
+
+                    if (data.SpritePET300ML)
+                        $('input[name = \"SpritePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET300mlPrice\"]').val(Number(data.Sprite300mlPrice).toFixed(2));
+
+                    //FantaCAN330ml
+
+                    //if (data.FantaPET300ML)
+                    //    $('input[name = \"FantaPET300ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET300mlPrice\"]').val(Number(data.Fanta300mlPrice).toFixed(2));
+
+
+                    if (data.CokeCAN330ml)
+                        $('input[name = \"CokeCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeCAN330mlPrice\"]').val(Number(data.Coke330mlPrice).toFixed(2));
+
+
+                    //if (data.FantaCAN330ml)
+                    //    $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Fanta330mlPrice).toFixed(2));
+
+
+                    if (data.SpriteCAN330ml)
+                        $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Sprite330mlPrice).toFixed(2));
+
+                    //CokePET500600ml
+                    if (data.CokePET500600ml)
+                        $('input[name = \"CokePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+
+                    if (data.SpritePET500600ml)
+                        $('input[name = \"SpritePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+
+                    if (data.FantaPET500600ml)
+                        $('input[name = \"FantaPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+
+                    if (data.RTCPET500600ml)
+                        $('input[name = \"RTCPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"RTCPET500600mlPrice\"]').val(Number(data.RTCPET500600mlPrice).toFixed(2));
+
+
+                    if (data.CokePET12515L)
+                        $('input[name = \"CokePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET12515LPrice\"]').val(Number(data.Coke12515LPrice).toFixed(2));
+
+
+                    if (data.SpritePET12515L)
+                        $('input[name = \"SpritePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET12515LPrice\"]').val(Number(data.Sprite12515LPrice).toFixed(2));
+
+                    //if (data.FantaPET12515L)
+                    //    $('input[name = \"FantaPET12515L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET12515LPrice\"]').val(Number(data.Fanta12515LPrice).toFixed(2));
+
+                    if (data.CokeMS888ml)
+                        $('input[name = \"CokePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET888mlPrice\"]').val(Number(data.CokeMS888mlPrice).toFixed(2));
+
+                    if (data.SpriteMS888ml)
+                        $('input[name = \"SpritePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET888mlPrice\"]').val(Number(data.SpriteMS888mlPrice).toFixed(2));
+
+
+
+                    if (data.CokePET2L)
+                        $('input[name = \"CokePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET2LPrice\"]').val(Number(data.Coke2LPrice).toFixed(2));
+
+                    if (data.SpritePET2L)
+                        $('input[name = \"SpritePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET2LPrice\"]').val(Number(data.Sprite2LPrice).toFixed(2));
+
+                    //if (data.FantaPET2L)
+                    //    $('input[name = \"FantaPET2L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET2LPrice\"]').val(Number(data.Fanta2LPrice).toFixed(2));
+
+                    //OtherGQX
+                }
+                $(\".checkbox\").each(function(i) {
+                    //                if (!$(this).is(\":checked\")) {
+                    //                    $(this).parent().removeClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").val('');
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#EAEAEA\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").attr(\"disabled\", true);
+                    //                } else {
+                    //                    $(this).parent().addClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                    //                }
+                    var ivalue = $(this).parent().parent().siblings().find(\"input\").val();
+                    if (ivalue != \"\" && ivalue != 0) {
+                        $(this).parent().parent().siblings().find(\"input\").removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                    } else {
+                        $(this).parent().parent().siblings().find(\"input\").val('');
+                        $(this).parent().parent().siblings().find(\"input\").addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                    }
+                    if (!$(this).is(\":checked\")) {
+                        $(this).parent().removeClass(\"active\");
+                    } else {
+                        $(this).parent().addClass(\"active\");
+                    }
+
+                });
+                CloseBox();
+            });
+        }
+
+        function OnSubmit() {
+
+            var num = 0;
+            var istrue = true;
+            var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+            _inputs.each(function(i) {
+                var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                var value = $(this).val();
+                if (value == '' && ch) {
+                    istrue = false;
+                    num = i;
+                }
+            });
+            _inputs.css(\"border\", \"0px solid red\");
+            if (!istrue) {
+                _inputs.eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                $(\"input[type='text']\").eq(num).blur();
+                return;
+            }
+
+            //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+            //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+            //        else
+            okSubmit(); //return;       
+        }
+
+
+        function setRightSelect() {
+            var _TFL = $(\".tab-btn.fl\");
+            var _TFR = $(\".tab-btn.fr\");
+            _TFR.addClass(\"active\");
+            $(\".koavailabilitybody\").hide();
+            _TFL.removeClass(\"active\");
+            $(\".cAvailabilitybody\").show();
+            $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+            $(document).scrollTop(0);
+            flag = false;
+        }
+
+
+        function okSubmit() {
+            var options = {
+                //target: '#showmsg',
+                url: 'three.aspx',
+                beforeSubmit: showStart,
+                success: showSuccess,
+                dataType: 'json'
+            };
+            $(\"form\").ajaxSubmit(options);
+        }
+
+        function showStart() {
+            ShowBox($(document).height());
+            //writeMes(\"正在提交...\");
+            return true;
+        }
+
+        function showSuccess(data) {
+            CloseBox();
+            if (data.success) {
+                //var id = $(\"input[name='id']\").val();
+                //location.href = 'threejinpin.aspx?id=' + id;
+                saveTaskDetail(\"GT\", \"three.aspx;\");
+            } else {
+                alert(data.msg);
+            }
+        }
+
+        function backUrl() {
+            // var id = $(\"input[name='id']\").val();
+            location.href = 'one.aspx';
+        }
+
+        var productList = [{
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 300ml\\n                        \",
+                \"ProductENName\": \"Coke PET 300ml\",
+                \"ProductNameAsTagName\": \"CokePET300ml\"
+            }, {
+                \"ProductName\": \"\\n                           雪碧 \\n                            Sprite PET 300ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 300ml\",
+                \"ProductNameAsTagName\": \"SpritePET300ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+                \"ProductENName\": \"Coke CAN 330ml\",
+                \"ProductNameAsTagName\": \"CokeCAN330ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+                \"ProductENName\": \"Sprite CAN 330ml\",
+                \"ProductNameAsTagName\": \"SpriteCAN330ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Coke PET 500/600ml\",
+                \"ProductNameAsTagName\": \"CokePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 500/600ml\",
+                \"ProductNameAsTagName\": \"SpritePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            芬达 \\n                            Fanta PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Fanta PET 500/600ml\",
+                \"ProductNameAsTagName\": \"FantaPET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            +C \\n                            RTC PET 500/600ml\\n                        \",
+                \"ProductENName\": \"RTC PET 500/600ml\",
+                \"ProductNameAsTagName\": \"RTCPET500600ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 888ml\\n                        \",
+                \"ProductENName\": \"Coke MS 888ml\",
+                \"ProductNameAsTagName\": \"CokePET888ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 888ml\\n                        \",
+                \"ProductENName\": \"Sprite MS 888ml\",
+                \"ProductNameAsTagName\": \"SpritePET888ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Coke MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"CokePET12515L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"SpritePET12515L\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                             Coke MS 2L\\n                        \",
+                \"ProductENName\": \" Coke MS 2L\",
+                \"ProductNameAsTagName\": \"CokePET2L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 2L\\n                        \",
+                \"ProductENName\": \"Sprite MS 2L\",
+                \"ProductNameAsTagName\": \"SpritePET2L\"
+            }]
+        }];" section nil nil [42396 42445])
+            ("loadfooter(\"GT\");
+        //$(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+
+        $(\"input[type='text']\").each(function() {
+            if ($(this).parent().is(\"div\")) {
+                $(this).decimalinput();
+                $(this).attr(\"onclick\", \"numberClick(this)\");
+            }
+        })
+
+        //页面加载事件设置初始值
+        window.onload = function() {
+            ShowBox($(document).height());
+            $(\"#KOnum\").hide();
+            $(\"#KBnum\").hide();
+
+            $.post(\"three.aspx\", {
+                \"action\": \"onload\"
+            }, function(e) {
+                // alert(e);
+                if (e != \"\") {
+                    var data = $.parseJSON(e);
+
+                    console.log(data);
+                    //这里写加载页面值的js
+                    //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);
+                    if (data.PepsicolaCAN)
+                        $('input[name = \"PepsicolaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsicolaCANPrice\"]').val(Number(data.PepsiCANPrice).toFixed(2));
+
+                    if (data.QX7upCAN)
+                        $('input[name = \"upCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"upCANPrice\"]').val(Number(data.QXupCANPrice).toFixed(2));
+
+                    if (data.MirandaCAN)
+                        $('input[name = \"MirandaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCANPrice\"]').val(Number(data.MirandaCANPrice).toFixed(2));
+
+                    if (data.PepsiCola600ml)
+                        $('input[name = \"Pepsi600mlcola\"]').attr(\"checked\", true);
+                    $('input[name=\"Pepsi600mlcolaPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+
+                    if (data.QX7up600ml)
+                        $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+
+                    if (data.Miranda600ml)
+                        $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+
+                    if (data.PepsiCola125L)
+                        $('input[name = \"PepsiCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola125mlPrice\"]').val(Number(data.Pepsi125MLPrice).toFixed(2));
+
+                    if (data.QX7up125L)
+                        $('input[name = \"upCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"upCola125mlPrice\"]').val(Number(data.QXup125MLPrice).toFixed(2));
+
+                    if (data.Miranda125L)
+                        $('input[name = \"MirandaCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCola125mlPrice\"]').val(Number(data.Miranda125MLPrice).toFixed(2));
+
+                    if (data.PepsiCola2L)
+                        $('input[name = \"PepsiCola2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola2mlPrice\"]').val(Number(data.Pepsi2LPrice).toFixed(2));
+
+                    if (data.QX7up2L)
+                        $('input[name = \"up2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up2mlPrice\"]').val(Number(data.QXup2LPrice).toFixed(2));
+
+                    if (data.Miranda2L)
+                        $('input[name = \"Miranda2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda2mlPrice\"]').val(Number(data.Miranda2LPrice).toFixed(2));
+
+                    if (data.CokePET300ML)
+                        $('input[name = \"CokePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET300mlPrice\"]').val(Number(data.Coke300mlPrice).toFixed(2));
+
+
+                    if (data.SpritePET300ML)
+                        $('input[name = \"SpritePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET300mlPrice\"]').val(Number(data.Sprite300mlPrice).toFixed(2));
+
+                    //FantaCAN330ml
+
+                    //if (data.FantaPET300ML)
+                    //    $('input[name = \"FantaPET300ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET300mlPrice\"]').val(Number(data.Fanta300mlPrice).toFixed(2));
+
+
+                    if (data.CokeCAN330ml)
+                        $('input[name = \"CokeCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeCAN330mlPrice\"]').val(Number(data.Coke330mlPrice).toFixed(2));
+
+
+                    //if (data.FantaCAN330ml)
+                    //    $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Fanta330mlPrice).toFixed(2));
+
+
+                    if (data.SpriteCAN330ml)
+                        $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Sprite330mlPrice).toFixed(2));
+
+                    //CokePET500600ml
+                    if (data.CokePET500600ml)
+                        $('input[name = \"CokePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+
+                    if (data.SpritePET500600ml)
+                        $('input[name = \"SpritePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+
+                    if (data.FantaPET500600ml)
+                        $('input[name = \"FantaPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+
+                    if (data.RTCPET500600ml)
+                        $('input[name = \"RTCPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"RTCPET500600mlPrice\"]').val(Number(data.RTCPET500600mlPrice).toFixed(2));
+
+
+                    if (data.CokePET12515L)
+                        $('input[name = \"CokePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET12515LPrice\"]').val(Number(data.Coke12515LPrice).toFixed(2));
+
+
+                    if (data.SpritePET12515L)
+                        $('input[name = \"SpritePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET12515LPrice\"]').val(Number(data.Sprite12515LPrice).toFixed(2));
+
+                    //if (data.FantaPET12515L)
+                    //    $('input[name = \"FantaPET12515L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET12515LPrice\"]').val(Number(data.Fanta12515LPrice).toFixed(2));
+
+                    if (data.CokeMS888ml)
+                        $('input[name = \"CokePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET888mlPrice\"]').val(Number(data.CokeMS888mlPrice).toFixed(2));
+
+                    if (data.SpriteMS888ml)
+                        $('input[name = \"SpritePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET888mlPrice\"]').val(Number(data.SpriteMS888mlPrice).toFixed(2));
+
+
+
+                    if (data.CokePET2L)
+                        $('input[name = \"CokePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET2LPrice\"]').val(Number(data.Coke2LPrice).toFixed(2));
+
+                    if (data.SpritePET2L)
+                        $('input[name = \"SpritePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET2LPrice\"]').val(Number(data.Sprite2LPrice).toFixed(2));
+
+                    //if (data.FantaPET2L)
+                    //    $('input[name = \"FantaPET2L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET2LPrice\"]').val(Number(data.Fanta2LPrice).toFixed(2));
+
+                    //OtherGQX
+                }
+                $(\".checkbox\").each(function(i) {
+                    //                if (!$(this).is(\":checked\")) {
+                    //                    $(this).parent().removeClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").val('');
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#EAEAEA\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").attr(\"disabled\", true);
+                    //                } else {
+                    //                    $(this).parent().addClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                    //                }
+                    var ivalue = $(this).parent().parent().siblings().find(\"input\").val();
+                    if (ivalue != \"\" && ivalue != 0) {
+                        $(this).parent().parent().siblings().find(\"input\").removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                    } else {
+                        $(this).parent().parent().siblings().find(\"input\").val('');
+                        $(this).parent().parent().siblings().find(\"input\").addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                    }
+                    if (!$(this).is(\":checked\")) {
+                        $(this).parent().removeClass(\"active\");
+                    } else {
+                        $(this).parent().addClass(\"active\");
+                    }
+
+                });
+                CloseBox();
+            });
+        }
+
+        function OnSubmit() {
+
+            var num = 0;
+            var istrue = true;
+            var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+            _inputs.each(function(i) {
+                var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                var value = $(this).val();
+                if (value == '' && ch) {
+                    istrue = false;
+                    num = i;
+                }
+            });
+            _inputs.css(\"border\", \"0px solid red\");
+            if (!istrue) {
+                _inputs.eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                $(\"input[type='text']\").eq(num).blur();
+                return;
+            }
+
+            //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+            //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+            //        else
+            okSubmit(); //return;       
+        }
+
+
+        function setRightSelect() {
+            var _TFL = $(\".tab-btn.fl\");
+            var _TFR = $(\".tab-btn.fr\");
+            _TFR.addClass(\"active\");
+            $(\".koavailabilitybody\").hide();
+            _TFL.removeClass(\"active\");
+            $(\".cAvailabilitybody\").show();
+            $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+            $(document).scrollTop(0);
+            flag = false;
+        }
+
+
+        function okSubmit() {
+            var options = {
+                //target: '#showmsg',
+                url: 'three.aspx',
+                beforeSubmit: showStart,
+                success: showSuccess,
+                dataType: 'json'
+            };
+            $(\"form\").ajaxSubmit(options);
+        }
+
+        function showStart() {
+            ShowBox($(document).height());
+            //writeMes(\"正在提交...\");
+            return true;
+        }
+
+        function showSuccess(data) {
+            CloseBox();
+            if (data.success) {
+                //var id = $(\"input[name='id']\").val();
+                //location.href = 'threejinpin.aspx?id=' + id;
+                saveTaskDetail(\"GT\", \"three.aspx;\");
+            } else {
+                alert(data.msg);
+            }
+        }
+
+        function backUrl() {
+            // var id = $(\"input[name='id']\").val();
+            location.href = 'one.aspx';
+        }
+
+        var productList = [{
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 300ml\\n                        \",
+                \"ProductENName\": \"Coke PET 300ml\",
+                \"ProductNameAsTagName\": \"CokePET300ml\"
+            }, {
+                \"ProductName\": \"\\n                           雪碧 \\n                            Sprite PET 300ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 300ml\",
+                \"ProductNameAsTagName\": \"SpritePET300ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+                \"ProductENName\": \"Coke CAN 330ml\",
+                \"ProductNameAsTagName\": \"CokeCAN330ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+                \"ProductENName\": \"Sprite CAN 330ml\",
+                \"ProductNameAsTagName\": \"SpriteCAN330ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Coke PET 500/600ml\",
+                \"ProductNameAsTagName\": \"CokePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 500/600ml\",
+                \"ProductNameAsTagName\": \"SpritePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            芬达 \\n                            Fanta PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Fanta PET 500/600ml\",
+                \"ProductNameAsTagName\": \"FantaPET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            +C \\n                            RTC PET 500/600ml\\n                        \",
+                \"ProductENName\": \"RTC PET 500/600ml\",
+                \"ProductNameAsTagName\": \"RTCPET500600ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 888ml\\n                        \",
+                \"ProductENName\": \"Coke MS 888ml\",
+                \"ProductNameAsTagName\": \"CokePET888ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 888ml\\n                        \",
+                \"ProductENName\": \"Sprite MS 888ml\",
+                \"ProductNameAsTagName\": \"SpritePET888ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Coke MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"CokePET12515L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"SpritePET12515L\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                             Coke MS 2L\\n                        \",
+                \"ProductENName\": \" Coke MS 2L\",
+                \"ProductNameAsTagName\": \"CokePET2L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 2L\\n                        \",
+                \"ProductENName\": \"Sprite MS 2L\",
+                \"ProductNameAsTagName\": \"SpritePET2L\"
+            }]
+        }];" section nil nil [42445 42504])
+            ("loadfooter(\"GT\");
+        //$(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+
+        $(\"input[type='text']\").each(function() {
+            if ($(this).parent().is(\"div\")) {
+                $(this).decimalinput();
+                $(this).attr(\"onclick\", \"numberClick(this)\");
+            }
+        })
+
+        //页面加载事件设置初始值
+        window.onload = function() {
+            ShowBox($(document).height());
+            $(\"#KOnum\").hide();
+            $(\"#KBnum\").hide();
+
+            $.post(\"three.aspx\", {
+                \"action\": \"onload\"
+            }, function(e) {
+                // alert(e);
+                if (e != \"\") {
+                    var data = $.parseJSON(e);
+
+                    console.log(data);
+                    //这里写加载页面值的js
+                    //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);
+                    if (data.PepsicolaCAN)
+                        $('input[name = \"PepsicolaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsicolaCANPrice\"]').val(Number(data.PepsiCANPrice).toFixed(2));
+
+                    if (data.QX7upCAN)
+                        $('input[name = \"upCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"upCANPrice\"]').val(Number(data.QXupCANPrice).toFixed(2));
+
+                    if (data.MirandaCAN)
+                        $('input[name = \"MirandaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCANPrice\"]').val(Number(data.MirandaCANPrice).toFixed(2));
+
+                    if (data.PepsiCola600ml)
+                        $('input[name = \"Pepsi600mlcola\"]').attr(\"checked\", true);
+                    $('input[name=\"Pepsi600mlcolaPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+
+                    if (data.QX7up600ml)
+                        $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+
+                    if (data.Miranda600ml)
+                        $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+
+                    if (data.PepsiCola125L)
+                        $('input[name = \"PepsiCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola125mlPrice\"]').val(Number(data.Pepsi125MLPrice).toFixed(2));
+
+                    if (data.QX7up125L)
+                        $('input[name = \"upCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"upCola125mlPrice\"]').val(Number(data.QXup125MLPrice).toFixed(2));
+
+                    if (data.Miranda125L)
+                        $('input[name = \"MirandaCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCola125mlPrice\"]').val(Number(data.Miranda125MLPrice).toFixed(2));
+
+                    if (data.PepsiCola2L)
+                        $('input[name = \"PepsiCola2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola2mlPrice\"]').val(Number(data.Pepsi2LPrice).toFixed(2));
+
+                    if (data.QX7up2L)
+                        $('input[name = \"up2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up2mlPrice\"]').val(Number(data.QXup2LPrice).toFixed(2));
+
+                    if (data.Miranda2L)
+                        $('input[name = \"Miranda2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda2mlPrice\"]').val(Number(data.Miranda2LPrice).toFixed(2));
+
+                    if (data.CokePET300ML)
+                        $('input[name = \"CokePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET300mlPrice\"]').val(Number(data.Coke300mlPrice).toFixed(2));
+
+
+                    if (data.SpritePET300ML)
+                        $('input[name = \"SpritePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET300mlPrice\"]').val(Number(data.Sprite300mlPrice).toFixed(2));
+
+                    //FantaCAN330ml
+
+                    //if (data.FantaPET300ML)
+                    //    $('input[name = \"FantaPET300ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET300mlPrice\"]').val(Number(data.Fanta300mlPrice).toFixed(2));
+
+
+                    if (data.CokeCAN330ml)
+                        $('input[name = \"CokeCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeCAN330mlPrice\"]').val(Number(data.Coke330mlPrice).toFixed(2));
+
+
+                    //if (data.FantaCAN330ml)
+                    //    $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Fanta330mlPrice).toFixed(2));
+
+
+                    if (data.SpriteCAN330ml)
+                        $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Sprite330mlPrice).toFixed(2));
+
+                    //CokePET500600ml
+                    if (data.CokePET500600ml)
+                        $('input[name = \"CokePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+
+                    if (data.SpritePET500600ml)
+                        $('input[name = \"SpritePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+
+                    if (data.FantaPET500600ml)
+                        $('input[name = \"FantaPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+
+                    if (data.RTCPET500600ml)
+                        $('input[name = \"RTCPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"RTCPET500600mlPrice\"]').val(Number(data.RTCPET500600mlPrice).toFixed(2));
+
+
+                    if (data.CokePET12515L)
+                        $('input[name = \"CokePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET12515LPrice\"]').val(Number(data.Coke12515LPrice).toFixed(2));
+
+
+                    if (data.SpritePET12515L)
+                        $('input[name = \"SpritePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET12515LPrice\"]').val(Number(data.Sprite12515LPrice).toFixed(2));
+
+                    //if (data.FantaPET12515L)
+                    //    $('input[name = \"FantaPET12515L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET12515LPrice\"]').val(Number(data.Fanta12515LPrice).toFixed(2));
+
+                    if (data.CokeMS888ml)
+                        $('input[name = \"CokePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET888mlPrice\"]').val(Number(data.CokeMS888mlPrice).toFixed(2));
+
+                    if (data.SpriteMS888ml)
+                        $('input[name = \"SpritePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET888mlPrice\"]').val(Number(data.SpriteMS888mlPrice).toFixed(2));
+
+
+
+                    if (data.CokePET2L)
+                        $('input[name = \"CokePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET2LPrice\"]').val(Number(data.Coke2LPrice).toFixed(2));
+
+                    if (data.SpritePET2L)
+                        $('input[name = \"SpritePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET2LPrice\"]').val(Number(data.Sprite2LPrice).toFixed(2));
+
+                    //if (data.FantaPET2L)
+                    //    $('input[name = \"FantaPET2L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET2LPrice\"]').val(Number(data.Fanta2LPrice).toFixed(2));
+
+                    //OtherGQX
+                }
+                $(\".checkbox\").each(function(i) {
+                    //                if (!$(this).is(\":checked\")) {
+                    //                    $(this).parent().removeClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").val('');
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#EAEAEA\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").attr(\"disabled\", true);
+                    //                } else {
+                    //                    $(this).parent().addClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                    //                }
+                    var ivalue = $(this).parent().parent().siblings().find(\"input\").val();
+                    if (ivalue != \"\" && ivalue != 0) {
+                        $(this).parent().parent().siblings().find(\"input\").removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                    } else {
+                        $(this).parent().parent().siblings().find(\"input\").val('');
+                        $(this).parent().parent().siblings().find(\"input\").addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                    }
+                    if (!$(this).is(\":checked\")) {
+                        $(this).parent().removeClass(\"active\");
+                    } else {
+                        $(this).parent().addClass(\"active\");
+                    }
+
+                });
+                CloseBox();
+            });
+        }
+
+        function OnSubmit() {
+
+            var num = 0;
+            var istrue = true;
+            var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+            _inputs.each(function(i) {
+                var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                var value = $(this).val();
+                if (value == '' && ch) {
+                    istrue = false;
+                    num = i;
+                }
+            });
+            _inputs.css(\"border\", \"0px solid red\");
+            if (!istrue) {
+                _inputs.eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                $(\"input[type='text']\").eq(num).blur();
+                return;
+            }
+
+            //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+            //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+            //        else
+            okSubmit(); //return;       
+        }
+
+
+        function setRightSelect() {
+            var _TFL = $(\".tab-btn.fl\");
+            var _TFR = $(\".tab-btn.fr\");
+            _TFR.addClass(\"active\");
+            $(\".koavailabilitybody\").hide();
+            _TFL.removeClass(\"active\");
+            $(\".cAvailabilitybody\").show();
+            $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+            $(document).scrollTop(0);
+            flag = false;
+        }
+
+
+        function okSubmit() {
+            var options = {
+                //target: '#showmsg',
+                url: 'three.aspx',
+                beforeSubmit: showStart,
+                success: showSuccess,
+                dataType: 'json'
+            };
+            $(\"form\").ajaxSubmit(options);
+        }
+
+        function showStart() {
+            ShowBox($(document).height());
+            //writeMes(\"正在提交...\");
+            return true;
+        }
+
+        function showSuccess(data) {
+            CloseBox();
+            if (data.success) {
+                //var id = $(\"input[name='id']\").val();
+                //location.href = 'threejinpin.aspx?id=' + id;
+                saveTaskDetail(\"GT\", \"three.aspx;\");
+            } else {
+                alert(data.msg);
+            }
+        }
+
+        function backUrl() {
+            // var id = $(\"input[name='id']\").val();
+            location.href = 'one.aspx';
+        }
+
+        var productList = [{
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 300ml\\n                        \",
+                \"ProductENName\": \"Coke PET 300ml\",
+                \"ProductNameAsTagName\": \"CokePET300ml\"
+            }, {
+                \"ProductName\": \"\\n                           雪碧 \\n                            Sprite PET 300ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 300ml\",
+                \"ProductNameAsTagName\": \"SpritePET300ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+                \"ProductENName\": \"Coke CAN 330ml\",
+                \"ProductNameAsTagName\": \"CokeCAN330ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+                \"ProductENName\": \"Sprite CAN 330ml\",
+                \"ProductNameAsTagName\": \"SpriteCAN330ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Coke PET 500/600ml\",
+                \"ProductNameAsTagName\": \"CokePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 500/600ml\",
+                \"ProductNameAsTagName\": \"SpritePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            芬达 \\n                            Fanta PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Fanta PET 500/600ml\",
+                \"ProductNameAsTagName\": \"FantaPET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            +C \\n                            RTC PET 500/600ml\\n                        \",
+                \"ProductENName\": \"RTC PET 500/600ml\",
+                \"ProductNameAsTagName\": \"RTCPET500600ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 888ml\\n                        \",
+                \"ProductENName\": \"Coke MS 888ml\",
+                \"ProductNameAsTagName\": \"CokePET888ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 888ml\\n                        \",
+                \"ProductENName\": \"Sprite MS 888ml\",
+                \"ProductNameAsTagName\": \"SpritePET888ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Coke MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"CokePET12515L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"SpritePET12515L\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                             Coke MS 2L\\n                        \",
+                \"ProductENName\": \" Coke MS 2L\",
+                \"ProductNameAsTagName\": \"CokePET2L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 2L\\n                        \",
+                \"ProductENName\": \"Sprite MS 2L\",
+                \"ProductNameAsTagName\": \"SpritePET2L\"
+            }]
+        }];" section nil nil [42504 42551])
+            ("loadfooter(\"GT\");
+        //$(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+
+        $(\"input[type='text']\").each(function() {
+            if ($(this).parent().is(\"div\")) {
+                $(this).decimalinput();
+                $(this).attr(\"onclick\", \"numberClick(this)\");
+            }
+        })
+
+        //页面加载事件设置初始值
+        window.onload = function() {
+            ShowBox($(document).height());
+            $(\"#KOnum\").hide();
+            $(\"#KBnum\").hide();
+
+            $.post(\"three.aspx\", {
+                \"action\": \"onload\"
+            }, function(e) {
+                // alert(e);
+                if (e != \"\") {
+                    var data = $.parseJSON(e);
+
+                    console.log(data);
+                    //这里写加载页面值的js
+                    //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);
+                    if (data.PepsicolaCAN)
+                        $('input[name = \"PepsicolaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsicolaCANPrice\"]').val(Number(data.PepsiCANPrice).toFixed(2));
+
+                    if (data.QX7upCAN)
+                        $('input[name = \"upCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"upCANPrice\"]').val(Number(data.QXupCANPrice).toFixed(2));
+
+                    if (data.MirandaCAN)
+                        $('input[name = \"MirandaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCANPrice\"]').val(Number(data.MirandaCANPrice).toFixed(2));
+
+                    if (data.PepsiCola600ml)
+                        $('input[name = \"Pepsi600mlcola\"]').attr(\"checked\", true);
+                    $('input[name=\"Pepsi600mlcolaPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+
+                    if (data.QX7up600ml)
+                        $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+
+                    if (data.Miranda600ml)
+                        $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+
+                    if (data.PepsiCola125L)
+                        $('input[name = \"PepsiCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola125mlPrice\"]').val(Number(data.Pepsi125MLPrice).toFixed(2));
+
+                    if (data.QX7up125L)
+                        $('input[name = \"upCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"upCola125mlPrice\"]').val(Number(data.QXup125MLPrice).toFixed(2));
+
+                    if (data.Miranda125L)
+                        $('input[name = \"MirandaCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCola125mlPrice\"]').val(Number(data.Miranda125MLPrice).toFixed(2));
+
+                    if (data.PepsiCola2L)
+                        $('input[name = \"PepsiCola2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola2mlPrice\"]').val(Number(data.Pepsi2LPrice).toFixed(2));
+
+                    if (data.QX7up2L)
+                        $('input[name = \"up2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up2mlPrice\"]').val(Number(data.QXup2LPrice).toFixed(2));
+
+                    if (data.Miranda2L)
+                        $('input[name = \"Miranda2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda2mlPrice\"]').val(Number(data.Miranda2LPrice).toFixed(2));
+
+                    if (data.CokePET300ML)
+                        $('input[name = \"CokePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET300mlPrice\"]').val(Number(data.Coke300mlPrice).toFixed(2));
+
+
+                    if (data.SpritePET300ML)
+                        $('input[name = \"SpritePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET300mlPrice\"]').val(Number(data.Sprite300mlPrice).toFixed(2));
+
+                    //FantaCAN330ml
+
+                    //if (data.FantaPET300ML)
+                    //    $('input[name = \"FantaPET300ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET300mlPrice\"]').val(Number(data.Fanta300mlPrice).toFixed(2));
+
+
+                    if (data.CokeCAN330ml)
+                        $('input[name = \"CokeCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeCAN330mlPrice\"]').val(Number(data.Coke330mlPrice).toFixed(2));
+
+
+                    //if (data.FantaCAN330ml)
+                    //    $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Fanta330mlPrice).toFixed(2));
+
+
+                    if (data.SpriteCAN330ml)
+                        $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Sprite330mlPrice).toFixed(2));
+
+                    //CokePET500600ml
+                    if (data.CokePET500600ml)
+                        $('input[name = \"CokePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+
+                    if (data.SpritePET500600ml)
+                        $('input[name = \"SpritePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+
+                    if (data.FantaPET500600ml)
+                        $('input[name = \"FantaPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+
+                    if (data.RTCPET500600ml)
+                        $('input[name = \"RTCPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"RTCPET500600mlPrice\"]').val(Number(data.RTCPET500600mlPrice).toFixed(2));
+
+
+                    if (data.CokePET12515L)
+                        $('input[name = \"CokePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET12515LPrice\"]').val(Number(data.Coke12515LPrice).toFixed(2));
+
+
+                    if (data.SpritePET12515L)
+                        $('input[name = \"SpritePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET12515LPrice\"]').val(Number(data.Sprite12515LPrice).toFixed(2));
+
+                    //if (data.FantaPET12515L)
+                    //    $('input[name = \"FantaPET12515L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET12515LPrice\"]').val(Number(data.Fanta12515LPrice).toFixed(2));
+
+                    if (data.CokeMS888ml)
+                        $('input[name = \"CokePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET888mlPrice\"]').val(Number(data.CokeMS888mlPrice).toFixed(2));
+
+                    if (data.SpriteMS888ml)
+                        $('input[name = \"SpritePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET888mlPrice\"]').val(Number(data.SpriteMS888mlPrice).toFixed(2));
+
+
+
+                    if (data.CokePET2L)
+                        $('input[name = \"CokePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET2LPrice\"]').val(Number(data.Coke2LPrice).toFixed(2));
+
+                    if (data.SpritePET2L)
+                        $('input[name = \"SpritePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET2LPrice\"]').val(Number(data.Sprite2LPrice).toFixed(2));
+
+                    //if (data.FantaPET2L)
+                    //    $('input[name = \"FantaPET2L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET2LPrice\"]').val(Number(data.Fanta2LPrice).toFixed(2));
+
+                    //OtherGQX
+                }
+                $(\".checkbox\").each(function(i) {
+                    //                if (!$(this).is(\":checked\")) {
+                    //                    $(this).parent().removeClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").val('');
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#EAEAEA\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").attr(\"disabled\", true);
+                    //                } else {
+                    //                    $(this).parent().addClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                    //                }
+                    var ivalue = $(this).parent().parent().siblings().find(\"input\").val();
+                    if (ivalue != \"\" && ivalue != 0) {
+                        $(this).parent().parent().siblings().find(\"input\").removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                    } else {
+                        $(this).parent().parent().siblings().find(\"input\").val('');
+                        $(this).parent().parent().siblings().find(\"input\").addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                    }
+                    if (!$(this).is(\":checked\")) {
+                        $(this).parent().removeClass(\"active\");
+                    } else {
+                        $(this).parent().addClass(\"active\");
+                    }
+
+                });
+                CloseBox();
+            });
+        }
+
+        function OnSubmit() {
+
+            var num = 0;
+            var istrue = true;
+            var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+            _inputs.each(function(i) {
+                var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                var value = $(this).val();
+                if (value == '' && ch) {
+                    istrue = false;
+                    num = i;
+                }
+            });
+            _inputs.css(\"border\", \"0px solid red\");
+            if (!istrue) {
+                _inputs.eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                $(\"input[type='text']\").eq(num).blur();
+                return;
+            }
+
+            //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+            //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+            //        else
+            okSubmit(); //return;       
+        }
+
+
+        function setRightSelect() {
+            var _TFL = $(\".tab-btn.fl\");
+            var _TFR = $(\".tab-btn.fr\");
+            _TFR.addClass(\"active\");
+            $(\".koavailabilitybody\").hide();
+            _TFL.removeClass(\"active\");
+            $(\".cAvailabilitybody\").show();
+            $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+            $(document).scrollTop(0);
+            flag = false;
+        }
+
+
+        function okSubmit() {
+            var options = {
+                //target: '#showmsg',
+                url: 'three.aspx',
+                beforeSubmit: showStart,
+                success: showSuccess,
+                dataType: 'json'
+            };
+            $(\"form\").ajaxSubmit(options);
+        }
+
+        function showStart() {
+            ShowBox($(document).height());
+            //writeMes(\"正在提交...\");
+            return true;
+        }
+
+        function showSuccess(data) {
+            CloseBox();
+            if (data.success) {
+                //var id = $(\"input[name='id']\").val();
+                //location.href = 'threejinpin.aspx?id=' + id;
+                saveTaskDetail(\"GT\", \"three.aspx;\");
+            } else {
+                alert(data.msg);
+            }
+        }
+
+        function backUrl() {
+            // var id = $(\"input[name='id']\").val();
+            location.href = 'one.aspx';
+        }
+
+        var productList = [{
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 300ml\\n                        \",
+                \"ProductENName\": \"Coke PET 300ml\",
+                \"ProductNameAsTagName\": \"CokePET300ml\"
+            }, {
+                \"ProductName\": \"\\n                           雪碧 \\n                            Sprite PET 300ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 300ml\",
+                \"ProductNameAsTagName\": \"SpritePET300ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+                \"ProductENName\": \"Coke CAN 330ml\",
+                \"ProductNameAsTagName\": \"CokeCAN330ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+                \"ProductENName\": \"Sprite CAN 330ml\",
+                \"ProductNameAsTagName\": \"SpriteCAN330ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Coke PET 500/600ml\",
+                \"ProductNameAsTagName\": \"CokePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 500/600ml\",
+                \"ProductNameAsTagName\": \"SpritePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            芬达 \\n                            Fanta PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Fanta PET 500/600ml\",
+                \"ProductNameAsTagName\": \"FantaPET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            +C \\n                            RTC PET 500/600ml\\n                        \",
+                \"ProductENName\": \"RTC PET 500/600ml\",
+                \"ProductNameAsTagName\": \"RTCPET500600ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 888ml\\n                        \",
+                \"ProductENName\": \"Coke MS 888ml\",
+                \"ProductNameAsTagName\": \"CokePET888ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 888ml\\n                        \",
+                \"ProductENName\": \"Sprite MS 888ml\",
+                \"ProductNameAsTagName\": \"SpritePET888ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Coke MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"CokePET12515L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"SpritePET12515L\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                             Coke MS 2L\\n                        \",
+                \"ProductENName\": \" Coke MS 2L\",
+                \"ProductNameAsTagName\": \"CokePET2L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 2L\\n                        \",
+                \"ProductENName\": \"Sprite MS 2L\",
+                \"ProductNameAsTagName\": \"SpritePET2L\"
+            }]
+        }];" section nil nil [42551 42602])
+            ("loadfooter(\"GT\");
+        //$(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+
+        $(\"input[type='text']\").each(function() {
+            if ($(this).parent().is(\"div\")) {
+                $(this).decimalinput();
+                $(this).attr(\"onclick\", \"numberClick(this)\");
+            }
+        })
+
+        //页面加载事件设置初始值
+        window.onload = function() {
+            ShowBox($(document).height());
+            $(\"#KOnum\").hide();
+            $(\"#KBnum\").hide();
+
+            $.post(\"three.aspx\", {
+                \"action\": \"onload\"
+            }, function(e) {
+                // alert(e);
+                if (e != \"\") {
+                    var data = $.parseJSON(e);
+
+                    console.log(data);
+                    //这里写加载页面值的js
+                    //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);
+                    if (data.PepsicolaCAN)
+                        $('input[name = \"PepsicolaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsicolaCANPrice\"]').val(Number(data.PepsiCANPrice).toFixed(2));
+
+                    if (data.QX7upCAN)
+                        $('input[name = \"upCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"upCANPrice\"]').val(Number(data.QXupCANPrice).toFixed(2));
+
+                    if (data.MirandaCAN)
+                        $('input[name = \"MirandaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCANPrice\"]').val(Number(data.MirandaCANPrice).toFixed(2));
+
+                    if (data.PepsiCola600ml)
+                        $('input[name = \"Pepsi600mlcola\"]').attr(\"checked\", true);
+                    $('input[name=\"Pepsi600mlcolaPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+
+                    if (data.QX7up600ml)
+                        $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+
+                    if (data.Miranda600ml)
+                        $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+
+                    if (data.PepsiCola125L)
+                        $('input[name = \"PepsiCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola125mlPrice\"]').val(Number(data.Pepsi125MLPrice).toFixed(2));
+
+                    if (data.QX7up125L)
+                        $('input[name = \"upCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"upCola125mlPrice\"]').val(Number(data.QXup125MLPrice).toFixed(2));
+
+                    if (data.Miranda125L)
+                        $('input[name = \"MirandaCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCola125mlPrice\"]').val(Number(data.Miranda125MLPrice).toFixed(2));
+
+                    if (data.PepsiCola2L)
+                        $('input[name = \"PepsiCola2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola2mlPrice\"]').val(Number(data.Pepsi2LPrice).toFixed(2));
+
+                    if (data.QX7up2L)
+                        $('input[name = \"up2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up2mlPrice\"]').val(Number(data.QXup2LPrice).toFixed(2));
+
+                    if (data.Miranda2L)
+                        $('input[name = \"Miranda2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda2mlPrice\"]').val(Number(data.Miranda2LPrice).toFixed(2));
+
+                    if (data.CokePET300ML)
+                        $('input[name = \"CokePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET300mlPrice\"]').val(Number(data.Coke300mlPrice).toFixed(2));
+
+
+                    if (data.SpritePET300ML)
+                        $('input[name = \"SpritePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET300mlPrice\"]').val(Number(data.Sprite300mlPrice).toFixed(2));
+
+                    //FantaCAN330ml
+
+                    //if (data.FantaPET300ML)
+                    //    $('input[name = \"FantaPET300ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET300mlPrice\"]').val(Number(data.Fanta300mlPrice).toFixed(2));
+
+
+                    if (data.CokeCAN330ml)
+                        $('input[name = \"CokeCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeCAN330mlPrice\"]').val(Number(data.Coke330mlPrice).toFixed(2));
+
+
+                    //if (data.FantaCAN330ml)
+                    //    $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Fanta330mlPrice).toFixed(2));
+
+
+                    if (data.SpriteCAN330ml)
+                        $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Sprite330mlPrice).toFixed(2));
+
+                    //CokePET500600ml
+                    if (data.CokePET500600ml)
+                        $('input[name = \"CokePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+
+                    if (data.SpritePET500600ml)
+                        $('input[name = \"SpritePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+
+                    if (data.FantaPET500600ml)
+                        $('input[name = \"FantaPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+
+                    if (data.RTCPET500600ml)
+                        $('input[name = \"RTCPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"RTCPET500600mlPrice\"]').val(Number(data.RTCPET500600mlPrice).toFixed(2));
+
+
+                    if (data.CokePET12515L)
+                        $('input[name = \"CokePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET12515LPrice\"]').val(Number(data.Coke12515LPrice).toFixed(2));
+
+
+                    if (data.SpritePET12515L)
+                        $('input[name = \"SpritePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET12515LPrice\"]').val(Number(data.Sprite12515LPrice).toFixed(2));
+
+                    //if (data.FantaPET12515L)
+                    //    $('input[name = \"FantaPET12515L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET12515LPrice\"]').val(Number(data.Fanta12515LPrice).toFixed(2));
+
+                    if (data.CokeMS888ml)
+                        $('input[name = \"CokePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET888mlPrice\"]').val(Number(data.CokeMS888mlPrice).toFixed(2));
+
+                    if (data.SpriteMS888ml)
+                        $('input[name = \"SpritePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET888mlPrice\"]').val(Number(data.SpriteMS888mlPrice).toFixed(2));
+
+
+
+                    if (data.CokePET2L)
+                        $('input[name = \"CokePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET2LPrice\"]').val(Number(data.Coke2LPrice).toFixed(2));
+
+                    if (data.SpritePET2L)
+                        $('input[name = \"SpritePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET2LPrice\"]').val(Number(data.Sprite2LPrice).toFixed(2));
+
+                    //if (data.FantaPET2L)
+                    //    $('input[name = \"FantaPET2L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET2LPrice\"]').val(Number(data.Fanta2LPrice).toFixed(2));
+
+                    //OtherGQX
+                }
+                $(\".checkbox\").each(function(i) {
+                    //                if (!$(this).is(\":checked\")) {
+                    //                    $(this).parent().removeClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").val('');
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#EAEAEA\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").attr(\"disabled\", true);
+                    //                } else {
+                    //                    $(this).parent().addClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                    //                }
+                    var ivalue = $(this).parent().parent().siblings().find(\"input\").val();
+                    if (ivalue != \"\" && ivalue != 0) {
+                        $(this).parent().parent().siblings().find(\"input\").removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                    } else {
+                        $(this).parent().parent().siblings().find(\"input\").val('');
+                        $(this).parent().parent().siblings().find(\"input\").addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                    }
+                    if (!$(this).is(\":checked\")) {
+                        $(this).parent().removeClass(\"active\");
+                    } else {
+                        $(this).parent().addClass(\"active\");
+                    }
+
+                });
+                CloseBox();
+            });
+        }
+
+        function OnSubmit() {
+
+            var num = 0;
+            var istrue = true;
+            var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+            _inputs.each(function(i) {
+                var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                var value = $(this).val();
+                if (value == '' && ch) {
+                    istrue = false;
+                    num = i;
+                }
+            });
+            _inputs.css(\"border\", \"0px solid red\");
+            if (!istrue) {
+                _inputs.eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                $(\"input[type='text']\").eq(num).blur();
+                return;
+            }
+
+            //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+            //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+            //        else
+            okSubmit(); //return;       
+        }
+
+
+        function setRightSelect() {
+            var _TFL = $(\".tab-btn.fl\");
+            var _TFR = $(\".tab-btn.fr\");
+            _TFR.addClass(\"active\");
+            $(\".koavailabilitybody\").hide();
+            _TFL.removeClass(\"active\");
+            $(\".cAvailabilitybody\").show();
+            $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+            $(document).scrollTop(0);
+            flag = false;
+        }
+
+
+        function okSubmit() {
+            var options = {
+                //target: '#showmsg',
+                url: 'three.aspx',
+                beforeSubmit: showStart,
+                success: showSuccess,
+                dataType: 'json'
+            };
+            $(\"form\").ajaxSubmit(options);
+        }
+
+        function showStart() {
+            ShowBox($(document).height());
+            //writeMes(\"正在提交...\");
+            return true;
+        }
+
+        function showSuccess(data) {
+            CloseBox();
+            if (data.success) {
+                //var id = $(\"input[name='id']\").val();
+                //location.href = 'threejinpin.aspx?id=' + id;
+                saveTaskDetail(\"GT\", \"three.aspx;\");
+            } else {
+                alert(data.msg);
+            }
+        }
+
+        function backUrl() {
+            // var id = $(\"input[name='id']\").val();
+            location.href = 'one.aspx';
+        }
+
+        var productList = [{
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 300ml\\n                        \",
+                \"ProductENName\": \"Coke PET 300ml\",
+                \"ProductNameAsTagName\": \"CokePET300ml\"
+            }, {
+                \"ProductName\": \"\\n                           雪碧 \\n                            Sprite PET 300ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 300ml\",
+                \"ProductNameAsTagName\": \"SpritePET300ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+                \"ProductENName\": \"Coke CAN 330ml\",
+                \"ProductNameAsTagName\": \"CokeCAN330ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+                \"ProductENName\": \"Sprite CAN 330ml\",
+                \"ProductNameAsTagName\": \"SpriteCAN330ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Coke PET 500/600ml\",
+                \"ProductNameAsTagName\": \"CokePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 500/600ml\",
+                \"ProductNameAsTagName\": \"SpritePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            芬达 \\n                            Fanta PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Fanta PET 500/600ml\",
+                \"ProductNameAsTagName\": \"FantaPET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            +C \\n                            RTC PET 500/600ml\\n                        \",
+                \"ProductENName\": \"RTC PET 500/600ml\",
+                \"ProductNameAsTagName\": \"RTCPET500600ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 888ml\\n                        \",
+                \"ProductENName\": \"Coke MS 888ml\",
+                \"ProductNameAsTagName\": \"CokePET888ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 888ml\\n                        \",
+                \"ProductENName\": \"Sprite MS 888ml\",
+                \"ProductNameAsTagName\": \"SpritePET888ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Coke MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"CokePET12515L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"SpritePET12515L\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                             Coke MS 2L\\n                        \",
+                \"ProductENName\": \" Coke MS 2L\",
+                \"ProductNameAsTagName\": \"CokePET2L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 2L\\n                        \",
+                \"ProductENName\": \"Sprite MS 2L\",
+                \"ProductNameAsTagName\": \"SpritePET2L\"
+            }]
+        }];" section nil nil [42602 42645])
+            ("loadfooter(\"GT\");
+        //$(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+
+        $(\"input[type='text']\").each(function() {
+            if ($(this).parent().is(\"div\")) {
+                $(this).decimalinput();
+                $(this).attr(\"onclick\", \"numberClick(this)\");
+            }
+        })
+
+        //页面加载事件设置初始值
+        window.onload = function() {
+            ShowBox($(document).height());
+            $(\"#KOnum\").hide();
+            $(\"#KBnum\").hide();
+
+            $.post(\"three.aspx\", {
+                \"action\": \"onload\"
+            }, function(e) {
+                // alert(e);
+                if (e != \"\") {
+                    var data = $.parseJSON(e);
+
+                    console.log(data);
+                    //这里写加载页面值的js
+                    //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);
+                    if (data.PepsicolaCAN)
+                        $('input[name = \"PepsicolaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsicolaCANPrice\"]').val(Number(data.PepsiCANPrice).toFixed(2));
+
+                    if (data.QX7upCAN)
+                        $('input[name = \"upCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"upCANPrice\"]').val(Number(data.QXupCANPrice).toFixed(2));
+
+                    if (data.MirandaCAN)
+                        $('input[name = \"MirandaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCANPrice\"]').val(Number(data.MirandaCANPrice).toFixed(2));
+
+                    if (data.PepsiCola600ml)
+                        $('input[name = \"Pepsi600mlcola\"]').attr(\"checked\", true);
+                    $('input[name=\"Pepsi600mlcolaPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+
+                    if (data.QX7up600ml)
+                        $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+
+                    if (data.Miranda600ml)
+                        $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+
+                    if (data.PepsiCola125L)
+                        $('input[name = \"PepsiCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola125mlPrice\"]').val(Number(data.Pepsi125MLPrice).toFixed(2));
+
+                    if (data.QX7up125L)
+                        $('input[name = \"upCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"upCola125mlPrice\"]').val(Number(data.QXup125MLPrice).toFixed(2));
+
+                    if (data.Miranda125L)
+                        $('input[name = \"MirandaCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCola125mlPrice\"]').val(Number(data.Miranda125MLPrice).toFixed(2));
+
+                    if (data.PepsiCola2L)
+                        $('input[name = \"PepsiCola2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola2mlPrice\"]').val(Number(data.Pepsi2LPrice).toFixed(2));
+
+                    if (data.QX7up2L)
+                        $('input[name = \"up2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up2mlPrice\"]').val(Number(data.QXup2LPrice).toFixed(2));
+
+                    if (data.Miranda2L)
+                        $('input[name = \"Miranda2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda2mlPrice\"]').val(Number(data.Miranda2LPrice).toFixed(2));
+
+                    if (data.CokePET300ML)
+                        $('input[name = \"CokePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET300mlPrice\"]').val(Number(data.Coke300mlPrice).toFixed(2));
+
+
+                    if (data.SpritePET300ML)
+                        $('input[name = \"SpritePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET300mlPrice\"]').val(Number(data.Sprite300mlPrice).toFixed(2));
+
+                    //FantaCAN330ml
+
+                    //if (data.FantaPET300ML)
+                    //    $('input[name = \"FantaPET300ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET300mlPrice\"]').val(Number(data.Fanta300mlPrice).toFixed(2));
+
+
+                    if (data.CokeCAN330ml)
+                        $('input[name = \"CokeCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeCAN330mlPrice\"]').val(Number(data.Coke330mlPrice).toFixed(2));
+
+
+                    //if (data.FantaCAN330ml)
+                    //    $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Fanta330mlPrice).toFixed(2));
+
+
+                    if (data.SpriteCAN330ml)
+                        $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Sprite330mlPrice).toFixed(2));
+
+                    //CokePET500600ml
+                    if (data.CokePET500600ml)
+                        $('input[name = \"CokePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+
+                    if (data.SpritePET500600ml)
+                        $('input[name = \"SpritePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+
+                    if (data.FantaPET500600ml)
+                        $('input[name = \"FantaPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+
+                    if (data.RTCPET500600ml)
+                        $('input[name = \"RTCPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"RTCPET500600mlPrice\"]').val(Number(data.RTCPET500600mlPrice).toFixed(2));
+
+
+                    if (data.CokePET12515L)
+                        $('input[name = \"CokePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET12515LPrice\"]').val(Number(data.Coke12515LPrice).toFixed(2));
+
+
+                    if (data.SpritePET12515L)
+                        $('input[name = \"SpritePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET12515LPrice\"]').val(Number(data.Sprite12515LPrice).toFixed(2));
+
+                    //if (data.FantaPET12515L)
+                    //    $('input[name = \"FantaPET12515L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET12515LPrice\"]').val(Number(data.Fanta12515LPrice).toFixed(2));
+
+                    if (data.CokeMS888ml)
+                        $('input[name = \"CokePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET888mlPrice\"]').val(Number(data.CokeMS888mlPrice).toFixed(2));
+
+                    if (data.SpriteMS888ml)
+                        $('input[name = \"SpritePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET888mlPrice\"]').val(Number(data.SpriteMS888mlPrice).toFixed(2));
+
+
+
+                    if (data.CokePET2L)
+                        $('input[name = \"CokePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET2LPrice\"]').val(Number(data.Coke2LPrice).toFixed(2));
+
+                    if (data.SpritePET2L)
+                        $('input[name = \"SpritePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET2LPrice\"]').val(Number(data.Sprite2LPrice).toFixed(2));
+
+                    //if (data.FantaPET2L)
+                    //    $('input[name = \"FantaPET2L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET2LPrice\"]').val(Number(data.Fanta2LPrice).toFixed(2));
+
+                    //OtherGQX
+                }
+                $(\".checkbox\").each(function(i) {
+                    //                if (!$(this).is(\":checked\")) {
+                    //                    $(this).parent().removeClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").val('');
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#EAEAEA\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").attr(\"disabled\", true);
+                    //                } else {
+                    //                    $(this).parent().addClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                    //                }
+                    var ivalue = $(this).parent().parent().siblings().find(\"input\").val();
+                    if (ivalue != \"\" && ivalue != 0) {
+                        $(this).parent().parent().siblings().find(\"input\").removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                    } else {
+                        $(this).parent().parent().siblings().find(\"input\").val('');
+                        $(this).parent().parent().siblings().find(\"input\").addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                    }
+                    if (!$(this).is(\":checked\")) {
+                        $(this).parent().removeClass(\"active\");
+                    } else {
+                        $(this).parent().addClass(\"active\");
+                    }
+
+                });
+                CloseBox();
+            });
+        }
+
+        function OnSubmit() {
+
+            var num = 0;
+            var istrue = true;
+            var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+            _inputs.each(function(i) {
+                var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                var value = $(this).val();
+                if (value == '' && ch) {
+                    istrue = false;
+                    num = i;
+                }
+            });
+            _inputs.css(\"border\", \"0px solid red\");
+            if (!istrue) {
+                _inputs.eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                $(\"input[type='text']\").eq(num).blur();
+                return;
+            }
+
+            //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+            //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+            //        else
+            okSubmit(); //return;       
+        }
+
+
+        function setRightSelect() {
+            var _TFL = $(\".tab-btn.fl\");
+            var _TFR = $(\".tab-btn.fr\");
+            _TFR.addClass(\"active\");
+            $(\".koavailabilitybody\").hide();
+            _TFL.removeClass(\"active\");
+            $(\".cAvailabilitybody\").show();
+            $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+            $(document).scrollTop(0);
+            flag = false;
+        }
+
+
+        function okSubmit() {
+            var options = {
+                //target: '#showmsg',
+                url: 'three.aspx',
+                beforeSubmit: showStart,
+                success: showSuccess,
+                dataType: 'json'
+            };
+            $(\"form\").ajaxSubmit(options);
+        }
+
+        function showStart() {
+            ShowBox($(document).height());
+            //writeMes(\"正在提交...\");
+            return true;
+        }
+
+        function showSuccess(data) {
+            CloseBox();
+            if (data.success) {
+                //var id = $(\"input[name='id']\").val();
+                //location.href = 'threejinpin.aspx?id=' + id;
+                saveTaskDetail(\"GT\", \"three.aspx;\");
+            } else {
+                alert(data.msg);
+            }
+        }
+
+        function backUrl() {
+            // var id = $(\"input[name='id']\").val();
+            location.href = 'one.aspx';
+        }
+
+        var productList = [{
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 300ml\\n                        \",
+                \"ProductENName\": \"Coke PET 300ml\",
+                \"ProductNameAsTagName\": \"CokePET300ml\"
+            }, {
+                \"ProductName\": \"\\n                           雪碧 \\n                            Sprite PET 300ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 300ml\",
+                \"ProductNameAsTagName\": \"SpritePET300ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+                \"ProductENName\": \"Coke CAN 330ml\",
+                \"ProductNameAsTagName\": \"CokeCAN330ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+                \"ProductENName\": \"Sprite CAN 330ml\",
+                \"ProductNameAsTagName\": \"SpriteCAN330ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Coke PET 500/600ml\",
+                \"ProductNameAsTagName\": \"CokePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 500/600ml\",
+                \"ProductNameAsTagName\": \"SpritePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            芬达 \\n                            Fanta PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Fanta PET 500/600ml\",
+                \"ProductNameAsTagName\": \"FantaPET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            +C \\n                            RTC PET 500/600ml\\n                        \",
+                \"ProductENName\": \"RTC PET 500/600ml\",
+                \"ProductNameAsTagName\": \"RTCPET500600ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 888ml\\n                        \",
+                \"ProductENName\": \"Coke MS 888ml\",
+                \"ProductNameAsTagName\": \"CokePET888ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 888ml\\n                        \",
+                \"ProductENName\": \"Sprite MS 888ml\",
+                \"ProductNameAsTagName\": \"SpritePET888ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Coke MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"CokePET12515L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"SpritePET12515L\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                             Coke MS 2L\\n                        \",
+                \"ProductENName\": \" Coke MS 2L\",
+                \"ProductNameAsTagName\": \"CokePET2L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 2L\\n                        \",
+                \"ProductENName\": \"Sprite MS 2L\",
+                \"ProductNameAsTagName\": \"SpritePET2L\"
+            }]
+        }];" section nil nil [42645 42693])
+            ("loadfooter(\"GT\");
+        //$(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+
+        $(\"input[type='text']\").each(function() {
+            if ($(this).parent().is(\"div\")) {
+                $(this).decimalinput();
+                $(this).attr(\"onclick\", \"numberClick(this)\");
+            }
+        })
+
+        //页面加载事件设置初始值
+        window.onload = function() {
+            ShowBox($(document).height());
+            $(\"#KOnum\").hide();
+            $(\"#KBnum\").hide();
+
+            $.post(\"three.aspx\", {
+                \"action\": \"onload\"
+            }, function(e) {
+                // alert(e);
+                if (e != \"\") {
+                    var data = $.parseJSON(e);
+
+                    console.log(data);
+                    //这里写加载页面值的js
+                    //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);
+                    if (data.PepsicolaCAN)
+                        $('input[name = \"PepsicolaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsicolaCANPrice\"]').val(Number(data.PepsiCANPrice).toFixed(2));
+
+                    if (data.QX7upCAN)
+                        $('input[name = \"upCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"upCANPrice\"]').val(Number(data.QXupCANPrice).toFixed(2));
+
+                    if (data.MirandaCAN)
+                        $('input[name = \"MirandaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCANPrice\"]').val(Number(data.MirandaCANPrice).toFixed(2));
+
+                    if (data.PepsiCola600ml)
+                        $('input[name = \"Pepsi600mlcola\"]').attr(\"checked\", true);
+                    $('input[name=\"Pepsi600mlcolaPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+
+                    if (data.QX7up600ml)
+                        $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+
+                    if (data.Miranda600ml)
+                        $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+
+                    if (data.PepsiCola125L)
+                        $('input[name = \"PepsiCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola125mlPrice\"]').val(Number(data.Pepsi125MLPrice).toFixed(2));
+
+                    if (data.QX7up125L)
+                        $('input[name = \"upCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"upCola125mlPrice\"]').val(Number(data.QXup125MLPrice).toFixed(2));
+
+                    if (data.Miranda125L)
+                        $('input[name = \"MirandaCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCola125mlPrice\"]').val(Number(data.Miranda125MLPrice).toFixed(2));
+
+                    if (data.PepsiCola2L)
+                        $('input[name = \"PepsiCola2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola2mlPrice\"]').val(Number(data.Pepsi2LPrice).toFixed(2));
+
+                    if (data.QX7up2L)
+                        $('input[name = \"up2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up2mlPrice\"]').val(Number(data.QXup2LPrice).toFixed(2));
+
+                    if (data.Miranda2L)
+                        $('input[name = \"Miranda2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda2mlPrice\"]').val(Number(data.Miranda2LPrice).toFixed(2));
+
+                    if (data.CokePET300ML)
+                        $('input[name = \"CokePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET300mlPrice\"]').val(Number(data.Coke300mlPrice).toFixed(2));
+
+
+                    if (data.SpritePET300ML)
+                        $('input[name = \"SpritePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET300mlPrice\"]').val(Number(data.Sprite300mlPrice).toFixed(2));
+
+                    //FantaCAN330ml
+
+                    //if (data.FantaPET300ML)
+                    //    $('input[name = \"FantaPET300ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET300mlPrice\"]').val(Number(data.Fanta300mlPrice).toFixed(2));
+
+
+                    if (data.CokeCAN330ml)
+                        $('input[name = \"CokeCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeCAN330mlPrice\"]').val(Number(data.Coke330mlPrice).toFixed(2));
+
+
+                    //if (data.FantaCAN330ml)
+                    //    $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Fanta330mlPrice).toFixed(2));
+
+
+                    if (data.SpriteCAN330ml)
+                        $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Sprite330mlPrice).toFixed(2));
+
+                    //CokePET500600ml
+                    if (data.CokePET500600ml)
+                        $('input[name = \"CokePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+
+                    if (data.SpritePET500600ml)
+                        $('input[name = \"SpritePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+
+                    if (data.FantaPET500600ml)
+                        $('input[name = \"FantaPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+
+                    if (data.RTCPET500600ml)
+                        $('input[name = \"RTCPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"RTCPET500600mlPrice\"]').val(Number(data.RTCPET500600mlPrice).toFixed(2));
+
+
+                    if (data.CokePET12515L)
+                        $('input[name = \"CokePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET12515LPrice\"]').val(Number(data.Coke12515LPrice).toFixed(2));
+
+
+                    if (data.SpritePET12515L)
+                        $('input[name = \"SpritePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET12515LPrice\"]').val(Number(data.Sprite12515LPrice).toFixed(2));
+
+                    //if (data.FantaPET12515L)
+                    //    $('input[name = \"FantaPET12515L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET12515LPrice\"]').val(Number(data.Fanta12515LPrice).toFixed(2));
+
+                    if (data.CokeMS888ml)
+                        $('input[name = \"CokePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET888mlPrice\"]').val(Number(data.CokeMS888mlPrice).toFixed(2));
+
+                    if (data.SpriteMS888ml)
+                        $('input[name = \"SpritePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET888mlPrice\"]').val(Number(data.SpriteMS888mlPrice).toFixed(2));
+
+
+
+                    if (data.CokePET2L)
+                        $('input[name = \"CokePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET2LPrice\"]').val(Number(data.Coke2LPrice).toFixed(2));
+
+                    if (data.SpritePET2L)
+                        $('input[name = \"SpritePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET2LPrice\"]').val(Number(data.Sprite2LPrice).toFixed(2));
+
+                    //if (data.FantaPET2L)
+                    //    $('input[name = \"FantaPET2L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET2LPrice\"]').val(Number(data.Fanta2LPrice).toFixed(2));
+
+                    //OtherGQX
+                }
+                $(\".checkbox\").each(function(i) {
+                    //                if (!$(this).is(\":checked\")) {
+                    //                    $(this).parent().removeClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").val('');
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#EAEAEA\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").attr(\"disabled\", true);
+                    //                } else {
+                    //                    $(this).parent().addClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                    //                }
+                    var ivalue = $(this).parent().parent().siblings().find(\"input\").val();
+                    if (ivalue != \"\" && ivalue != 0) {
+                        $(this).parent().parent().siblings().find(\"input\").removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                    } else {
+                        $(this).parent().parent().siblings().find(\"input\").val('');
+                        $(this).parent().parent().siblings().find(\"input\").addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                    }
+                    if (!$(this).is(\":checked\")) {
+                        $(this).parent().removeClass(\"active\");
+                    } else {
+                        $(this).parent().addClass(\"active\");
+                    }
+
+                });
+                CloseBox();
+            });
+        }
+
+        function OnSubmit() {
+
+            var num = 0;
+            var istrue = true;
+            var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+            _inputs.each(function(i) {
+                var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                var value = $(this).val();
+                if (value == '' && ch) {
+                    istrue = false;
+                    num = i;
+                }
+            });
+            _inputs.css(\"border\", \"0px solid red\");
+            if (!istrue) {
+                _inputs.eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                $(\"input[type='text']\").eq(num).blur();
+                return;
+            }
+
+            //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+            //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+            //        else
+            okSubmit(); //return;       
+        }
+
+
+        function setRightSelect() {
+            var _TFL = $(\".tab-btn.fl\");
+            var _TFR = $(\".tab-btn.fr\");
+            _TFR.addClass(\"active\");
+            $(\".koavailabilitybody\").hide();
+            _TFL.removeClass(\"active\");
+            $(\".cAvailabilitybody\").show();
+            $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+            $(document).scrollTop(0);
+            flag = false;
+        }
+
+
+        function okSubmit() {
+            var options = {
+                //target: '#showmsg',
+                url: 'three.aspx',
+                beforeSubmit: showStart,
+                success: showSuccess,
+                dataType: 'json'
+            };
+            $(\"form\").ajaxSubmit(options);
+        }
+
+        function showStart() {
+            ShowBox($(document).height());
+            //writeMes(\"正在提交...\");
+            return true;
+        }
+
+        function showSuccess(data) {
+            CloseBox();
+            if (data.success) {
+                //var id = $(\"input[name='id']\").val();
+                //location.href = 'threejinpin.aspx?id=' + id;
+                saveTaskDetail(\"GT\", \"three.aspx;\");
+            } else {
+                alert(data.msg);
+            }
+        }
+
+        function backUrl() {
+            // var id = $(\"input[name='id']\").val();
+            location.href = 'one.aspx';
+        }
+
+        var productList = [{
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 300ml\\n                        \",
+                \"ProductENName\": \"Coke PET 300ml\",
+                \"ProductNameAsTagName\": \"CokePET300ml\"
+            }, {
+                \"ProductName\": \"\\n                           雪碧 \\n                            Sprite PET 300ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 300ml\",
+                \"ProductNameAsTagName\": \"SpritePET300ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+                \"ProductENName\": \"Coke CAN 330ml\",
+                \"ProductNameAsTagName\": \"CokeCAN330ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+                \"ProductENName\": \"Sprite CAN 330ml\",
+                \"ProductNameAsTagName\": \"SpriteCAN330ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Coke PET 500/600ml\",
+                \"ProductNameAsTagName\": \"CokePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 500/600ml\",
+                \"ProductNameAsTagName\": \"SpritePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            芬达 \\n                            Fanta PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Fanta PET 500/600ml\",
+                \"ProductNameAsTagName\": \"FantaPET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            +C \\n                            RTC PET 500/600ml\\n                        \",
+                \"ProductENName\": \"RTC PET 500/600ml\",
+                \"ProductNameAsTagName\": \"RTCPET500600ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 888ml\\n                        \",
+                \"ProductENName\": \"Coke MS 888ml\",
+                \"ProductNameAsTagName\": \"CokePET888ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 888ml\\n                        \",
+                \"ProductENName\": \"Sprite MS 888ml\",
+                \"ProductNameAsTagName\": \"SpritePET888ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Coke MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"CokePET12515L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"SpritePET12515L\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                             Coke MS 2L\\n                        \",
+                \"ProductENName\": \" Coke MS 2L\",
+                \"ProductNameAsTagName\": \"CokePET2L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 2L\\n                        \",
+                \"ProductENName\": \"Sprite MS 2L\",
+                \"ProductNameAsTagName\": \"SpritePET2L\"
+            }]
+        }];" section nil nil [42693 42738])
+            ("loadfooter(\"GT\");
+        //$(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+
+        $(\"input[type='text']\").each(function() {
+            if ($(this).parent().is(\"div\")) {
+                $(this).decimalinput();
+                $(this).attr(\"onclick\", \"numberClick(this)\");
+            }
+        })
+
+        //页面加载事件设置初始值
+        window.onload = function() {
+            ShowBox($(document).height());
+            $(\"#KOnum\").hide();
+            $(\"#KBnum\").hide();
+
+            $.post(\"three.aspx\", {
+                \"action\": \"onload\"
+            }, function(e) {
+                // alert(e);
+                if (e != \"\") {
+                    var data = $.parseJSON(e);
+
+                    console.log(data);
+                    //这里写加载页面值的js
+                    //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);
+                    if (data.PepsicolaCAN)
+                        $('input[name = \"PepsicolaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsicolaCANPrice\"]').val(Number(data.PepsiCANPrice).toFixed(2));
+
+                    if (data.QX7upCAN)
+                        $('input[name = \"upCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"upCANPrice\"]').val(Number(data.QXupCANPrice).toFixed(2));
+
+                    if (data.MirandaCAN)
+                        $('input[name = \"MirandaCAN\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCANPrice\"]').val(Number(data.MirandaCANPrice).toFixed(2));
+
+                    if (data.PepsiCola600ml)
+                        $('input[name = \"Pepsi600mlcola\"]').attr(\"checked\", true);
+                    $('input[name=\"Pepsi600mlcolaPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+
+                    if (data.QX7up600ml)
+                        $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+
+                    if (data.Miranda600ml)
+                        $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+
+                    if (data.PepsiCola125L)
+                        $('input[name = \"PepsiCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola125mlPrice\"]').val(Number(data.Pepsi125MLPrice).toFixed(2));
+
+                    if (data.QX7up125L)
+                        $('input[name = \"upCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"upCola125mlPrice\"]').val(Number(data.QXup125MLPrice).toFixed(2));
+
+                    if (data.Miranda125L)
+                        $('input[name = \"MirandaCola125ml\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaCola125mlPrice\"]').val(Number(data.Miranda125MLPrice).toFixed(2));
+
+                    if (data.PepsiCola2L)
+                        $('input[name = \"PepsiCola2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola2mlPrice\"]').val(Number(data.Pepsi2LPrice).toFixed(2));
+
+                    if (data.QX7up2L)
+                        $('input[name = \"up2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"up2mlPrice\"]').val(Number(data.QXup2LPrice).toFixed(2));
+
+                    if (data.Miranda2L)
+                        $('input[name = \"Miranda2ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda2mlPrice\"]').val(Number(data.Miranda2LPrice).toFixed(2));
+
+                    if (data.CokePET300ML)
+                        $('input[name = \"CokePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET300mlPrice\"]').val(Number(data.Coke300mlPrice).toFixed(2));
+
+
+                    if (data.SpritePET300ML)
+                        $('input[name = \"SpritePET300ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET300mlPrice\"]').val(Number(data.Sprite300mlPrice).toFixed(2));
+
+                    //FantaCAN330ml
+
+                    //if (data.FantaPET300ML)
+                    //    $('input[name = \"FantaPET300ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET300mlPrice\"]').val(Number(data.Fanta300mlPrice).toFixed(2));
+
+
+                    if (data.CokeCAN330ml)
+                        $('input[name = \"CokeCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeCAN330mlPrice\"]').val(Number(data.Coke330mlPrice).toFixed(2));
+
+
+                    //if (data.FantaCAN330ml)
+                    //    $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    //$('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Fanta330mlPrice).toFixed(2));
+
+
+                    if (data.SpriteCAN330ml)
+                        $('input[name = \"SpriteCAN330ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteCAN330mlPrice\"]').val(Number(data.Sprite330mlPrice).toFixed(2));
+
+                    //CokePET500600ml
+                    if (data.CokePET500600ml)
+                        $('input[name = \"CokePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+
+                    if (data.SpritePET500600ml)
+                        $('input[name = \"SpritePET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+
+                    if (data.FantaPET500600ml)
+                        $('input[name = \"FantaPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+
+                    if (data.RTCPET500600ml)
+                        $('input[name = \"RTCPET500600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"RTCPET500600mlPrice\"]').val(Number(data.RTCPET500600mlPrice).toFixed(2));
+
+
+                    if (data.CokePET12515L)
+                        $('input[name = \"CokePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET12515LPrice\"]').val(Number(data.Coke12515LPrice).toFixed(2));
+
+
+                    if (data.SpritePET12515L)
+                        $('input[name = \"SpritePET12515L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET12515LPrice\"]').val(Number(data.Sprite12515LPrice).toFixed(2));
+
+                    //if (data.FantaPET12515L)
+                    //    $('input[name = \"FantaPET12515L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET12515LPrice\"]').val(Number(data.Fanta12515LPrice).toFixed(2));
+
+                    if (data.CokeMS888ml)
+                        $('input[name = \"CokePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET888mlPrice\"]').val(Number(data.CokeMS888mlPrice).toFixed(2));
+
+                    if (data.SpriteMS888ml)
+                        $('input[name = \"SpritePET888ml\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET888mlPrice\"]').val(Number(data.SpriteMS888mlPrice).toFixed(2));
+
+
+
+                    if (data.CokePET2L)
+                        $('input[name = \"CokePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET2LPrice\"]').val(Number(data.Coke2LPrice).toFixed(2));
+
+                    if (data.SpritePET2L)
+                        $('input[name = \"SpritePET2L\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET2LPrice\"]').val(Number(data.Sprite2LPrice).toFixed(2));
+
+                    //if (data.FantaPET2L)
+                    //    $('input[name = \"FantaPET2L\"]').attr(\"checked\", true);
+                    //$('input[name=\"FantaPET2LPrice\"]').val(Number(data.Fanta2LPrice).toFixed(2));
+
+                    //OtherGQX
+                }
+                $(\".checkbox\").each(function(i) {
+                    //                if (!$(this).is(\":checked\")) {
+                    //                    $(this).parent().removeClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").val('');
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#EAEAEA\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").attr(\"disabled\", true);
+                    //                } else {
+                    //                    $(this).parent().addClass(\"active\");
+                    //                    $(this).parent().parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                    //                    $(this).parent().parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                    //                }
+                    var ivalue = $(this).parent().parent().siblings().find(\"input\").val();
+                    if (ivalue != \"\" && ivalue != 0) {
+                        $(this).parent().parent().siblings().find(\"input\").removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                    } else {
+                        $(this).parent().parent().siblings().find(\"input\").val('');
+                        $(this).parent().parent().siblings().find(\"input\").addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                    }
+                    if (!$(this).is(\":checked\")) {
+                        $(this).parent().removeClass(\"active\");
+                    } else {
+                        $(this).parent().addClass(\"active\");
+                    }
+
+                });
+                CloseBox();
+            });
+        }
+
+        function OnSubmit() {
+
+            var num = 0;
+            var istrue = true;
+            var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+            _inputs.each(function(i) {
+                var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                var value = $(this).val();
+                if (value == '' && ch) {
+                    istrue = false;
+                    num = i;
+                }
+            });
+            _inputs.css(\"border\", \"0px solid red\");
+            if (!istrue) {
+                _inputs.eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                $(\"input[type='text']\").eq(num).blur();
+                return;
+            }
+
+            //        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+            //            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+            //        else
+            okSubmit(); //return;       
+        }
+
+
+        function setRightSelect() {
+            var _TFL = $(\".tab-btn.fl\");
+            var _TFR = $(\".tab-btn.fr\");
+            _TFR.addClass(\"active\");
+            $(\".koavailabilitybody\").hide();
+            _TFL.removeClass(\"active\");
+            $(\".cAvailabilitybody\").show();
+            $(\".tab-btn.active\").highlight(\".tab-btn.active\");
+            $(document).scrollTop(0);
+            flag = false;
+        }
+
+
+        function okSubmit() {
+            var options = {
+                //target: '#showmsg',
+                url: 'three.aspx',
+                beforeSubmit: showStart,
+                success: showSuccess,
+                dataType: 'json'
+            };
+            $(\"form\").ajaxSubmit(options);
+        }
+
+        function showStart() {
+            ShowBox($(document).height());
+            //writeMes(\"正在提交...\");
+            return true;
+        }
+
+        function showSuccess(data) {
+            CloseBox();
+            if (data.success) {
+                //var id = $(\"input[name='id']\").val();
+                //location.href = 'threejinpin.aspx?id=' + id;
+                saveTaskDetail(\"GT\", \"three.aspx;\");
+            } else {
+                alert(data.msg);
+            }
+        }
+
+        function backUrl() {
+            // var id = $(\"input[name='id']\").val();
+            location.href = 'one.aspx';
+        }
+
+        var productList = [{
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 300ml\\n                        \",
+                \"ProductENName\": \"Coke PET 300ml\",
+                \"ProductNameAsTagName\": \"CokePET300ml\"
+            }, {
+                \"ProductName\": \"\\n                           雪碧 \\n                            Sprite PET 300ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 300ml\",
+                \"ProductNameAsTagName\": \"SpritePET300ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐罐装\\n                            Coke CAN 330ml\\n                        \",
+                \"ProductENName\": \"Coke CAN 330ml\",
+                \"ProductNameAsTagName\": \"CokeCAN330ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧罐装 \\n                            Sprite CAN 330ml\\n                        \",
+                \"ProductENName\": \"Sprite CAN 330ml\",
+                \"ProductNameAsTagName\": \"SpriteCAN330ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Coke PET 500/600ml\",
+                \"ProductNameAsTagName\": \"CokePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Sprite PET 500/600ml\",
+                \"ProductNameAsTagName\": \"SpritePET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            芬达 \\n                            Fanta PET 500/600ml\\n                        \",
+                \"ProductENName\": \"Fanta PET 500/600ml\",
+                \"ProductNameAsTagName\": \"FantaPET500600ml\"
+            }, {
+                \"ProductName\": \"\\n                            +C \\n                            RTC PET 500/600ml\\n                        \",
+                \"ProductENName\": \"RTC PET 500/600ml\",
+                \"ProductNameAsTagName\": \"RTCPET500600ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 888ml\\n                        \",
+                \"ProductENName\": \"Coke MS 888ml\",
+                \"ProductNameAsTagName\": \"CokePET888ml\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 888ml\\n                        \",
+                \"ProductENName\": \"Sprite MS 888ml\",
+                \"ProductNameAsTagName\": \"SpritePET888ml\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                            Coke MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Coke MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"CokePET12515L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 1.25/1.5L\\n                        \",
+                \"ProductENName\": \"Sprite MS 1.25/1.5L\",
+                \"ProductNameAsTagName\": \"SpritePET12515L\"
+            }]
+        }, {
+            \"Products\": [{
+                \"ProductName\": \"\\n                            可乐\\n                             Coke MS 2L\\n                        \",
+                \"ProductENName\": \" Coke MS 2L\",
+                \"ProductNameAsTagName\": \"CokePET2L\"
+            }, {
+                \"ProductName\": \"\\n                            雪碧 \\n                            Sprite MS 2L\\n                        \",
+                \"ProductENName\": \"Sprite MS 2L\",
+                \"ProductNameAsTagName\": \"SpritePET2L\"
+            }]
+        }];" section nil nil [42738 58880]))          
+      :file "three.aspx"
+      :pointmax 58880
+      :fsize 60673
+      :lastmodtime '(21956 19156 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_c!Users!RainbowLu!KOnnector!Web!KOnnector!GT!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

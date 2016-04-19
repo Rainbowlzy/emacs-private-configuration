@@ -1,0 +1,1706 @@
+;; Object TED/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "TED/"
+  :tables
+  (list
+    (semanticdb-table "TEDthree.aspx"
+      :major-mode 'html-mode
+      :tags 
+        '( ("市场走访-传统餐饮(Trad.E&D)" section nil nil [353 559])
+            ("SPARKLING产品铺货" section (:members 
+              ( ("X" anchor nil nil [8456 8459])
+                ("X" anchor nil nil [15660 15663])
+                ("X" anchor nil nil [16894 16897]))              ) nil [559 18454])
+            ("loadfooter(\"TED\");
+
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $.post(\"TEDthree.aspx\", { \"action\": \"onload\"}, function (e) {
+//            alert(e);
+            if (e != \"\") {
+                var data = $.parseJSON(e);
+                //这里写加载页面值的js
+                //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);//CokeGlass
+                if (data.CokeGlass) 
+                    $('input[name = \"CokeGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeGlassPrice\"]').val(Number(data.CokeGlasslPrice).toFixed(2));
+                
+                if (data.SpriteGlas) 
+                    $('input[name = \"SpriteGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteGlassPrice\"]').val(Number(data.SpriteGlasslPrice).toFixed(2));
+                
+
+                if (data.FantaGlass) 
+                    $('input[name = \"FantaGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaGlassPrice\"]').val(Number(data.FantaGlasslPrice).toFixed(2));
+                
+
+                if (data.CokePET500600ml) 
+                    $('input[name = \"Coke56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+                
+                if (data.SpritePET500600ml) 
+                    $('input[name = \"Sprite56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+                
+
+                if (data.FantaPET500600ml) 
+                    $('input[name = \"Fanta56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+                
+
+                if (data.PepsiRB) 
+                    $('input[name = \"PepsiRB\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiRBPrice\"]').val(Number(data.PepsiRBPrice).toFixed(2));
+                
+
+                if (data.QIUPRB) 
+                    $('input[name = \"UPRB\"]').attr(\"checked\", true);
+                    $('input[name=\"QXUPRBPrice\"]').val(Number(data.QXupRBPrice).toFixed(2));
+                
+
+                if (data.MirandaRB) 
+                    $('input[name = \"MirandaRB\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaRBPrice\"]').val(Number(data.MirandaRBPrice).toFixed(2));
+                
+
+                if (data.PepsiCola600ml) 
+                    $('input[name = \"PepsiCola600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola600mlPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+                
+
+                if (data.QX7up600ml) 
+                    $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"QXup600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+                
+
+                if (data.Miranda600ml) 
+                    $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+                
+
+            }
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+            CloseBox();
+        });
+
+    }
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }   
+
+//        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+//            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+//        else
+            okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        //$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        flag = false;
+    }
+
+
+    function okSubmit() {
+        var options = {
+            url: 'TEDthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+
+    function showStart() {
+        ShowBox($(document).height());
+        //writeMes('正在提交中...');  
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'TEDfive.aspx?id=' + id;
+            saveTaskDetail(\"TED\",\"TEDthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        // var id = $(\"input[name='id']\").val();
+        location.href = 'TEDone.aspx';
+    }" section nil nil [18454 18496])
+            ("loadfooter(\"TED\");
+
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $.post(\"TEDthree.aspx\", { \"action\": \"onload\"}, function (e) {
+//            alert(e);
+            if (e != \"\") {
+                var data = $.parseJSON(e);
+                //这里写加载页面值的js
+                //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);//CokeGlass
+                if (data.CokeGlass) 
+                    $('input[name = \"CokeGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeGlassPrice\"]').val(Number(data.CokeGlasslPrice).toFixed(2));
+                
+                if (data.SpriteGlas) 
+                    $('input[name = \"SpriteGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteGlassPrice\"]').val(Number(data.SpriteGlasslPrice).toFixed(2));
+                
+
+                if (data.FantaGlass) 
+                    $('input[name = \"FantaGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaGlassPrice\"]').val(Number(data.FantaGlasslPrice).toFixed(2));
+                
+
+                if (data.CokePET500600ml) 
+                    $('input[name = \"Coke56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+                
+                if (data.SpritePET500600ml) 
+                    $('input[name = \"Sprite56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+                
+
+                if (data.FantaPET500600ml) 
+                    $('input[name = \"Fanta56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+                
+
+                if (data.PepsiRB) 
+                    $('input[name = \"PepsiRB\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiRBPrice\"]').val(Number(data.PepsiRBPrice).toFixed(2));
+                
+
+                if (data.QIUPRB) 
+                    $('input[name = \"UPRB\"]').attr(\"checked\", true);
+                    $('input[name=\"QXUPRBPrice\"]').val(Number(data.QXupRBPrice).toFixed(2));
+                
+
+                if (data.MirandaRB) 
+                    $('input[name = \"MirandaRB\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaRBPrice\"]').val(Number(data.MirandaRBPrice).toFixed(2));
+                
+
+                if (data.PepsiCola600ml) 
+                    $('input[name = \"PepsiCola600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola600mlPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+                
+
+                if (data.QX7up600ml) 
+                    $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"QXup600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+                
+
+                if (data.Miranda600ml) 
+                    $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+                
+
+            }
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+            CloseBox();
+        });
+
+    }
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }   
+
+//        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+//            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+//        else
+            okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        //$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        flag = false;
+    }
+
+
+    function okSubmit() {
+        var options = {
+            url: 'TEDthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+
+    function showStart() {
+        ShowBox($(document).height());
+        //writeMes('正在提交中...');  
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'TEDfive.aspx?id=' + id;
+            saveTaskDetail(\"TED\",\"TEDthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        // var id = $(\"input[name='id']\").val();
+        location.href = 'TEDone.aspx';
+    }" section nil nil [18496 18541])
+            ("loadfooter(\"TED\");
+
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $.post(\"TEDthree.aspx\", { \"action\": \"onload\"}, function (e) {
+//            alert(e);
+            if (e != \"\") {
+                var data = $.parseJSON(e);
+                //这里写加载页面值的js
+                //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);//CokeGlass
+                if (data.CokeGlass) 
+                    $('input[name = \"CokeGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeGlassPrice\"]').val(Number(data.CokeGlasslPrice).toFixed(2));
+                
+                if (data.SpriteGlas) 
+                    $('input[name = \"SpriteGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteGlassPrice\"]').val(Number(data.SpriteGlasslPrice).toFixed(2));
+                
+
+                if (data.FantaGlass) 
+                    $('input[name = \"FantaGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaGlassPrice\"]').val(Number(data.FantaGlasslPrice).toFixed(2));
+                
+
+                if (data.CokePET500600ml) 
+                    $('input[name = \"Coke56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+                
+                if (data.SpritePET500600ml) 
+                    $('input[name = \"Sprite56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+                
+
+                if (data.FantaPET500600ml) 
+                    $('input[name = \"Fanta56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+                
+
+                if (data.PepsiRB) 
+                    $('input[name = \"PepsiRB\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiRBPrice\"]').val(Number(data.PepsiRBPrice).toFixed(2));
+                
+
+                if (data.QIUPRB) 
+                    $('input[name = \"UPRB\"]').attr(\"checked\", true);
+                    $('input[name=\"QXUPRBPrice\"]').val(Number(data.QXupRBPrice).toFixed(2));
+                
+
+                if (data.MirandaRB) 
+                    $('input[name = \"MirandaRB\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaRBPrice\"]').val(Number(data.MirandaRBPrice).toFixed(2));
+                
+
+                if (data.PepsiCola600ml) 
+                    $('input[name = \"PepsiCola600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola600mlPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+                
+
+                if (data.QX7up600ml) 
+                    $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"QXup600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+                
+
+                if (data.Miranda600ml) 
+                    $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+                
+
+            }
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+            CloseBox();
+        });
+
+    }
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }   
+
+//        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+//            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+//        else
+            okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        //$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        flag = false;
+    }
+
+
+    function okSubmit() {
+        var options = {
+            url: 'TEDthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+
+    function showStart() {
+        ShowBox($(document).height());
+        //writeMes('正在提交中...');  
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'TEDfive.aspx?id=' + id;
+            saveTaskDetail(\"TED\",\"TEDthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        // var id = $(\"input[name='id']\").val();
+        location.href = 'TEDone.aspx';
+    }" section nil nil [18541 18596])
+            ("loadfooter(\"TED\");
+
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $.post(\"TEDthree.aspx\", { \"action\": \"onload\"}, function (e) {
+//            alert(e);
+            if (e != \"\") {
+                var data = $.parseJSON(e);
+                //这里写加载页面值的js
+                //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);//CokeGlass
+                if (data.CokeGlass) 
+                    $('input[name = \"CokeGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeGlassPrice\"]').val(Number(data.CokeGlasslPrice).toFixed(2));
+                
+                if (data.SpriteGlas) 
+                    $('input[name = \"SpriteGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteGlassPrice\"]').val(Number(data.SpriteGlasslPrice).toFixed(2));
+                
+
+                if (data.FantaGlass) 
+                    $('input[name = \"FantaGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaGlassPrice\"]').val(Number(data.FantaGlasslPrice).toFixed(2));
+                
+
+                if (data.CokePET500600ml) 
+                    $('input[name = \"Coke56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+                
+                if (data.SpritePET500600ml) 
+                    $('input[name = \"Sprite56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+                
+
+                if (data.FantaPET500600ml) 
+                    $('input[name = \"Fanta56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+                
+
+                if (data.PepsiRB) 
+                    $('input[name = \"PepsiRB\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiRBPrice\"]').val(Number(data.PepsiRBPrice).toFixed(2));
+                
+
+                if (data.QIUPRB) 
+                    $('input[name = \"UPRB\"]').attr(\"checked\", true);
+                    $('input[name=\"QXUPRBPrice\"]').val(Number(data.QXupRBPrice).toFixed(2));
+                
+
+                if (data.MirandaRB) 
+                    $('input[name = \"MirandaRB\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaRBPrice\"]').val(Number(data.MirandaRBPrice).toFixed(2));
+                
+
+                if (data.PepsiCola600ml) 
+                    $('input[name = \"PepsiCola600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola600mlPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+                
+
+                if (data.QX7up600ml) 
+                    $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"QXup600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+                
+
+                if (data.Miranda600ml) 
+                    $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+                
+
+            }
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+            CloseBox();
+        });
+
+    }
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }   
+
+//        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+//            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+//        else
+            okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        //$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        flag = false;
+    }
+
+
+    function okSubmit() {
+        var options = {
+            url: 'TEDthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+
+    function showStart() {
+        ShowBox($(document).height());
+        //writeMes('正在提交中...');  
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'TEDfive.aspx?id=' + id;
+            saveTaskDetail(\"TED\",\"TEDthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        // var id = $(\"input[name='id']\").val();
+        location.href = 'TEDone.aspx';
+    }" section nil nil [18596 18639])
+            ("loadfooter(\"TED\");
+
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $.post(\"TEDthree.aspx\", { \"action\": \"onload\"}, function (e) {
+//            alert(e);
+            if (e != \"\") {
+                var data = $.parseJSON(e);
+                //这里写加载页面值的js
+                //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);//CokeGlass
+                if (data.CokeGlass) 
+                    $('input[name = \"CokeGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeGlassPrice\"]').val(Number(data.CokeGlasslPrice).toFixed(2));
+                
+                if (data.SpriteGlas) 
+                    $('input[name = \"SpriteGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteGlassPrice\"]').val(Number(data.SpriteGlasslPrice).toFixed(2));
+                
+
+                if (data.FantaGlass) 
+                    $('input[name = \"FantaGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaGlassPrice\"]').val(Number(data.FantaGlasslPrice).toFixed(2));
+                
+
+                if (data.CokePET500600ml) 
+                    $('input[name = \"Coke56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+                
+                if (data.SpritePET500600ml) 
+                    $('input[name = \"Sprite56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+                
+
+                if (data.FantaPET500600ml) 
+                    $('input[name = \"Fanta56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+                
+
+                if (data.PepsiRB) 
+                    $('input[name = \"PepsiRB\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiRBPrice\"]').val(Number(data.PepsiRBPrice).toFixed(2));
+                
+
+                if (data.QIUPRB) 
+                    $('input[name = \"UPRB\"]').attr(\"checked\", true);
+                    $('input[name=\"QXUPRBPrice\"]').val(Number(data.QXupRBPrice).toFixed(2));
+                
+
+                if (data.MirandaRB) 
+                    $('input[name = \"MirandaRB\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaRBPrice\"]').val(Number(data.MirandaRBPrice).toFixed(2));
+                
+
+                if (data.PepsiCola600ml) 
+                    $('input[name = \"PepsiCola600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola600mlPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+                
+
+                if (data.QX7up600ml) 
+                    $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"QXup600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+                
+
+                if (data.Miranda600ml) 
+                    $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+                
+
+            }
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+            CloseBox();
+        });
+
+    }
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }   
+
+//        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+//            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+//        else
+            okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        //$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        flag = false;
+    }
+
+
+    function okSubmit() {
+        var options = {
+            url: 'TEDthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+
+    function showStart() {
+        ShowBox($(document).height());
+        //writeMes('正在提交中...');  
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'TEDfive.aspx?id=' + id;
+            saveTaskDetail(\"TED\",\"TEDthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        // var id = $(\"input[name='id']\").val();
+        location.href = 'TEDone.aspx';
+    }" section nil nil [18639 18686])
+            ("loadfooter(\"TED\");
+
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $.post(\"TEDthree.aspx\", { \"action\": \"onload\"}, function (e) {
+//            alert(e);
+            if (e != \"\") {
+                var data = $.parseJSON(e);
+                //这里写加载页面值的js
+                //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);//CokeGlass
+                if (data.CokeGlass) 
+                    $('input[name = \"CokeGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeGlassPrice\"]').val(Number(data.CokeGlasslPrice).toFixed(2));
+                
+                if (data.SpriteGlas) 
+                    $('input[name = \"SpriteGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteGlassPrice\"]').val(Number(data.SpriteGlasslPrice).toFixed(2));
+                
+
+                if (data.FantaGlass) 
+                    $('input[name = \"FantaGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaGlassPrice\"]').val(Number(data.FantaGlasslPrice).toFixed(2));
+                
+
+                if (data.CokePET500600ml) 
+                    $('input[name = \"Coke56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+                
+                if (data.SpritePET500600ml) 
+                    $('input[name = \"Sprite56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+                
+
+                if (data.FantaPET500600ml) 
+                    $('input[name = \"Fanta56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+                
+
+                if (data.PepsiRB) 
+                    $('input[name = \"PepsiRB\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiRBPrice\"]').val(Number(data.PepsiRBPrice).toFixed(2));
+                
+
+                if (data.QIUPRB) 
+                    $('input[name = \"UPRB\"]').attr(\"checked\", true);
+                    $('input[name=\"QXUPRBPrice\"]').val(Number(data.QXupRBPrice).toFixed(2));
+                
+
+                if (data.MirandaRB) 
+                    $('input[name = \"MirandaRB\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaRBPrice\"]').val(Number(data.MirandaRBPrice).toFixed(2));
+                
+
+                if (data.PepsiCola600ml) 
+                    $('input[name = \"PepsiCola600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola600mlPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+                
+
+                if (data.QX7up600ml) 
+                    $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"QXup600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+                
+
+                if (data.Miranda600ml) 
+                    $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+                
+
+            }
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+            CloseBox();
+        });
+
+    }
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }   
+
+//        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+//            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+//        else
+            okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        //$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        flag = false;
+    }
+
+
+    function okSubmit() {
+        var options = {
+            url: 'TEDthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+
+    function showStart() {
+        ShowBox($(document).height());
+        //writeMes('正在提交中...');  
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'TEDfive.aspx?id=' + id;
+            saveTaskDetail(\"TED\",\"TEDthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        // var id = $(\"input[name='id']\").val();
+        location.href = 'TEDone.aspx';
+    }" section nil nil [18686 18725])
+            ("loadfooter(\"TED\");
+
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $.post(\"TEDthree.aspx\", { \"action\": \"onload\"}, function (e) {
+//            alert(e);
+            if (e != \"\") {
+                var data = $.parseJSON(e);
+                //这里写加载页面值的js
+                //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);//CokeGlass
+                if (data.CokeGlass) 
+                    $('input[name = \"CokeGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeGlassPrice\"]').val(Number(data.CokeGlasslPrice).toFixed(2));
+                
+                if (data.SpriteGlas) 
+                    $('input[name = \"SpriteGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteGlassPrice\"]').val(Number(data.SpriteGlasslPrice).toFixed(2));
+                
+
+                if (data.FantaGlass) 
+                    $('input[name = \"FantaGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaGlassPrice\"]').val(Number(data.FantaGlasslPrice).toFixed(2));
+                
+
+                if (data.CokePET500600ml) 
+                    $('input[name = \"Coke56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+                
+                if (data.SpritePET500600ml) 
+                    $('input[name = \"Sprite56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+                
+
+                if (data.FantaPET500600ml) 
+                    $('input[name = \"Fanta56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+                
+
+                if (data.PepsiRB) 
+                    $('input[name = \"PepsiRB\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiRBPrice\"]').val(Number(data.PepsiRBPrice).toFixed(2));
+                
+
+                if (data.QIUPRB) 
+                    $('input[name = \"UPRB\"]').attr(\"checked\", true);
+                    $('input[name=\"QXUPRBPrice\"]').val(Number(data.QXupRBPrice).toFixed(2));
+                
+
+                if (data.MirandaRB) 
+                    $('input[name = \"MirandaRB\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaRBPrice\"]').val(Number(data.MirandaRBPrice).toFixed(2));
+                
+
+                if (data.PepsiCola600ml) 
+                    $('input[name = \"PepsiCola600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola600mlPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+                
+
+                if (data.QX7up600ml) 
+                    $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"QXup600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+                
+
+                if (data.Miranda600ml) 
+                    $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+                
+
+            }
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+            CloseBox();
+        });
+
+    }
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }   
+
+//        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+//            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+//        else
+            okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        //$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        flag = false;
+    }
+
+
+    function okSubmit() {
+        var options = {
+            url: 'TEDthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+
+    function showStart() {
+        ShowBox($(document).height());
+        //writeMes('正在提交中...');  
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'TEDfive.aspx?id=' + id;
+            saveTaskDetail(\"TED\",\"TEDthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        // var id = $(\"input[name='id']\").val();
+        location.href = 'TEDone.aspx';
+    }" section nil nil [18725 18769])
+            ("loadfooter(\"TED\");
+
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $.post(\"TEDthree.aspx\", { \"action\": \"onload\"}, function (e) {
+//            alert(e);
+            if (e != \"\") {
+                var data = $.parseJSON(e);
+                //这里写加载页面值的js
+                //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);//CokeGlass
+                if (data.CokeGlass) 
+                    $('input[name = \"CokeGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeGlassPrice\"]').val(Number(data.CokeGlasslPrice).toFixed(2));
+                
+                if (data.SpriteGlas) 
+                    $('input[name = \"SpriteGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteGlassPrice\"]').val(Number(data.SpriteGlasslPrice).toFixed(2));
+                
+
+                if (data.FantaGlass) 
+                    $('input[name = \"FantaGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaGlassPrice\"]').val(Number(data.FantaGlasslPrice).toFixed(2));
+                
+
+                if (data.CokePET500600ml) 
+                    $('input[name = \"Coke56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+                
+                if (data.SpritePET500600ml) 
+                    $('input[name = \"Sprite56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+                
+
+                if (data.FantaPET500600ml) 
+                    $('input[name = \"Fanta56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+                
+
+                if (data.PepsiRB) 
+                    $('input[name = \"PepsiRB\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiRBPrice\"]').val(Number(data.PepsiRBPrice).toFixed(2));
+                
+
+                if (data.QIUPRB) 
+                    $('input[name = \"UPRB\"]').attr(\"checked\", true);
+                    $('input[name=\"QXUPRBPrice\"]').val(Number(data.QXupRBPrice).toFixed(2));
+                
+
+                if (data.MirandaRB) 
+                    $('input[name = \"MirandaRB\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaRBPrice\"]').val(Number(data.MirandaRBPrice).toFixed(2));
+                
+
+                if (data.PepsiCola600ml) 
+                    $('input[name = \"PepsiCola600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola600mlPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+                
+
+                if (data.QX7up600ml) 
+                    $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"QXup600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+                
+
+                if (data.Miranda600ml) 
+                    $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+                
+
+            }
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+            CloseBox();
+        });
+
+    }
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }   
+
+//        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+//            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+//        else
+            okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        //$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        flag = false;
+    }
+
+
+    function okSubmit() {
+        var options = {
+            url: 'TEDthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+
+    function showStart() {
+        ShowBox($(document).height());
+        //writeMes('正在提交中...');  
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'TEDfive.aspx?id=' + id;
+            saveTaskDetail(\"TED\",\"TEDthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        // var id = $(\"input[name='id']\").val();
+        location.href = 'TEDone.aspx';
+    }" section nil nil [18769 18810])
+            ("loadfooter(\"TED\");
+
+    $(\"#kelebody1\").css(\"min-height\", $(window).height() - 130);
+    $(\"input[type='text']\").attr(\"onclick\", \"numberClick(this)\");
+    $(\"input[type='text']\").decimalinput();
+
+    //页面加载事件设置初始值
+    window.onload = function () {
+        ShowBox($(document).height());
+        $.post(\"TEDthree.aspx\", { \"action\": \"onload\"}, function (e) {
+//            alert(e);
+            if (e != \"\") {
+                var data = $.parseJSON(e);
+                //这里写加载页面值的js
+                //alert(data.CokeCAN330ml + \",\" + data.Coke330Price);//CokeGlass
+                if (data.CokeGlass) 
+                    $('input[name = \"CokeGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"CokeGlassPrice\"]').val(Number(data.CokeGlasslPrice).toFixed(2));
+                
+                if (data.SpriteGlas) 
+                    $('input[name = \"SpriteGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"SpriteGlassPrice\"]').val(Number(data.SpriteGlasslPrice).toFixed(2));
+                
+
+                if (data.FantaGlass) 
+                    $('input[name = \"FantaGlass\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaGlassPrice\"]').val(Number(data.FantaGlasslPrice).toFixed(2));
+                
+
+                if (data.CokePET500600ml) 
+                    $('input[name = \"Coke56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"CokePET500600mlPrice\"]').val(Number(data.Coke500600mlPrice).toFixed(2));
+                
+                if (data.SpritePET500600ml) 
+                    $('input[name = \"Sprite56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"SpritePET500600mlPrice\"]').val(Number(data.Sprite500600mlPrice).toFixed(2));
+                
+
+                if (data.FantaPET500600ml) 
+                    $('input[name = \"Fanta56PET\"]').attr(\"checked\", true);
+                    $('input[name=\"FantaPET500600mlPrice\"]').val(Number(data.Fanta500600mlPrice).toFixed(2));
+                
+
+                if (data.PepsiRB) 
+                    $('input[name = \"PepsiRB\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiRBPrice\"]').val(Number(data.PepsiRBPrice).toFixed(2));
+                
+
+                if (data.QIUPRB) 
+                    $('input[name = \"UPRB\"]').attr(\"checked\", true);
+                    $('input[name=\"QXUPRBPrice\"]').val(Number(data.QXupRBPrice).toFixed(2));
+                
+
+                if (data.MirandaRB) 
+                    $('input[name = \"MirandaRB\"]').attr(\"checked\", true);
+                    $('input[name=\"MirandaRBPrice\"]').val(Number(data.MirandaRBPrice).toFixed(2));
+                
+
+                if (data.PepsiCola600ml) 
+                    $('input[name = \"PepsiCola600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"PepsiCola600mlPrice\"]').val(Number(data.Pepsi600mlPrice).toFixed(2));
+                
+
+                if (data.QX7up600ml) 
+                    $('input[name = \"up600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"QXup600mlPrice\"]').val(Number(data.QXup600mlPrice).toFixed(2));
+                
+
+                if (data.Miranda600ml) 
+                    $('input[name = \"Miranda600ml\"]').attr(\"checked\", true);
+                    $('input[name=\"Miranda600mlPrice\"]').val(Number(data.Miranda600mlPrice).toFixed(2));
+                
+
+            }
+            $(\".checkbox\").each(function (i) {
+                var _input = $(this).parent().parent().siblings().find(\"input\"); //.val();
+                if (_input.val() != \"\" && _input.val() != 0) {
+                    _input.removeClass(\"disabled\"); //.css(\"background\", \"#fff\");
+                } else {
+                    _input.val('');
+                    _input.addClass(\"disabled\"); //.css(\"background\", \"#EAEAEA\");
+                }
+                if (!$(this).is(\":checked\")) {
+                    //没选中
+                    $(this).parent().removeClass(\"active\");
+                } else {
+                    //选中
+                    $(this).parent().addClass(\"active\");
+                }
+            });
+            CloseBox();
+        });
+
+    }
+
+    function OnSubmit() {
+        var num = 0;
+        var istrue = true;
+        var _inputs = $(\"table>tbody>tr>td>div>input[type='text']\");
+        _inputs.each(function (i) {
+            var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+            var value = $(this).val();
+            if (value == '' && ch) {
+                istrue = false;
+                num = i;
+            }
+        });
+        _inputs.css(\"border\", \"0px solid red\");
+        if (!istrue) {
+            _inputs.eq(num).css(\"border\", \"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+            $(\"input[type='text']\").eq(num).blur();
+            return;
+        }   
+
+//        if (!getNextTip() && $(\".cAvailabilitybody\").find(\"input[type='checkbox']:checked\").length == 0)
+//            confirm(\"未填竞品，是否继续？<br/>You did not fill in competitor, are you sure to continue?\", okSubmit, setRightSelect)
+//        else
+            okSubmit();
+    }
+
+    function setRightSelect() {
+        var _TFL = $(\".tab-btn.fl\");
+        var _TFR = $(\".tab-btn.fr\");
+        _TFR.addClass(\"active\");
+        $(\".koavailabilitybody\").hide();
+        _TFL.removeClass(\"active\");
+        $(\".cAvailabilitybody\").show();
+        //$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+        flag = false;
+    }
+
+
+    function okSubmit() {
+        var options = {
+            url: 'TEDthree.aspx',
+            beforeSubmit: showStart,
+            success: showSuccess,
+            dataType: 'json'
+        };
+        $(\"form\").ajaxSubmit(options);
+    }
+
+
+    function showStart() {
+        ShowBox($(document).height());
+        //writeMes('正在提交中...');  
+        return true;
+    }
+    function showSuccess(data) {
+        CloseBox();
+        if (data.success) {
+            //var id = $(\"input[name='id']\").val();
+            //location.href = 'TEDfive.aspx?id=' + id;
+            saveTaskDetail(\"TED\",\"TEDthree.aspx;\");
+        }
+        else {
+            alert(data.msg);
+        }
+    }
+
+    function backUrl() {
+        // var id = $(\"input[name='id']\").val();
+        location.href = 'TEDone.aspx';
+    }" section nil nil [18810 25132])
+            ("//选择有无
+    $(\".select-input\").each(function () {
+        $(this).click(function () {
+
+            //新加的判断，启用一个未填写值时不能继续选择下面的
+            var istrue = true;
+            var index = $(this).attr(\"for\");
+            //index = index * 1 - 1;         
+            //            alert(index);
+            if (index == '1') istrue = !$(\".checkbox\").eq(3).is(\":checked\")
+            if (index == '2') istrue = !$(\".checkbox\").eq(4).is(\":checked\")
+            if (index == '3') istrue = !$(\".checkbox\").eq(5).is(\":checked\")
+            if (index == '4') istrue = !$(\".checkbox\").eq(0).is(\":checked\")
+            if (index == '5') istrue = !$(\".checkbox\").eq(1).is(\":checked\")
+            if (index == '6') istrue = !$(\".checkbox\").eq(2).is(\":checked\")
+
+
+            if (istrue) {
+                $(\".checkbox\").each(function (i) {
+                    var ch = $(this).is(\":checked\");
+                    var value = $(\"input[type='text']\").eq(i).val();
+                    if (ch && value == '')
+                        istrue = false;
+                })
+
+
+                $(\"input[type='text']\").each(function (i) {
+                    var ch = $(\"input:checkbox\").eq(i).is(\":checked\");
+                    var value = $(this).val();
+                    if (value == '' && ch) {
+                        istrue = false;
+                        num = i;
+                    }
+                })
+
+            }
+            //            alert(istrue);
+            $(\"input[type='text']\").css(\"border\", \"0px solid red\");
+            if (!istrue && $(this).parent().siblings().find(\"input\").attr(\"name\") != $(\"input[type='text']\").eq(num).attr(\"name\")) {
+                $(\"input[type='text']\").eq(num).css(\"border\", \"1px solid red\");
+                alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+                return false;
+            }
+            /////  
+
+            var _input = $(this).parent().siblings().find(\"input\");
+            if ($(this).hasClass(\"active\")) {
+                $(this).removeClass(\"active\");
+                //$(this).parent().siblings().find(\"input\").attr(\"disabled\", true);
+                _input.val('');
+                _input.addClass(\"disabled\");
+                $(this).children(\"input[type='checkbox']\").removeAttr(\"checked\");
+            } else {
+                $(this).addClass(\"active\");
+                //$(this).parent().siblings().find(\"input\").removeAttr(\"disabled\").focus();
+                //$(this).parent().siblings().find(\"input\").css(\"background\", \"#fff\");
+                _input.removeClass(\"disabled\");
+                $(this).children(\"input[type='checkbox']\").attr(\"checked\", true);
+                var defaultv = _input.attr(\"default\") * 1.00;
+                //alert(defaultv);
+                if (defaultv > 0)
+                    _input.val(defaultv);
+            }
+        });
+    });" section nil nil [25132 28047])
+            ("var flag = true;
+
+    function getNextTip(){
+        if(!flag) 
+            return true;
+        else
+            return false;
+    }
+	/*tab*/
+	function tab(){
+
+		_TFL=$(\".tab-btn.fl\");
+		_TFR=$(\".tab-btn.fr\");		
+		_TFL.swipe({
+			swipeRight:function(){
+				//alert(1);
+				if(_TFL.hasClass(\"active\")){
+					this.removeClass(\"active\");
+					$(\".koavailabilitybody\").hide();
+					_TFR.addClass(\"active\");
+					$(\".cAvailabilitybody\").show();
+					//$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+				
+				}
+                return flag=false;
+			},
+			tap:function(){
+				//alert(1);
+				if(_TFL.hasClass(\"active\"))
+				{
+				
+				}else{
+					this.addClass(\"active\");
+					$(\".koavailabilitybody\").show();
+					_TFR.removeClass(\"active\");
+					$(\".cAvailabilitybody\").hide();
+					//$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+				
+				}
+                return flag=false;
+			},
+		});
+		_TFR.swipe({
+			swipeLeft:function(){
+				//alert(1);
+				if(_TFR.hasClass(\"active\")){
+					this.removeClass(\"active\");
+					$(\".koavailabilitybody\").show();
+					_TFL.addClass(\"active\");
+					$(\".cAvailabilitybody\").hide();
+					//$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+
+				}
+                return flag=false;
+			},
+			tap:function(){
+				//alert(1);
+				if(_TFR.hasClass(\"active\"))
+				{
+				
+				}else{
+					this.addClass(\"active\");
+					$(\".koavailabilitybody\").hide();
+					_TFL.removeClass(\"active\");
+					$(\".cAvailabilitybody\").show();
+					//$(\".tab-btn.active\").highlight(\".tab-btn.active\");
+				
+				}
+                return flag=false;
+			},
+		})
+	
+		}
+	 tab();
+
+
+
+      function qqe(){
+        var num = 0;
+        var istrue = true;
+        $(\".koavailabilitybody\").find(\"input[type='text']\").each(function (i) {
+            var ch = $(\".koavailabilitybody\").find(\"input:checkbox\").eq(i).is(\":checked\");    
+            var value = $(this).val();
+            if (value == '' && ch){
+                istrue = false;      
+                num = i;                     
+                }                        
+            });
+        $(\"input[type='text']\").css(\"border\",\"0px solid red\");
+        if(!istrue){
+             $(\".koavailabilitybody\").find(\"input[type='text']\").eq(num).css(\"border\",\"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+
+                $(\"#KB\").removeClass(\"active\");
+                $(\"#KO\").addClass(\"active\");
+				$(\".koavailabilitybody\").show();
+				$(\".cAvailabilitybody\").hide();
+
+             $(\".koavailabilitybody\").find(\"input[type='text']\").eq(num).blur();          
+        }   
+                return istrue;      
+     }
+
+
+
+     function WW(){
+
+       var num = 0;
+        var istrue = true;
+        $(\".cAvailabilitybody\").find(\"input[type='text']\").each(function (i) {
+            var ch =  $(\".cAvailabilitybody\").find(\"input:checkbox\").eq(i).is(\":checked\");    
+            var value = $(this).val();
+            if (value == '' && ch){
+                istrue = false;      
+                num = i;                     
+                }                        
+            });
+        $(\"input[type='text']\").css(\"border\",\"0px solid red\");
+        if(!istrue){
+             $(\".cAvailabilitybody\").find(\"input[type='text']\").eq(num).css(\"border\",\"1px solid red\");
+            alert(\"请为所选品项填写价格. <br/>Please fill in price for the selected SKU.\");
+
+                $(\"#KO\").removeClass(\"active\");
+                $(\"#KB\").addClass(\"active\");
+				$(\".cAvailabilitybody\").show();
+				$(\".koavailabilitybody\").hide();
+
+             $(\".cAvailabilitybody\").find(\"input[type='text']\").eq(num).blur();          
+        }   
+        return istrue;    
+     }
+    var productList = eval(getJsonFromStaticHtmlPage());
+    ready(function() {
+    showProductList(2);
+    });" section nil nil [28047 31886]))          
+      :file "TEDthree.aspx"
+      :pointmax 31886
+      :fsize 33246
+      :lastmodtime '(21956 22400 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_c!Users!RainbowLu!KOnnector!Web!KOnnector!TED!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

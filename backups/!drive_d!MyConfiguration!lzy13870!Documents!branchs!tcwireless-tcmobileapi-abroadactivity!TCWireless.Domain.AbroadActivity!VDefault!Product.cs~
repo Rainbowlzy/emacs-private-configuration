@@ -1,0 +1,268 @@
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace TCWireless.Domain.AbroadActivity.VDefault
+{
+    public class Product
+    {
+        private string _firstAreaId;
+
+        private string _firstAreaName;
+
+        private string _secondAreaId;
+
+        private string _orderCount;
+
+        private string _imgUrl;
+
+        private string _discount;
+
+        private string _price;
+
+        private string _lowPrice;
+
+        private string _tag;
+
+        private string _tabName;
+
+        private string _subTitle;
+
+        private string _showTitle;
+
+        private string _title;
+
+        private string _resId;
+
+        private string _category;
+
+        private string _threeAreaName;
+
+        private string _threeAreaId;
+
+        private string _secondAreaName;
+
+        [JsonProperty(PropertyName = "firstAreaID")]
+        public string FirstAreaID
+        {
+            get
+            {
+                return this._firstAreaId;
+            }
+            set
+            {
+                this._firstAreaId = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "firstAreaName")]
+        public string FirstAreaName
+        {
+            get
+            {
+                return this._firstAreaName;
+            }
+            set
+            {
+                this._firstAreaName = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "secondAreaId")]
+        public string SecondAreaId
+        {
+            get
+            {
+                return this._secondAreaId;
+            }
+            set
+            {
+                this._secondAreaId = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "secondAreaName")]
+        public string SecondAreaName
+        {
+            get
+            {
+                return this._secondAreaName;
+            }
+            set
+            {
+                this._secondAreaName = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "threeAreaId")]
+        public string ThreeAreaId
+        {
+            get
+            {
+                return this._threeAreaId;
+            }
+            set
+            {
+                this._threeAreaId = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "threeAreaName")]
+        public string ThreeAreaName
+        {
+            get
+            {
+                return this._threeAreaName;
+            }
+            set
+            {
+                this._threeAreaName = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "category")]
+        public string Category
+        {
+            get
+            {
+                return this._category;
+            }
+            set
+            {
+                this._category = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "resId")]
+        public string ResId
+        {
+            get
+            {
+                return this._resId;
+            }
+            set
+            {
+                this._resId = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "title")]
+        public string Title
+        {
+            get
+            {
+                return this._title;
+            }
+            set
+            {
+                this._title = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "showTitle")]
+        public string ShowTitle
+        {
+            get
+            {
+                return this._showTitle;
+            }
+            set
+            {
+                this._showTitle = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "subTitle")]
+        public string SubTitle
+        {
+            get
+            {
+                return this._subTitle;
+            }
+            set
+            {
+                this._subTitle = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "tabName")]
+        public string TabName
+        {
+            get
+            {
+                return this._tabName;
+            }
+            set
+            {
+                this._tabName = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "tag")]
+        public string Tag
+        {
+            get
+            {
+                return this._tag;
+            }
+            set
+            {
+                this._tag = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "lowPrice")]
+        public string LowPrice
+        {
+            get
+            {
+                return this._lowPrice;
+            }
+            set
+            {
+                this._lowPrice = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "price")]
+        public string Price
+        {
+            get
+            {
+                return this._price;
+            }
+            set
+            {
+                this._price = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "discount")]
+        public string Discount
+        {
+            get
+            {
+                return this._discount;
+            }
+            set
+            {
+                this._discount = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "imgUrl")]
+        public string ImgUrl
+        {
+            get
+            {
+                return this._imgUrl;
+            }
+            set
+            {
+                this._imgUrl = value;
+            }
+        }
+    }
+}
