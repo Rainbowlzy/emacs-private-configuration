@@ -1,0 +1,309 @@
+(ns website.interface-test)
+(use '[dk.ative.docjure.spreadsheet])
+(use '[clojure.set])
+(use '[clojure.xml])
+(use '[clojure.java.io])
+(use '[clojure.java.shell])
+(require '[clojure.data.json :as json])
+(require '[clj-http.client :as client])
+(require '[clj-http.cookies :as cookies])
+(require '[clj-time.format :as f])
+(require '[clj-time.coerce :as c])
+(require '[clj-time.local :as l])
+(require '[clj-time.periodic :as p])
+(require '[clojure.string :as string])
+(require '[ring.adapter.jetty :as jetty])
+(require '[clojure.pprint :as ppt])
+(require '[clj-sockets.core :refer [create-socket write-to close-socket read-line read-lines write-line]])
+
+(def member-id-order ""  "I0_3f708ce4003be28bce9ef3d5c5a99e1c")
+(def current-version "" "806")
+(def split-mark "Used to split println" ";; ======================================================================================")
+(def deviceids ["1106e0c19bbfbe8d4f7f4cc6285c1ab07edc2d3c" "c2ea535fb19e1230784848bf1a61f4f4a1a6afb" "37a59e7a0b1cc0c4" "eb32616e32ae285a21ec8242ea2dfdd0fc7000a6" "6ee6d81d81e5bea8" "dd5d46f711ede1217ec41d67887b1d9ed51f91d4" "82229162d95f7e8e" "fcf57b9dfc6b98499a8589f673d876a0671b8dc7" "5d83ce0f4e446dbc" "d97f90da666b88f9" "9b92a64d1e31fa1dc34817b82e63721561cac556" "5a218e96e60c94b9" "1f701e13c5308d542491fda3c0ac0a0f1472332d" "4e5761928c9b1612" "6642808e7c3262fdaf51bcfa3ee4aec6956eaa89" "006346902b84448967ced884bc1691143b1b20d2" "14d37a9aee1a606541280c39926bfc6f2093a03f" "dca0722a079a8fe2" "f69b8173c004ba9" "223b8e4f3d6e41762611de78bca20d28b393e188" "7d2f1ca32b24abd6ecdcb08b9757b3ec36427aa4" "68fd3c7d9ea9630b" "e7caedd298db2b0" "06E1A924-C2E5-49CA-A8DB-496CBD1DB3BF" "5f6f7430d83a1fa72221b16228fa97f59758ce21" "9ce40e073ca61c44" "d2964656aafa7fce" "a8e7434145982306" "1c5bcbca1ab0aa74" "f9ceec0a0efcda8f" "b5cd0048cd4c6390" "20ffb7ea86c15b5c" "9ba35e35ec682bfd" "1894a1dce5d50447610d34ab62f4dac2eba2e" "a6dfd7dc0f1acc36" "628888349928f79a84ad3e245023ae402816d297" "91fd4d1f5a8bb54c" "a358929a5eacd36c4267cbd1e7d9aad2cc7ac824" "4642AA04-2BBC-411D-9DDF-7D99627A36A5" "8311f8f2ae8c17f7aa348f42313a39acd6d617de" "131deea915be8555" "f436e94ce6de7f11820f1f0b3422cae85c8cdbf0" "a855b50e8acc9f04736da7b8b3f9863a88050101" "CF457396-FEEC-4D25-AE40-A14220E10FFC" "a6774d612b365f7" "52b795562139656c" "72c40bac1fed15f" "5cedc84d5a199ae5" "aa278aae4eaf13d2" "7ce8405cab71bbf98f8ca5c318420667686931d4" "a6fa6fe279ea94bbd34c5ee3214a5e24b96984a8" "5f52b4813a608d47" "a1a67b01c7abaf45" "FE669F8A-B909-4E06-B0D5-9486264161A4" "e142d3976c6f3ec0" "fd8ca0ba2b62eb98" "ccc843af24e40e7f" "9b173da9c615954a6ce9caac0565656e233966f0" "A000004559D1F7" "9fa33fad185fc35" "f265d777229e9f04" "216b614e4124309b" "d259dd3341872ae8" "d7d2bf3b89a37f57871850b6a716c2c5859c5b28" "776a7e50e5836bda" "c548700007bdf445" "d5e8b7cce661ddde65ddd9dff8aa72c390096f28" "bd76f62a13044e61" "F2085DE4-C014-462F-9CB0-E2C3581E9E97" "7c6cf1b08274ce75" "43f56d8cfc37d0bd" "c2b3ca838fc6c80086817224607c742b1449661c" "55650f9f4ddf08d2" "22afb49dba4c09fb" "8e9e20197a5f9a28" "fa3417d7ca69e816" "f2c95e80e8a943e9" "d35336dbd7d1df71835ad2ed83c8d5b8381f0562" "76a5341d81122d84733827245d6e031d3bc7fb57" "b5c59798b215fbb7" "57cc749834b6bf09a47792fb8376963cbccf4276" "d97a4b9114cedf7a" "56c4af031079453" "535c3411297f9217" "88be67a451908602" "788acb71a86ff60b3063f5aa37b3b15af7ce62f4" "1f154da850eb3bb04bb6d0f023933dcf9748d605" "db651e30cfcc3b5a" "c75bee643bedbf47f6e23e1ffd3981ce84e103bd" "ee75d3df37913f1c" "4a4a743dca7e812d26c74c7afb70f494d5a61242" "97B34695-B383-45B6-AA59-D6EDA1682034" "700c78df203ab9fc" "81d98ebb4237143e" "0db3bc133d00f8371ad056c789dd0bb3b20ab6d2" "1e6a1c3ddfb54d39" "71890c0a1a7b3b75d424b55212c30aa993540e9c" "1002c59c7b5cc03d" "622edc13f747801b" "fdbc42c138598213"])
+(defn response[entity] (-> entity :response :response))
+(defn request[entity] (-> entity :request :request))
+(defn service-name[entity] (-> entity request :header :serviceName))
+(defn header[entity] (-> entity response :header))
+(defn rsp-desc[entity] (-> entity header :rspDesc))
+(defn body[entity] (-> entity response :body))
+
+(defn is-field-empty[ent v]
+  (or (and (string? (get ent v))
+           (= (.length (get ent v)) 0))
+      (and (vector? (get ent v))
+           (= (count (get ent v)) 0))))
+
+
+(def default-params{:productId "18874"
+                    :specialId 7
+                    :subProductId 260521
+                    :resourceId 260512
+                    :memberId "I0_ba8e71171ab462d7d42b5c8977fe5e62"
+                    :orderId 2170672
+                    :playTheme 13
+                    :supplierRelationId "49675"
+                    :srcCityId 226
+                    :page 1
+                    :pageSize 10
+                    :DestType 2
+                    :dest "东京"
+                    :sstype 1})
+
+
+(def config
+  "Global configuration entity."
+  (load-file
+   "d:/MyConfiguration/lzy13870/Desktop/ringfullsite/ringfullsite/src/website/config.clj"))
+
+(def vm-abroadactivity
+  "Virtual machine abroadactivity url."
+  (str (-> config :domains :vm)
+       (-> config :handlers :abroadactivity)))
+
+(defn show-sp-name[en]
+  (for [v en] (:name v)))
+
+
+;; (defn call[url input]
+;;   (let[rsp-text (->
+;;                  "http://localhost/abroadactivity/default.aspx"
+;;                  (client/post {:form-params {:url url :input input}})
+;;                  )]
+;;     (if (= (:status rsp-text) 200)
+;;       (:body rsp-text)
+;;       (println-str rsp-text))
+;;     ))
+
+(defn call[url input]
+  (let[socket (create-socket "127.0.0.1" 17788)]
+    (write-to socket (json/write-str {:url url :input input}))
+    (let[resp (read-line socket)]
+      (close-socket socket)
+      resp)
+    ))
+
+
+;; (defn save-request[request output]
+;;   (let [client-info-summary (str
+;;                              \- (-> request :request :header :serviceName)
+;;                              \- (-> request :request :body :clientInfo :versionType)
+;;                              \- (-> request :request :body :clientInfo :versionNumber)
+;;                              \- (-> request :request :body :clientInfo :networkType)
+;;                              \- (l/format-local-time (l/local-now) :date)
+;;                              ".clj")
+;;         build-path #(str (-> config :project-folder) "/" % client-info-summary)]
+;;     (spit (build-path "request") (str request))
+;;     (spit (build-path "response") (str (json/read-str output :key-fn keyword)))))
+
+(defn call-service
+  ([params service client version url] (call-service params service client version url (first deviceids)))
+  ([params service client version url deviceid]
+   (let [request {:request
+                  {:body
+                   (into {:clientInfo
+                          {:deviceId deviceid,
+                           :extend (str "2^com.tongcheng." client ",4^9.0.2,5^" client "6_2"),
+                           :mac "cacdca6fcf78998b8ba745400a0eb92c",
+                           :refId "5866741",
+                           :versionType (str client),
+                           :clientIp "10.6.2.52",
+                           :networkType "wifi",
+                           :versionNumber (clojure.string/join "." (clojure.string/split (str version) #""))}}
+                         params),
+                   :header {:accountID "5ee7b429-b8c6-400f-8b87-3c384c4ea68a",
+                            :encryptEffort "0",
+                            :serviceName (str service),
+                            :reqTime "1444725647927",
+                            :version "20110303090115"}}}
+         ]
+     ;; (println url)
+     ;; (println (json/write-str request))
+     {:request request
+      :response (let[rsp-text (call url (json/write-str request))
+                     rsp (json/read-str rsp-text :key-fn keyword)]
+                  (->> rsp :response :header :rspDesc (str service " ") println)
+                  ;; (->> rsp pprint)
+                  rsp)
+      :url url}
+     )))
+
+(def abroad (-> config :handlers :abroadactivity))
+
+(defn call-default
+  ([sv] (call-default {} sv))
+  ([sv params] (call-service params sv "iphone" "806" (str (-> config :domains :vm) abroad)))
+  ([sv params version deviceid] (call-service params sv "iphone" "806" (str (-> config :domains :vm) abroad) deviceid))
+  ([sv params version] (call-service params sv "iphone" (str version) (str (-> config :domains :vm) abroad))))
+
+(defn call-8008
+  ([sv params]
+   (call-service params sv "iphone" "806" (str (-> config :domains :test8008))))
+  ([sv params version deviceid]
+   (call-service params sv "iphone" version (str (-> config :domains :test8008)) deviceid))
+  ([sv params version](call-service params sv "iphone" (str version) (str (-> config :domains :test8008)))))
+
+(defn call-8018
+  ([sv] (call-8008 sv {}))
+  ([sv params] (call-service params sv "iphone" "806" (str (-> config :domains :test8018))))
+  ([sv params version] (call-service params sv "iphone" (str version) (str (-> config :domains :test8018)))))
+
+(defn call-online[sv params] (call-service params sv "iphone" "806" (str (-> config :domains :online))))
+
+(defn run-in-output[service]
+  (let[folder "d:/MyConfiguration/lzy13870/output/" 
+       params {:productId "19358"
+               :specialId 7
+               :memberId "I0_ba8e71171ab462d7d42b5c8977fe5e62"
+               :orderId 2170672
+               :supplierRelationId 64178
+               :dest "东京"
+               :sstype 1}]
+    (spit
+     (str folder service "_8008.json")
+     (call-default service params)
+     )
+    (spit
+     (str folder service "_default.json")
+     (call-default service params)
+     )
+    )
+  )
+
+
+;; (->> (call-default 'getpricecalendar default-params 806 "1106e0c19bbfbe8d4f7f4cc6285c1ab07edc2d3c") body)
+
+
+
+;; (->> (call-default 'getabroadwifiindex {} '806 (first deviceids)) body)
+;; (for [id deviceids] (->> (call-default 'getabroadwifiindex {} '806 id) body :abtest (str id " : ") println))
+;; (for [id deviceids] (->> (call-default 'getabroadproductlist {} '806 id) body :abroadProductList first :abtest (str id " : ") println))
+
+
+;; (->> (call-default 'getpricecalendar default-params '806 (first deviceids)) body pprint)
+
+;; (->> (call-default 'getabroadwifiindex default-params '806 (first deviceids)) body :todayRecommendList pprint)
+
+(defn getabroaddetail-default[id]
+  (->> (call-default 'getabroaddetail {:productId id} '806 (first deviceids)) body))
+
+(defn getabroadproductlistnew-default[params]
+  (->> (call-default 'getabroadproductlistnew params '806 (first deviceids)) body))
+
+;; (->> (call-default 'getabroadproductlistnew {:playTheme 13} '806 (first deviceids)))
+
+;; (getabroadproductlistnew-default {:playTheme 2})
+
+
+
+;; (->> (call-default
+;;       'getspecialdetail{:requestFrom "H5" :specialId "10" :sstype "1" } '806 (first deviceids))
+;;      body :productListNew pprint)
+
+(defn getabroadproductlist-default[params]
+  (->> (call-default 'getabroadproductlist params '806 (first deviceids)) body))
+
+
+(defn get-all-products
+  ([]
+   (->> (getabroadproductlist-default {:page 1 :pageSize 99999}) :abroadProductList)))
+
+
+(defn iter-show[p coll]
+  (for [c coll] (p c)))
+
+
+(defn check-fields
+  ([ent]
+   (println (str ent "\t" (type ent)))
+   (cond (or (map? ent) (vector? ent)) (for [o ent] (check-fields o))
+         (and (map-entry? ent) (empty? (val ent))) (key ent)
+         (and (map-entry? ent) (not (empty? (val ent))) (coll? (val ent))) (check-fields (val ent))
+         (keyword? ent) ent
+         :else nil)))
+
+(defn check-body[ent]
+  (->> (remove nil? (check-fields ent))))
+
+
+(defn order-list[member-id]
+  (->> (call-service {:memberId member-id} "getorderlistinfo" "iphone" current-version "http://61.155.197.173:8008/ordercenter/Order/OrderListHandler.ashx") body :orderListAll))
+
+(defn order-list-print[member-id]
+  (->> (order-list member-id) (iter-show :title) pprint))
+
+(def order-problem-entity
+  "订单有问题的排查实体"
+  {:memberId "c2351a8b8f3a38ed661720fb7e2cc5ac"
+   :orderId "2378108"})
+
+(defn order-detail [ord member-id]
+  (body (call-8008 'getorderdetail {:orderId ord :memberId member-id})))
+
+(defn call-getabroaddetail [product-id]
+  (body (call-default 'getabroaddetail {:productId product-id})))
+(defn get-abroad-details [& prods]
+  (for [prod prods] (call-getabroaddetail prod)))
+(defn show-main-title [& prods]
+  (for [prod prods] (:mainTitle prod)))
+(defn not-empty? [ent]
+  (not (empty? ent)))
+(defn all-not-empty? [& coll]
+  (and (for [ent coll] (not-empty? ent))))
+
+;; (let [first-list (->> (call-default 'getabroadproductlist {:page 1 :pageSize 10000}) body)
+;;       page (:pageInfo first-list)
+;;       total (:totalPage page)]
+;;   (for [prod (:abroadProductList first-list)]
+;;     (select-keys (->> (call-default 'getabroaddetail (select-keys prod [:productId])) body) [:productId :mainTitle :coordinatelist])))
+
+;; (defn get-abroad-product-list-new-test-func []
+;;   (let [play-theme-list [{:showText "主题门票", :value "6"}
+;;                          {:showText "通讯工具", :value "9"}
+;;                          {:showText "交通接驳", :value "8"}
+;;                          {:showText "观光游览", :value "11"}
+;;                          {:showText "休闲娱乐", :value "12"}
+;;                          {:showText "美食必享", :value "13"}]]
+;;     (for [theme play-theme-list]
+;;       (let [rsp (body (call-8008 'getabroadproductlistnew {:playTheme (Integer. (:value theme))}))]
+;;         (let [rsp-map {:theme (:showText theme)
+;;                        ;; :predict-theme (for [prod (filter #(= (:theme %) (:showText theme)) (let [p "d:/MyConfiguration/lzy13870/Desktop/sent/海外玩乐爆款推荐3.31.xlsx"]
+;;                        ;;                                                                       (->> (load-workbook p)
+;;                        ;;                                                                            (select-sheet "Sheet1")
+;;                        ;;                                                                            ;; (select-columns {:A :sort,:B :theme,:C :dest,:D :productId,:E :title})
+;;                        ;;                                                                            (select-columns {:B :theme,:C :productId}))))]
+;;                        ;;                  (str (int (:productId prod))))
+;;                        :abroadProductList (for [prod (:abroadProductList rsp)]
+;;                                             (select-keys prod [:productId :mainTitle]))
+;;                        :url (select-keys rsp [:url])
+;;                        }]
+;;           {:主题 (str (:showText theme) \| (:value theme))
+;;            ;; :找不到 (clojure.string/join "," (difference (set (:predict-theme rsp-map)) (set (:abroadProductList rsp-map))))
+;;            ;; :找到了  (clojure.string/join "," (intersection (set (:predict-theme rsp-map)) (set (:abroadProductList rsp-map))))
+;;            ;; :产品详情 (for [pprod (difference (set (:predict-theme rsp-map)) (set (:abroadProductList rsp-map)))] (:productId (body (call-online 'getabroaddetail {:productId pprod}))))
+;;            ;; :url (:url rsp)
+;;            ;; :predict (:predict-theme rsp-map)
+;;            :product-list (:abroadProductList rsp-map)
+;;            :url (:url rsp-map)
+;;            }
+;;           ;; (:predict-theme rsp-map)
+;;           ;; (:abroadProductList rsp-map)
+;;           )))))
+
+;; (defn get-all-member-id-list "会员ID" []
+;;   (filter #(not (empty? %)) (set (reduce into (for [i (range 1 5)]
+;;                                                 (for [row (->> (load-workbook (str "D:/MyConfiguration/lzy13870/Desktop/sent/orders" i ".xlsx"))
+;;                                                                (select-sheet "Sheet1")
+;;                                                                (select-columns {:D :input}))]
+;;                                                   (let []
+;;                                                     (try
+;;                                                       (select-keys (->> (json/read-str (string/replace (:input row) "，" ",") :key-fn keyword) :request :body) [
+;;                                                                                                                                                                 ;; :guestMobile :contactMobile :linkMobile :invoiceMobile :memberMobile :bookMobile :customerMobile
+;;                                                                                                                                                                 :memberId :loginName])
+;;                                                       (catch Exception ex nil))
+;;                                                     )
+;;                                                   ))))))
+
+
+
+;; (def member-id-list #{"I0_82d987bfd24863003fe02d2587a803e5"  "3b013ba144e0b02dca29cde6cc9f0422"  "I0_9a2eb308aca1a44fec47cf9af0a77a1d"  "ce7d07cec8b871e3b44ca07fb8eec27a"  "I0_85e8e9418790b19a467da5b8c78d66a8"  "ea7480e17b43392fcb9ab413af5cf401"  "I0_aaedbbdb05dc89ac48818f2bef2320d4"  "I0_9fb479629356c96687b38812aded9e14"  "I0_2016ea83abf8b0bf529e62a2e67c9a0a"  "I0_12afb217449fe86ab42f52a5602e5a89"  "0f585ab28c7c7b976a2ae8c831f07cf9"  "I0_c31ca59fb6d8ad33d77ac9242e5ee27b"  "I0_81dc7a200e671fd7e63aa37bf98869d6"  "I0_8ca0717f8052ec3758ac50400b588773"  "86b7070a5a6f4f3ec736f3bb98b92b65"  "675c15c9fe06bfd60657aac8d7b20667"  "I0_934b73611163515a68954e7a3ebdd2de"  "I0_70667f985b639f78ac6b894c9df1b63d"  "I0_f6a8163cf9fdf55f01cdebe959058d96"  "I0_66ce066a5debcf59c5dff5828eb27f18"  "I0_d36189f316b1066f46ef578dcae05cb6"  "I0_3de04e2045fd223b9b6195745df3f67b"  "I0_a1138de40d0e9ea2d2f33e0dfc3441f6"  "I0_1b1316f6683e5041c105032295f3c35a"  "I0_94301fecf074a1aaa98a464272345ff7"  "I0_5b823430500901a8165159f05ce4b7ae"  "I0_b7376af3f2f6004492050fd75e3b537d"  "I0_dcb02b306602a3fc7381854c28a82abc"  "c2351a8b8f3a38ed661720fb7e2cc5ac"  "I0_f5f2e4a4934eae329b2bba40393fc3b3"  "1dccc5c5f766c975c0cc9bc1e565d9ad"  "I0_84c90e21710f518be01253f1ffbe45aa"  "I0_41fc2fb986eb9e7e46d281a2756394c4"  "I0_80b265b7860c94b33e90a22b0559fb93"})
+(println "loaded.")

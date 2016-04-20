@@ -1,0 +1,11 @@
+(ns website.notification-send
+  (:use
+   ;; [website.interface-test]
+        [postal.core]))
+
+(send-message {:user "Rainbowlzy@yeah.net" :pass "lzy19188126681"
+               :host "smtp.yeah.net"
+               :port 587}
+              {:from "Rainbowlzy@yeah.net" :to "Rainbowlzy@yeah.net"
+               :subject "Test from Amazon SES" :body "Test!!!11"})
+
