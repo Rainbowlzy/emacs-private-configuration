@@ -59,6 +59,7 @@
 
 (when (>= emacs-major-version 24)
   (require-all '(eval-after-load ahei-misc yasnippet helm-config
+                                 cljdoc
                                  ;; linum
                                  multiple-cursors icicles ido ido-vertical-mode ac-emmet auto-complete-settings
                                  ))
@@ -270,13 +271,7 @@
 (add-hook 'cider-mode-hook (defun cider-mode-hook-func ()
 			     (interactive)
 			     (eldoc-mode t)
-                             (projectile-global-mode)
-                             (setq projectile-completion-system 'helm)
-                             (setq projectile-indexing-method 'alien)
-                             (helm-projectile-on)
-                             (setq projectile-switch-project-action 'helm-projectile-find-file)
-                             (setq projectile-switch-project-action 'helm-projectile)
-
+                             (global-set-key [f6] 'cider-load-buffer)
 			     ;; clojure installation end.
 
 
@@ -307,6 +302,12 @@
 ;; (add-hook 'lisp-mode-hook (lambda () "for lisp mode" (interactive) (slime)))
 
 (require 'ac-cider)
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+(setq projectile-indexing-method 'alien)
+(helm-projectile-on)
+(setq projectile-switch-project-action 'helm-projectile-find-file)
+(setq projectile-switch-project-action 'helm-projectile)
 (add-hook 'cider-mode-hook 'ac-flyspell-workaround)
 (add-hook 'cider-mode-hook 'ac-cider-setup)
 (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
@@ -318,7 +319,7 @@
 
 (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
-
+(global-set-key [f5] 'browse-url)
 
 (provide 'require-cmds-init)
 
