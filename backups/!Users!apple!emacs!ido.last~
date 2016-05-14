@@ -174,9 +174,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/apple/emacs/" (22327 18048 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "recentf" "README.md" "projectile.cache" "projectile-bookmarks.eld" "places" "init.el" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "custom/" "cua.el" "cpp-init.el" "backups/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
  ("/Users/apple/emacs/emacs-lisp/" (22327 17974 0 0) "web-mode-init.el" "stack-m.el" "stack-f.el" "slime-init.el" "require-cmds-init.el" "read.el" "queue-m.el" "queue-f.el" "pp-xml-init.el" "Powershell.el" "PowerShell-Mode.el" "package-init.el" "omnisharp-emacs-master/" "libs/" "keys-init.el" "init.el" "hooks-init.el" "functions-init.el" "fonts-init.el" "eval-after-load.el" "emmet-mode-init.el" "elib-node.el" "dll.el" "dll-debug.el" "csharp-mode.el.backup" "csharp-mode-master/" "csharp/" "cookie.el" "clojure-init.el" "cedet-init.el" "cedet-1.1/" "cedet-1.0.1/" "bintree.el" "avltree.elc" "auto-complete-settings.el" "auto-complete-init.el" "auto-complete+.el" "ahei-misc.el" "aes.el" "../" "./")
+
+ ("/Users/apple/emacs/" (22327 17981 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "recentf" "README.md" "projectile.cache" "projectile-bookmarks.eld" "places" "init.el" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "custom/" "cua.el" "cpp-init.el" "backups/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
  ("/Users/apple/slsms/" (22315 26518 0 0) "test/" "target/" "src/" "resources/" "README.md" "public/" "project.clj" "LICENSE" "doc/" "bin/" ".settings/" ".project" ".lein-repl-history" ".hgignore" ".gitignore" ".git/" ".DS_Store" ".classpath" "../" "./")
 
