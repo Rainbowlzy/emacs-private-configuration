@@ -116,6 +116,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "d:/MyConfiguration/lzy13870/AppData/Roaming/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/resources/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/"
@@ -126,7 +127,6 @@
  "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/public/bootstrap/js/"
- "d:/MyConfiguration/lzy13870/AppData/Roaming/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/public/bootstrap/css/"
  "d:/MyConfiguration/lzy13870/AppData/Roaming/.lein/"
  "d:/MyConfiguration/lzy13870/Desktop/ringfullsite/ringfullsite/src/website/"
@@ -170,6 +170,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "pwd"
  "script.clj"
  "core.clj"
  "home-ext.html"
@@ -178,15 +179,18 @@
  "bayes.py"
  "submit_order.clj"
  "angular.min.js"
- "pwd"
  "encrypto.clj"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/" (22323 55149 0 0) "Zoom/" "XMind/" "Wireshark/" "WinRAR/" "travelconsultant_request.txt" "travelconsultant_request.js" "text2.txt" "text1.txt" "test.log" "Tencent/" "tasklist.org" "Sun/" "submit_order.json" "submit_order.js" "SQL Assistant/" "SogouWP/" "SogouWallPaper/" "SGWPUpgrade/" "SGWPCommon/" "SGWallPaperDT/" "sendredpackage.js" "seetest/" "restclient.txt" "response.txt" "requirement.txt" "requests/" "request1.txt" "request.json" "request-ashx.txt" "redpackage-shareurl.txt" "qmdr/" "pwd" "pub.js" "projecttagsMapping.txt" "projectTags.txt" "projectList.org" "profile.clj" "problem.org" "pay.txt" "order_submit_interface.txt" "order.org" "NVIDIA/" "NuGet/" "Nuance/" "npm-cache/" "npm/" "Nox/" "notexistlineid.txt" "Notepad++/" "News/" "Mozilla/" "Microsoft FxCop/" "Microsoft/" "MemberExtend.txt" "member.org" "member-verify-code.txt" "member-verify-code.org" "member-todo-list.org" "Media Center Programs/" "Maxthon3/" "Macromedia/" "JetBrains/" "interface_name_list.txt" "interface_name_list.org" "Identities/" "ICSharpCode/" "hosts.txt" "hongbao.org" "hongbao-request.js" "Handler1.txt" "GitExtensions/" "Everything/" "emacs/" "DFEFQQ.DLL" "deviceid.txt" "DestinationProjectList.org" "DataInterface.txt" "clientinfo.js" "cityList2.txt" "cityList.txt" "cake.clj" "branchs/" "baidu.txt" "Baidu/" "afterBuild.bat" "Adobe/" "761requirement.txt" "760request.txt" "760request.js" "360se6/" "2.txt" "1.txt" "1.html" "1.csv" "1.bat" ".ssh/" ".srecode/" ".semanticdb/" ".newsrc-dribble" ".lein/" ".ido.last" ".history" ".emacs.d/" ".boot/" "../" "./")
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/" (22325 30576 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "LICENSE" "init.el~" "init.el" "ido.last~" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "CONTRIBUTORS.txt" "avl-tree.el" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" "#ido.el#" "../" "./")
 
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/" (22322 59980 0 0) "畅游海外专题线上配置.xlsx" "submit_order.clj" "site.clj" "script.clj" "rsp.txt" "output-1462245423090.xlsx" "output-1462245402781.xlsx" "memberdata.clj" "encrypto.clj" "db.clj" "core.clj" ".#script.clj" "#script.clj#" "../" "./")
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/" (22325 29324 0 0) "Zoom/" "XMind/" "Wireshark/" "WinRAR/" "travelconsultant_request.txt" "travelconsultant_request.js" "text2.txt" "text1.txt" "test.log" "Tencent/" "tasklist.org" "Sun/" "submit_order.json" "submit_order.js" "SQL Assistant/" "SogouWP/" "SogouWallPaper/" "SGWPUpgrade/" "SGWPCommon/" "SGWallPaperDT/" "sendredpackage.js" "seetest/" "restclient.txt" "response.txt" "requirement.txt" "requests/" "request1.txt" "request.json" "request-ashx.txt" "redpackage-shareurl.txt" "qmdr/" "pwd" "pub.js" "projecttagsMapping.txt" "projectTags.txt" "projectList.org" "profile.clj" "problem.org" "pay.txt" "order_submit_interface.txt" "order.org" "NVIDIA/" "NuGet/" "Nuance/" "npm-cache/" "npm/" "Nox/" "notexistlineid.txt" "Notepad++/" "News/" "Mozilla/" "Microsoft FxCop/" "Microsoft/" "MemberExtend.txt" "member.org" "member-verify-code.txt" "member-verify-code.org" "member-todo-list.org" "Media Center Programs/" "Maxthon3/" "Macromedia/" "JetBrains/" "interface_name_list.txt" "interface_name_list.org" "Identities/" "ICSharpCode/" "hosts.txt" "hongbao.org" "hongbao-request.js" "Handler1.txt" "GitExtensions/" "Everything/" "emacs/" "DFEFQQ.DLL" "deviceid.txt" "DestinationProjectList.org" "DataInterface.txt" "clientinfo.js" "cityList2.txt" "cityList.txt" "cake.clj" "branchs/" "baidu.txt" "Baidu/" "afterBuild.bat" "Adobe/" "761requirement.txt" "760request.txt" "760request.js" "360se6/" "2.txt" "1.txt" "1.html" "1.csv" "1.bat" ".ssh/" ".srecode/" ".semanticdb/" ".newsrc-dribble" ".lein/" ".ido.last" ".history" ".emacs.d/" ".boot/" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/TCWireless.Domain.AbroadActivity/VDefault/" (22325 32372 0 0) "QueryProcessingCommon.cs" "QueryProcessing810.cs" "QueryProcessing808.cs" "QueryProcessing806.cs" "QueryProcessing805.cs" "QueryProcessing803.cs" "QueryProcessing802.cs.orig" "QueryProcessing802.cs" "QueryProcessing.cs.orig" "QueryProcessing.cs" "ClientExtension.cs" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/" (22325 23943 0 0) "畅游海外专题线上配置.xlsx" "submit_order.clj" "site.clj" "script.clj" "rsp.txt" "output-1462245423090.xlsx" "output-1462245402781.xlsx" "memberdata.clj" "encrypto.clj" "db.clj" "core.clj" ".#script.clj" "#script.clj#" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/website/" (22321 45818 0 0) "tmp.gif" "temp.clj" "sls.clj" "roul.clj" "ring.clj" "notification_send.clj" "gen.clj" "gaussian.clj" "excel-test.clj" "encrypto.clj" "db.clj" "core.clj" "config.clj" "ai.clj" ".#temp.clj" ".#.#temp.clj" "#temp.clj#" "../" "./")
 
@@ -231,8 +235,6 @@
  ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/" (22314 43731 0 0) "TCWireless.Utility/" "TCWireless.TCMobileAPI5.psess" "TCWireless.TCMobileAPI4.psess" "TCWireless.TCMobileAPI3.psess" "TCWireless.TCMobileAPI2.psess" "TCWireless.TCMobileAPI160504.vsp" "TCWireless.TCMobileAPI160504(2).vsp" "TCWireless.TCMobileAPI160504(1).vsp" "TCWireless.TCMobileAPI160428.vsp" "TCWireless.TCMobileAPI160427.vsp" "TCWireless.TCMobileAPI160427(4).vsp" "TCWireless.TCMobileAPI160427(3).vsp" "TCWireless.TCMobileAPI160427(2).vsp" "TCWireless.TCMobileAPI160427(1).vsp" "TCWireless.TCMobileAPI1.psess" "TCWireless.TCMobileAPI.psess" "TCWireless.TCMobileAPI.AbroadActivity.v11.suo" "TCWireless.TCMobileAPI.AbroadActivity.sln.DotSettings" "TCWireless.TCMobileAPI.AbroadActivity.sln" "TCWireless.TCMobileAPI.AbroadActivity/" "TCWireless.Parameter/" "TCWireless.Model/" "TCWireless.Enums/" "TCWireless.Domain.AbroadActivity/" "TCWireless.Distributed.AbroadActivity/" "TCWireless.Data.DataAccess/" "TCWireless.Data.AbroadActivity/" "TCWireless.AutoTest.AbroadActivity/" "SolutionItems/" "servicename.txt" "Report160427.vsp" "Report160427(1).vsp" "Performance1.psess" "packages/" "obj/" "http_10.101.68.63_21414_QueryHandler.psess" "deploy/" "clr.pdb/" "bin/" ".gitignore" ".git/" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/TCWireless.Domain.AbroadActivity/" (22314 41673 0 0) "VDefault/" "TCWireless.Domain.AbroadActivity.csproj" "TCInterVacationOrder/" "SpecialDetail.cs" "Properties/" "Policy/" "packages.config" "obj/" "NoticeProcessing803.cs" "NoticeProcessing802.cs" "NoticeProcessing.cs" "Interfaces/" "bin/" "App_Data/" "app.config" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/TCWireless.Domain.AbroadActivity/VDefault/" (22314 44449 0 0) "QueryProcessingCommon.cs" "QueryProcessing810.cs" "QueryProcessing808.cs" "QueryProcessing806.cs" "QueryProcessing805.cs" "QueryProcessing803.cs" "QueryProcessing802.cs.orig" "QueryProcessing802.cs" "QueryProcessing.cs.orig" "QueryProcessing.cs" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/resources/" (22312 25147 0 0) "sqljdbc_4.0/" "sqljdbc4.jar" "sqljdbc.jar" "home.html" "../" "./")
 
@@ -309,8 +311,6 @@
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/" (22267 46454 0 0) "website/" ".DS_Store" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/ringfullsite/" (22144 48721 0 0) "test/" "target/" "src/" "resources/" "README.md" "readme.html~" "readme.html" "public/" "project.clj" "LICENSE" "doc/" "dev-resources/" "code.png" "CHANGELOG.md" ".nrepl-port" ".lein-repl-history" ".hgignore" ".gitignore" ".git/" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/" (22275 3687 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "LICENSE" "init.el~" "init.el" "ido.last~" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "CONTRIBUTORS.txt" "avl-tree.el" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" "#ido.el#" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/ringfullsite/ringfullsite/src/website/" (22275 3486 0 0) "tmp1.xml" "tmp.xml" "test.txt" "test.cs" "test" "temp.clj" "sls.clj~" "sls.clj" "roul.clj" "ring.clj~" "ring.clj" "productlist.xml" "productlist.clj" "notification_send.clj" "ls.sh" "interface-test.clj~" "interface-test.clj" "inputstrings.txt" "gen.clj" "gaussian.clj" "excel-test.clj~" "excel-test.clj" "db.clj~" "db.clj" "core.clj" "config.clj" "ai.clj~" "ai.clj" ".DS_Store" "../" "./")
 

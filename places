@@ -1,16 +1,16 @@
 ;;; -*- coding: utf-8 -*-
-(("d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/init.el" . 733)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/script.clj" . 2905)
+(("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/" . 52)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/" . 82)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/" . 54)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/website/core.clj" . 2094)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/script.clj" . 1500)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/project.clj" . 2119)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/init.el" . 733)
  ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/TCWireless.Domain.AbroadActivity/VDefault/QueryProcessing803.cs" . 12234)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/pwd" . 10)
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/core.clj" . 650)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/website/core.clj" . 3909)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/"
-  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/project.clj"))
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/project.clj" . 326)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/require-cmds-init.el" . 12004)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/"
-  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/.."))
  ("d:/MyConfiguration/lzy13870/Applications/emacs-24.5-bin-i686-mingw32/share/emacs/24.5/lisp/simple.el" . 113045)
  ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/machinelearninginaction/Ch04/bayes.py" . 544)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/eldoc-eval-20150512.506/eldoc-eval-autoloads.el" . 915)
@@ -44,8 +44,6 @@
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/resources/home.html" . 454)
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/"
   (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/lib"))
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/"
-  (dired-filename . "d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/custom"))
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/memberdata.clj" . 719)
  ("d:/MyConfiguration/lzy13870/Desktop/ringfullsite/ringfullsite/src/website/config.clj" . 1077)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/recentf" . 600)
