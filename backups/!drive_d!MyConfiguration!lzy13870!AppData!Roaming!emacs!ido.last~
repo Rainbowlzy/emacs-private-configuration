@@ -13,7 +13,7 @@
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/public/bootstrap/" . "css/")
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/public/" . "bootstrap/")
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/" . "interface_test/")
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/" . "resources/")
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/" . "src/")
  ("c:/Users/Administrator/AppData/Local/" . "Temp/")
  ("c:/Users/Administrator/AppData/" . "Local/")
  ("c:/Users/Administrator/" . "AppData/")
@@ -29,7 +29,7 @@
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/" . "resources/")
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/" . "ringfullsite/")
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/" . "ringfullsite/")
- ("d:/MyConfiguration/lzy13870/Documents/branchs/" . "slsms/")
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/" . "interface-test/")
  ("d:/MyConfiguration/lzy13870/Documents/ringfullsite/ringfullsite/bootstrap/" . "js/")
  ("d:/MyConfiguration/lzy13870/Documents/ringfullsite/ringfullsite/src/" . "website/")
  ("d:/MyConfiguration/lzy13870/Documents/ringfullsite/ringfullsite/" . "bootstrap/")
@@ -116,13 +116,14 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "d:/MyConfiguration/lzy13870/AppData/Roaming/"
+ "d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/"
+ "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/"
+ "d:/MyConfiguration/lzy13870/AppData/Roaming/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/resources/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/website/"
- "d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/"
  "d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/machinelearninginaction/Ch04/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/"
@@ -165,17 +166,16 @@
  "/Users/apple/emacs/emacs-lisp/"
  "/Users/apple/branchs/ringfullsite/public/"
  "/Users/apple/.emacs.d/emacs-lisp/"
- "/Users/apple/clj-tank/src/clj_tank/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "pwd"
+ "require-cmds-init.el"
  "script.clj"
+ "project.clj"
+ "pwd"
  "core.clj"
  "home-ext.html"
- "project.clj"
- "require-cmds-init.el"
  "bayes.py"
  "submit_order.clj"
  "angular.min.js"
@@ -184,27 +184,31 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/" (22325 30576 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "LICENSE" "init.el~" "init.el" "ido.last~" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "CONTRIBUTORS.txt" "avl-tree.el" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" "#ido.el#" "../" "./")
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/" (22329 25790 0 0) "web-mode-init.el" "stack-m.el" "stack-f.el" "slime-init.el" "require-cmds-init.el" "read.el" "queue-m.el" "queue-f.el" "pp-xml-init.el" "Powershell.el" "PowerShell-Mode.el" "package-init.el" "omnisharp-emacs-master/" "libs/" "keys-init.el" "init.el" "hooks-init.el" "functions-init.el" "fonts-init.el" "eval-after-load.el" "emmet-mode-init.el" "elib-node.el" "dll.el" "dll-debug.el" "csharp-mode.el.backup" "csharp-mode-master/" "csharp/" "cookie.el" "clojure-init.el" "cedet-init.el" "cedet-1.1/" "cedet-1.0.1/" "bintree.el" "avltree.elc" "auto-complete-settings.el" "auto-complete-init.el" "auto-complete+.el" "ahei-misc.el" "aes.el" "../" "./")
 
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/" (22325 29324 0 0) "Zoom/" "XMind/" "Wireshark/" "WinRAR/" "travelconsultant_request.txt" "travelconsultant_request.js" "text2.txt" "text1.txt" "test.log" "Tencent/" "tasklist.org" "Sun/" "submit_order.json" "submit_order.js" "SQL Assistant/" "SogouWP/" "SogouWallPaper/" "SGWPUpgrade/" "SGWPCommon/" "SGWallPaperDT/" "sendredpackage.js" "seetest/" "restclient.txt" "response.txt" "requirement.txt" "requests/" "request1.txt" "request.json" "request-ashx.txt" "redpackage-shareurl.txt" "qmdr/" "pwd" "pub.js" "projecttagsMapping.txt" "projectTags.txt" "projectList.org" "profile.clj" "problem.org" "pay.txt" "order_submit_interface.txt" "order.org" "NVIDIA/" "NuGet/" "Nuance/" "npm-cache/" "npm/" "Nox/" "notexistlineid.txt" "Notepad++/" "News/" "Mozilla/" "Microsoft FxCop/" "Microsoft/" "MemberExtend.txt" "member.org" "member-verify-code.txt" "member-verify-code.org" "member-todo-list.org" "Media Center Programs/" "Maxthon3/" "Macromedia/" "JetBrains/" "interface_name_list.txt" "interface_name_list.org" "Identities/" "ICSharpCode/" "hosts.txt" "hongbao.org" "hongbao-request.js" "Handler1.txt" "GitExtensions/" "Everything/" "emacs/" "DFEFQQ.DLL" "deviceid.txt" "DestinationProjectList.org" "DataInterface.txt" "clientinfo.js" "cityList2.txt" "cityList.txt" "cake.clj" "branchs/" "baidu.txt" "Baidu/" "afterBuild.bat" "Adobe/" "761requirement.txt" "760request.txt" "760request.js" "360se6/" "2.txt" "1.txt" "1.html" "1.csv" "1.bat" ".ssh/" ".srecode/" ".semanticdb/" ".newsrc-dribble" ".lein/" ".ido.last" ".history" ".emacs.d/" ".boot/" "../" "./")
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/" (22329 25691 0 0) "Zoom/" "XMind/" "Wireshark/" "WinRAR/" "travelconsultant_request.txt" "travelconsultant_request.js" "text2.txt" "text1.txt" "test.log" "Tencent/" "tasklist.org" "Sun/" "submit_order.json" "submit_order.js" "SQL Assistant/" "SogouWP/" "SogouWallPaper/" "SGWPUpgrade/" "SGWPCommon/" "SGWallPaperDT/" "sendredpackage.js" "seetest/" "restclient.txt" "response.txt" "requirement.txt" "requests/" "request1.txt" "request.json" "request-ashx.txt" "redpackage-shareurl.txt" "qmdr/" "pwd" "pub.js" "projecttagsMapping.txt" "projectTags.txt" "projectList.org" "profile.clj" "problem.org" "pay.txt" "order_submit_interface.txt" "order.org" "NVIDIA/" "NuGet/" "Nuance/" "npm-cache/" "npm/" "Nox/" "notexistlineid.txt" "Notepad++/" "News/" "Mozilla/" "Microsoft FxCop/" "Microsoft/" "MemberExtend.txt" "member.org" "member-verify-code.txt" "member-verify-code.org" "member-todo-list.org" "Media Center Programs/" "Maxthon3/" "Macromedia/" "JetBrains/" "interface_name_list.txt" "interface_name_list.org" "Identities/" "ICSharpCode/" "hosts.txt" "hongbao.org" "hongbao-request.js" "Handler1.txt" "GitHub/" "GitExtensions/" "Everything/" "emacs/" "DFEFQQ.DLL" "deviceid.txt" "DestinationProjectList.org" "DataInterface.txt" "clientinfo.js" "cityList2.txt" "cityList.txt" "cake.clj" "branchs/" "baidu.txt" "Baidu/" "afterBuild.bat" "Adobe/" "761requirement.txt" "760request.txt" "760request.js" "360se6/" "2.txt" "1.txt" "1.html" "1.csv" "1.bat" ".ssh/" ".srecode/" ".semanticdb/" ".newsrc-dribble" ".lein/" ".ido.last" ".history" ".emacs.d/" ".boot/" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/" (22329 25768 0 0) "畅游海外专题线上配置.xlsx" "submit_order.clj" "site.clj" "script.clj" "rsp.txt" "output-1462245423090.xlsx" "output-1462245402781.xlsx" "memberdata.clj" "encrypto.clj" "db.clj" "core.clj" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/website/" (22329 25683 0 0) "tmp.gif" "temp.clj" "sls.clj" "roul.clj" "ring.clj" "notification_send.clj" "gen.clj" "gaussian.clj" "excel-test.clj" "encrypto.clj" "db.clj" "core.clj" "config.clj" "ai.clj" ".#temp.clj" ".#.#temp.clj" "#temp.clj#" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/" (22329 19392 0 0) "test/" "target/" "src/" "resources/" "README.md" "public/" "project.clj" "LICENSE" "doc/" "dev-resources/" "bin/" ".settings/" ".project" ".nrepl-port" ".gitignore" ".git/" ".classpath" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/" (22321 45817 0 0) "website/" "slsms/" ".DS_Store" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/" (22329 18992 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "recentf" "README.md" "projectile.cache" "projectile-bookmarks.eld" "places" "init.el" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "backups/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/" (22325 30576 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "LICENSE" "init.el~" "init.el" "ido.last~" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "CONTRIBUTORS.txt" "avl-tree.el" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" "#ido.el#" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/TCWireless.Domain.AbroadActivity/VDefault/" (22325 32372 0 0) "QueryProcessingCommon.cs" "QueryProcessing810.cs" "QueryProcessing808.cs" "QueryProcessing806.cs" "QueryProcessing805.cs" "QueryProcessing803.cs" "QueryProcessing802.cs.orig" "QueryProcessing802.cs" "QueryProcessing.cs.orig" "QueryProcessing.cs" "ClientExtension.cs" "../" "./")
 
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/" (22325 23943 0 0) "畅游海外专题线上配置.xlsx" "submit_order.clj" "site.clj" "script.clj" "rsp.txt" "output-1462245423090.xlsx" "output-1462245402781.xlsx" "memberdata.clj" "encrypto.clj" "db.clj" "core.clj" ".#script.clj" "#script.clj#" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/website/" (22321 45818 0 0) "tmp.gif" "temp.clj" "sls.clj" "roul.clj" "ring.clj" "notification_send.clj" "gen.clj" "gaussian.clj" "excel-test.clj" "encrypto.clj" "db.clj" "core.clj" "config.clj" "ai.clj" ".#temp.clj" ".#.#temp.clj" "#temp.clj#" "../" "./")
-
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/" (22321 37559 0 0) "tmp.gif" "temp.clj" "sls.clj.orig" "sls.clj" "roul.clj" "ring.clj" "notification_send.clj" "gen.clj" "gaussian.clj" "excel-test.clj" "encrypto.clj" "db.clj" "core.clj" "config.clj" "ai.clj" ".#temp.clj" ".#.#temp.clj" "#.#temp.clj#" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/" (22296 18017 0 0) "website/" ".DS_Store" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/" (22321 36312 0 0) "test/" "target/" "src/" "resources/" "README.md" "readme.html" "public/" "project.clj" "pom.xml" "log" "LICENSE" "doc/" "dev-resources/" "config.clj" "code.png" "CHANGELOG.md" ".nrepl-port" ".lein-repl-history" ".git/" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/resources/" (22321 36329 0 0) "tr.html" "th.html" "template.html~" "template.html" "td.html" "table.html" "old-home.html" "new-product.html" "login.html" "interface-test-0.1.0-SNAPSHOT.jar/" "insert.html" "home.html" "home-ext.html" "cdn.html" "base.html" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/" (22321 36200 0 0) "test/" "target/" "src/" "resources/" "README.md" "public/" "project.clj" "prod.txt" "LICENSE" "FIND" "doc/" "CHANGELOG.md" ".nrepl-port" ".hgignore" ".gitignore" ".git/" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/" (22321 35785 0 0) "web-mode-init.el" "stack-m.el" "stack-f.el" "slime-init.el" "require-cmds-init.el" "read.el" "queue-m.el" "queue-f.el" "pp-xml-init.el" "Powershell.el" "PowerShell-Mode.el" "package-init.el" "omnisharp-emacs-master/" "libs/" "keys-init.el" "init.el" "hooks-init.el" "functions-init.el" "fonts-init.el" "eval-after-load.el" "emmet-mode-init.el" "elib-node.el" "dll.el" "dll-debug.el" "csharp-mode.el.backup" "csharp-mode-master/" "csharp/" "cookie.el" "clojure-init.el" "cedet-init.el" "cedet-1.1/" "cedet-1.0.1/" "bintree.el" "avltree.elc" "auto-complete-settings.el" "auto-complete-init.el" "auto-complete+.el" "ahei-misc.el" "aes.el" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/machinelearninginaction/Ch04/" (22320 2743 0 0) "EXTRAS/" "email.zip" "email/" "bayes.pyc" "bayes.py" "../" "./")
 
@@ -230,8 +234,6 @@
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/" (22312 22791 0 0) "site.js" "npm-debug.log" "lib/" "jquery.dataTables.min.js" "jquery-2.2.3.min.js" "jquery-2.2.3.js" "bootstrap.min.js" "bootstrap.js" "angular.min.js" "1.js" "../" "./")
 
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/" (22314 47126 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "recentf" "README.md" "projectile.cache" "projectile-bookmarks.eld" "places" "init.el" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "backups/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
  ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/" (22314 43731 0 0) "TCWireless.Utility/" "TCWireless.TCMobileAPI5.psess" "TCWireless.TCMobileAPI4.psess" "TCWireless.TCMobileAPI3.psess" "TCWireless.TCMobileAPI2.psess" "TCWireless.TCMobileAPI160504.vsp" "TCWireless.TCMobileAPI160504(2).vsp" "TCWireless.TCMobileAPI160504(1).vsp" "TCWireless.TCMobileAPI160428.vsp" "TCWireless.TCMobileAPI160427.vsp" "TCWireless.TCMobileAPI160427(4).vsp" "TCWireless.TCMobileAPI160427(3).vsp" "TCWireless.TCMobileAPI160427(2).vsp" "TCWireless.TCMobileAPI160427(1).vsp" "TCWireless.TCMobileAPI1.psess" "TCWireless.TCMobileAPI.psess" "TCWireless.TCMobileAPI.AbroadActivity.v11.suo" "TCWireless.TCMobileAPI.AbroadActivity.sln.DotSettings" "TCWireless.TCMobileAPI.AbroadActivity.sln" "TCWireless.TCMobileAPI.AbroadActivity/" "TCWireless.Parameter/" "TCWireless.Model/" "TCWireless.Enums/" "TCWireless.Domain.AbroadActivity/" "TCWireless.Distributed.AbroadActivity/" "TCWireless.Data.DataAccess/" "TCWireless.Data.AbroadActivity/" "TCWireless.AutoTest.AbroadActivity/" "SolutionItems/" "servicename.txt" "Report160427.vsp" "Report160427(1).vsp" "Performance1.psess" "packages/" "obj/" "http_10.101.68.63_21414_QueryHandler.psess" "deploy/" "clr.pdb/" "bin/" ".gitignore" ".git/" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/TCWireless.Domain.AbroadActivity/" (22314 41673 0 0) "VDefault/" "TCWireless.Domain.AbroadActivity.csproj" "TCInterVacationOrder/" "SpecialDetail.cs" "Properties/" "Policy/" "packages.config" "obj/" "NoticeProcessing803.cs" "NoticeProcessing802.cs" "NoticeProcessing.cs" "Interfaces/" "bin/" "App_Data/" "app.config" "../" "./")
@@ -247,8 +249,6 @@
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/public/bootstrap/css/" (22301 31921 0 0) "jquery.dataTables.min.css" "bootstrap.min.css" "bootstrap.css" "bootstrap-theme.min.css" "bootstrap-responsive.min.css" "bootstrap-responsive.css" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/" (22302 50837 0 0) "「开始」菜单/" "workspace/" "vmlog.log" "Videos/" "tmp3.js" "tmp1.js" "tmp.xml" "tmp.js" "Templates/" "TCWireless.UnitTest.YingXiao/" "TC.InterVacation.SOA.Product.Entities.dll" "stuff/" "sql/" "SendTo/" "Searches/" "Saved Games/" "reverse.bat" "Recent/" "push.bat" "public" "ps.bat" "private.ppk" "PrintHood/" "Pictures/" "output/" "ntuser.pol" "ntuser.ini" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "Microsoft FxCop 1.35.7z" "Local Settings/" "Links/" "kill.bat" "key.pub" "key" "jee-latest-released2/" "jee-latest-released/" "git.txt" "Favorites/" "eclipse-installer/" "Downloads/" "Documents/" "developer.bat~" "developer.bat" "Desktop/" "Cookies/" "Contacts/" "build.bat" "Applications/" "Application Data/" "AppData/" "AndroidStudioProjects/" ".WebStorm9/" ".WebStorm10/" ".ssh/" ".p2/" ".oracle_jre_usage/" ".mongorc.js" ".m2/" ".lein/" ".kdiff3rc" ".idlerc/" ".gradle/" ".gitconfig.backup" ".gitconfig" ".emacs.d/" ".eclipse/" ".DS_Store" ".dir" ".dbshell" ".BigNox/" ".bash_history" ".AndroidStudioPreview2.0/" ".android/" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/" (22296 18017 0 0) "test/" "target/" "src/" "ringfullsite/" "resources/" "README.md" "readme.html" "public/" "project.clj" "pom.xml" "log" "LICENSE" "doc/" "config.clj" "code.png" "CHANGELOG.md" ".nrepl-port" ".lein-repl-history" ".git/" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/" (22301 31833 0 0) "__MACOSX/" "ringfullsite.rar" "ringfullsite/" "../" "./")
 

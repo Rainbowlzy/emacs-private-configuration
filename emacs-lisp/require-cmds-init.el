@@ -42,8 +42,13 @@
 (dolist (f (directory-files "~/emacs/emacs-lisp/" t))
   (add-to-list 'load-path f))
 
+
+
 (defun set-exec-path-from-shell-PATH ()
-  (let ((path-from-shell (shell-command-to-string "echo %PATH%")))
+  (let ((path-from-shell
+         (concat (replace-regexp-in-string "%PATH%" ""  (shell-command-to-string "echo %PATH%"))
+                 (replace-regexp-in-string "$PATH" "" (shell-command-to-string "echo $PATH")))
+         ))
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 
