@@ -1,0 +1,119 @@
+{:Header
+ {:RspCode "0",
+  :RspDesc "success",
+  :RspTime "2016-04-21 10:17:13.821",
+  :IProcTimeS "2016-04-21T10:17:13.821+08:00",
+  :IProcTimeE "2016-04-21T10:17:13.883+08:00",
+  :DstName "TCWEB30188",
+  :ReqUID "ab0c013c-808d-cf60-e4f0-08d3698b0d8e"},
+ :Body
+ {:DepartureCity "",
+  :AmountAdvice 0,
+  :ProductType 9,
+  :ReturnPlaceSumList
+  [{:ReturnPlace "【首都T2】【安检区内】", :ReturnAdressList ["国际到达行李提取大厅“环球漫游”柜台（6号行李转盘）（周一至周日/24小时营业）00:00-23:59"]}
+   {:ReturnPlace "【首都T3】【安检区内】", :ReturnAdressList ["二层国际到达行李提取大厅“环球漫游”柜台(38号转盘旁)（周一至周日/24小时营业）00:00-23:59"]}
+   {:ReturnPlace "【市区网点】【朝阳区】", :ReturnAdressList ["东三环北路甲2号京信大厦0958室（工作日8:30－20:00，周末&法定假日8:30－17:30）08:30-17:30"]}],
+  :AmountDirect 20,
+  :ErrorCode 0,
+  :IsCanSell 0,
+  :ImgUrl "http://pic4.40017.cn/line/admin/2016/04/05/10/Q9hItH.jpg",
+  :ServiceLanguage [],
+  :RouteList [],
+  :DestinationCityId "2926",
+  :Notice "",
+  :ProductTypeTag ["无线网络" "出行必备"],
+  :CoordinateList [],
+  :ValidOrderNumber 0,
+  :ReceivePlaceSumList
+  [{:ReceivePlace "【首都T2】【安检区内】", :ReceiveAdressList ["国际出发过安检后“环球漫游”柜台（路过免税店直走到丁字路口右侧离境退税柜台旁）（周一至周日/24小时营业）00:00-23:59"]}
+   {:ReceivePlace "【首都T3】【安检区内】", :ReceiveAdressList ["国际出发中央商业区“环球漫游”柜台（过安检后喷泉左侧紧邻烟酒免税店）(周一至周日/24小时营业00:00-23:59"]}
+   {:ReceivePlace "【市区网点】【朝阳区】", :ReceiveAdressList ["东三环北路甲2号京信大厦0958室（工作日8:30－20:00，周末&法定假日8:30－17:30）08:30-20:00"]}],
+  :ProductTypeDes "通讯工具",
+  :PriceInfoOfType [],
+  :Address "",
+  :ProductTag 4,
+  :AmountContract 17,
+  :ProductId 0,
+  :CanSellDes "",
+  :PlayExerienceList
+  [{:playExerienceId 66275,
+    :TravelDescription
+    "<span style=\"font-size:16px;\"><strong>标准配置</strong></span><br />\n<br />\nWIFI设备+数据线+目的地适用插头+设备包<br />\n<br />\n<span style=\"font-size:16px;\"><strong> 常见问题</strong></span><br />\n<strong>1、什么是随身WIFI？</strong><br />\n随身WIFI是一个随身携带的无线WIFI发射器，是把目的地国家当地网络信号转化成WIFI信号，供手机或电脑上网，只能在目的地国家使用，国内无法开机使用，否则可能产生的高额跨国流量费用由客人承担。<br />\n<br />\n<strong> 2、随身WIFI怎么用？</strong><br />\n连接随身WIFI上网，跟您的手机型号没有关系，只要您的手机或pad具有WIFI功能，连接无线WIFI，搜索机身背后的账号，输入机身背后的密码就可以连接网络了。<br />\n<br />\n<strong>3、怎么计费？</strong><br />\n租金=单价*出行天数*台数；出行天数自领取机器当日开始计算租金，到返还机器日期止。<br />\n<br />\n<strong>4、移动WIFI网速如何？</strong><br />\nWIFI均采用当地的通信运营商， 网速高速稳定；但是在比较偏僻的地方，公海，高速，海拔很高的山峰，密闭的室内会有影响；连接的机器越多，网速越慢，建议连接三到五台设备，具体连接数量以设备资料为准。<br />\n<br />\n<strong>5、使用WIFI时，手机要不要开通国际漫游？</strong><br />\n无需开通国际数据漫游，可通过WiFi信号直接上网。 <br />\n<br />\n<strong>6、如果在国外有几天不用设备，是否需要支付这几天的租金？</strong><br />\n这个不用的也是需要支付费用的哦，就像您租房一样，按租赁时段计费，不住的时候租金照付哦~<br />\n<br />\n<strong>7、电量问题，使用时间问题？</strong><br />\nWIFI在使用过程中发热和发烫是正常现象，请不要担心。我们的设备可以在充满电的情况下使用6-8小时，建议自备充电宝。<br />\n<br />\n<strong>8、如果在国外使用出现问题怎么办？</strong><br />\n万一长时间无网络信号，建议您重启或初始化机器；设备说明书中包含常见故障的应对方法。如果设备无法使用，请在有网的情况下扫描机身的微信售后，将故障问题反馈至售后技术人员帮您解决。<br />\n<br />\n<strong> 9、延期或者超出天数怎么办？</strong><br />\n如出游前行程发生变化，需要申请取消移动WIFI，然后根据行程重新预定；如出游期间行程提早结束，可致电同程客服申请未使用天数的退款；如在出游期间行程延长，需要回国之后至柜台办理延期事宜（延期费用高于同程售卖价格）。",
+    :ImgUrlA "http://pic3.40017.cn/line/admin/2015/07/09/14/p05ANL.jpg",
+    :ImgUrlB "http://pic3.40017.cn/line/admin/2015/07/09/14/a5BMDE.jpg"}
+   {:playExerienceId 66276,
+    :TravelDescription "",
+    :ImgUrlA "http://pic3.40017.cn/line/admin/2015/07/09/14/fuaH48.jpg",
+    :ImgUrlB "http://pic3.40017.cn/line/admin/2015/07/09/14/eftewI.jpg"}],
+  :ReceiveTypeSum ["机场自取"],
+  :ErrorDes "",
+  :DestinationCityPinYin "xinjiapo",
+  :DestinationCity "新加坡",
+  :MainTitle "新加坡旅行WIFI租赁（北京取还）",
+  :RecommendReason
+  {:ReasonA "畅享3G网络，秀美照，开导航，你将成为旅伴的超级热点", :ReasonB "秀美照、看视频、开导航，全程毫无压力！", :ReasonC "随身WIFI，让您随时随地畅享无限网络，无处不精彩，无时不欢乐！"},
+  :LeavePortCityId "53",
+  :NewNoticeInfo
+  {:CostInclude "费用说明：<br/>租赁费用=单价*出行天数*台数<br/>出行天数按取机日期到还机日期计算。<br/>快递取还机器设备需在线支付押金，在归还机器设备后5~7个工作日退还押金。",
+   :CostNoInclude
+   "机场自取【押金】：<br/>1、需在机场柜台支付押金500元/台，押金支付方式详见票型说明；<br/>2、机器主体丢失扣除全部押金，部分零件丢失按柜台标准扣除相应费用；<br/>3、归还设备后，在机场现场退还押金。<br/>",
+   :Preference "",
+   :ProductDesc
+   "网络覆盖：新加坡全境。<br/>流量说明：不限制流量（根据运营商“公平原则”，避免长时间观看电影或下载，短时间内使用过大流量可能被当地运营商降速或者断网）。<br/>标准配置：WIFI机器+数据线+目的地适用插头（可直接在目的地使用）+设备包。<br/>机器性能：比普通手机略小，能连接5台设备，续航时间为6~8小时。<br/>退款规则：该产品支持取消。如需取消，请拨打电话 4007-777777 转 6 <br/>改期规则：使用日期前1天12:00（含）之前申请取消，不收取损失费；使用日期前1天12:00之后申请取消，收取一日租金费用。<br/>发票说明:同程旅游所有产品均可以开具发票，发票内容为“旅游服务费“，无法开具其他内容，请您在机器归还之后，拨打400-7777-777转6开具发票。",
+   :OrderLimit "",
+   :Direction
+   "1、领取方法：<br/>凭同程网预定成功短信出国当天领取设备（市区自取特惠：可以提前1天领取，回国之后第二天归还），快递设备会提前一天送到；<br/>2、使用方法：<br/>连接随身WIFI上网，跟您的手机型号没有关系，只要您的手机或pad具有WIFI功能，连接无线WIFI，搜索机身背后的账号，输入机身背后的密码就可以连接网络了。",
+   :Attention
+   "温馨提示:<br/>（1）拿到设备后，可以开机查询剩余电量，但不能连接网络且不要在国内长时间开机，否则产生的漫游费用由客人承担。<br/>（2）为了保证您的设备电量充足，在收到设备后对设备进行充电；在使用过程中，建议携带移动电源。<br/>（3）关于丢失或出现故障时的赔偿：<br/>路由器：500元/台；后盖：400元/台；上网SIM卡：400元/张；随身WIFI包：50元/个；充电插头：50元/个；USB连接线：50元/个。<br/>特别注意：机器丢失时，请先立即通知客服办理停机手续，如不及时通知而产生的费用将由顾客自己承担。"},
+  :ImgUrlList
+  ["http://pic4.40017.cn/line/admin/2016/04/05/10/Q9hItH.jpg"
+   "http://pic3.40017.cn/line/admin/2015/07/09/14/p05ANL.jpg"
+   "http://pic3.40017.cn/line/admin/2015/07/09/14/a5BMDE.jpg"
+   "http://pic3.40017.cn/line/admin/2015/07/09/14/fuaH48.jpg"
+   "http://pic3.40017.cn/line/admin/2015/07/09/14/eftewI.jpg"],
+  :LeavePortCity "北京",
+  :ProductCategoryDes "WIFI",
+  :DepartureCityId "",
+  :SubTitle "覆盖5大洲，超过100个国家和地区，超过501万用户的选择",
+  :ProductCategory 92,
+  :PriceInfo
+  [{:PriceName "",
+    :priceDetail
+    [{:AmountDirect 20.0,
+      :AdmountAdvice 0.0,
+      :PriceDes "新加坡WIFI（北京取还）【环球漫游柜台】",
+      :SupplierRelationId 98278,
+      :MinLineDate "2016-04-23T00:00:00+08:00",
+      :ActivityId 0,
+      :StrAk "",
+      :ResidualCount 0,
+      :AmountContract 17.0,
+      :ProductId 315752,
+      :PriceExtendDetail
+      {:PrePayAmount 500,
+       :VerifyType "短信",
+       :ReceiveType "机场自取",
+       :AdvanceTime "14:00",
+       :ReserveRemark
+       "1、押金支付方式：仅限信用卡<br/>2.特惠政策：国内机场柜台，若出发当天20:00之后领取机器或回国后凌晨06:00之前归还机器，可以少购买一日租金，至多可以少一日租金。（享特惠政策，务必备注好出发航班号~）<br/>日达到500MB，会收到短信提醒 ",
+       :AdvanceDays 1,
+       :StandardConfig "WIFI设备+数据线+目的地适用插头+设备包",
+       :ReserveTime "",
+       :PrePayDes "1、机器主体丢失扣除全部押金，部分零件丢失按照柜台标准扣除相应费用。\r\n2、预付押金：归还设备后，由同程在3～10个工作日内退还押金\r\n3、此为每台机器押金费用",
+       :ContainedItems "",
+       :TwoDimensionCode "",
+       :BookPerson 1,
+       :IsPrePay "到付",
+       :PayType "预付",
+       :Language [],
+       :IsMutiPlace 1},
+      :PerioId 0,
+      :ThirdDirect 20,
+      :ApplyPerson "",
+      :PrivilegeDetail "",
+      :DiscountInfoList [],
+      :PriceId 0}]}],
+  :IsSuccess true,
+  :ProductTagDes "通讯工具",
+  :Status 2}}

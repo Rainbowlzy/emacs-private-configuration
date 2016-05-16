@@ -1,27 +1,62 @@
 ;;; -*- coding: utf-8 -*-
-(("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/memberdata.clj" . 719)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/core.clj" . 5108)
- ("d:/MyConfiguration/lzy13870/Desktop/ringfullsite/ringfullsite/src/website/config.clj" . 1077)
+(("d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/init.el" . 733)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/script.clj" . 2905)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/TCWireless.Domain.AbroadActivity/VDefault/QueryProcessing803.cs" . 12234)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/pwd" . 10)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/core.clj" . 650)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/website/core.clj" . 3909)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/project.clj"))
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/project.clj" . 326)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/require-cmds-init.el" . 12004)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/.."))
+ ("d:/MyConfiguration/lzy13870/Applications/emacs-24.5-bin-i686-mingw32/share/emacs/24.5/lisp/simple.el" . 113045)
+ ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/machinelearninginaction/Ch04/bayes.py" . 544)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/eldoc-eval-20150512.506/eldoc-eval-autoloads.el" . 915)
+ ("c:/Python27/Lib/site-packages/pip/" . 36)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/yasnippet-20160403.830/yasnippet-autoloads.el" . 922)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/org-20160502/org-loaddefs.el" . 88291)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/.git"))
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/deploy/config/tcmobileapi_17usoft_com_AbroadActivity/product/App_Data/TCConfig/TongCheng.SOA.Interface.Config" . 2192)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/deploy/config/tcmobileapi_17usoft_com_AbroadActivity/stage/App_Data/TCConfig/TongCheng.SOA.Interface.Config" . 643)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/TCWireless.TCMobileAPI.AbroadActivity/QueryHandler.ashx.cs" . 9003)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity - 副本/TCWireless.Domain.AbroadActivity/VDefault/QueryProcessing808.cs" . 2800)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/go/hello/hello.go" . 77)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/go-snippets-20151121.2257/go-snippets-autoloads.el" . 503)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/go-stacktracer-20150430.1442/go-stacktracer-autoloads.el" . 418)
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/org-20160502/org-autoloads.el" . 26776)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/resources/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/resources/.."))
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/resources"))
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/resources/sqljdbc_6.0/enu/" . 74)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/site.clj" . 24)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/lib/form-validator/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/lib/form-validator/."))
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/.."))
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js"))
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/lib/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/lib/form-validator"))
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/resources/home.html" . 454)
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/"
+  (dired-filename . "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/public/js/lib"))
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/"
   (dired-filename . "d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/custom"))
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/memberdata.clj" . 719)
+ ("d:/MyConfiguration/lzy13870/Desktop/ringfullsite/ringfullsite/src/website/config.clj" . 1077)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/recentf" . 600)
  ("d:/MyConfiguration/lzy13870/"
   (dired-filename . "d:/MyConfiguration/lzy13870/.AndroidStudioPreview2.0"))
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/script.clj" . 3801)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/interface-test.clj" . 17940)
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/pwd" . 10)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/project.clj" . 47)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/sls.clj" . 2530)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/ac-helm-20160318.1933/ac-helm-autoloads.el" . 404)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/core.clj" . 2)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/helm-clojuredocs-20160405.23/helm-clojuredocs-autoloads.el" . 575)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/" . 1417)
  ("d:/MyConfiguration/lzy13870/AppData/Local/Temp/form-init4959724126049971138.clj" . 24634)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/project.clj" . 2006)
  ("c:/Users/Administrator/AppData/Local/Temp/"
   (dired-filename . "c:/Users/Administrator/AppData/Local/Temp/."))
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/.lein/profiles.clj" . 268)
- ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/resources/new-product.html" . 1651)
  ("d:/MyConfiguration/lzy13870/Desktop/ringfullsite/ringfullsite/src/website/interface_test_script.clj" . 919)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/ac-html-bootstrap-20160302.901/ac-html-bootstrap-autoloads.el" . 858)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/align-cljlet-20160112.1301/align-cljlet-autoloads.el" . 412)
@@ -64,7 +99,6 @@
   (dired-filename . "d:/MyConfiguration/lzy13870/Downloads/ring-master/ring-master/ring-jetty-adapter/src/ring/adapter/jetty.clj"))
  ("d:/MyConfiguration/lzy13870/Downloads/ring-master/ring-master/ring-servlet/src/ring/util/servlet.clj" . 2389)
  ("d:/MyConfiguration/lzy13870/Downloads/ring-master/ring-master/ring-core/src/ring/util/response.clj" . 1570)
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/init.el" . 665)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/" . 8162)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/emmet-mode-init.el" . 477)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/auto-complete-settings.el" . 5704)

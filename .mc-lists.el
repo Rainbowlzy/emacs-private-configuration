@@ -4,8 +4,13 @@
 (setq mc/cmds-to-run-for-all
       '(
         beginning-of-buffer
+        c-electric-paren
         downcase-region
+        emmet-expand-line
+        end-of-buffer
         kill-region
+        kill-sexp
+        paredit-backward-kill-word
         paredit-close-round
         paredit-doublequote
         paredit-forward-delete

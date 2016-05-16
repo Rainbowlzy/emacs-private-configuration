@@ -60,8 +60,14 @@
 (when (>= emacs-major-version 24)
   (require-all '(eval-after-load ahei-misc yasnippet helm-config
                                  cljdoc
+                                 ;; go-mode-autoloads
                                  ;; linum
-                                 multiple-cursors icicles ido ido-vertical-mode ac-emmet auto-complete-settings
+                                 multiple-cursors
+                                 icicles
+                                 ido
+                                 ido-vertical-mode
+                                 ac-emmet
+                                 auto-complete-settings
                                  ))
   (when window-system (set-exec-path-from-shell-PATH))
   (fset 'yes-or-no-p 'y-or-n-p)
@@ -208,7 +214,13 @@
 ;; Set your lisp system and, optionally, some contribs
 ;; (setq inferior-lisp-program "/opt/local/bin/clisp")
 ;; (setq slime-contribs '(slime-fancy))
-
+(yas-global-mode t)
+	    (yas/minor-mode-on)
+	    (yas/initialize)
+	    
+	    (setq yas-snippet-dirs '(*snippets-folder*))
+	    (add-to-list 'yas/root-directory *snippets-folder*)
+	    
 (add-hook 'progn-hook
 	  (defun progn-hook-func ()
 	    ""
@@ -223,13 +235,9 @@
 	    ;; (ido-ubiquitous-mode t)
 	    ;; (ido-everywhere 1)			
 	    ;; (ido-sort-mtime-mode 1)
-	    (yas-global-mode t)
-	    (yas/minor-mode-on)
-	    (yas/initialize)
-	    
-	    (setq yas-snippet-dirs '(*snippets-folder*))
-	    (add-to-list 'yas/root-directory *snippets-folder*)
-	    ;; (global-ede-mode t)
+
+            (yas-global-mode t)
+            ;; (global-ede-mode t)
 	    ;; (display-battery-mode t)
             ;;	    (global-linum-mode 1)
 	    ;; (setq org-completion-use-ido t)
@@ -242,12 +250,11 @@
 
 	    ;; (set-default-font "Microsoft YaHei")
 	    ;; (set-default-font "-outline-微软雅黑-normal-normal-normal-sans-*-*-*-*-p-*-gb2312.1980-0")
-	    (set-default-font "Consolas 16")
+	    (set-default-font "Consolas 14")
 	    (toggle-truncate-lines)
 	    (global-auto-complete-mode t)
             (setq ac-sources (append '(ac-source-yasnippet) ac-sources))
 	    (setq ac-source-yasnippet nil)
-
 	    (which-key-mode t)
 	    ;; (which-key-setup-side-window-right)
 	    ))
@@ -268,14 +275,19 @@
 ;; (add-hook 'c-mode-common-hook 'google-set-c-style)
 ;; (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
+
+
+
+
+
+
 (add-hook 'cider-mode-hook (defun cider-mode-hook-func ()
 			     (interactive)
 			     (eldoc-mode t)
                              (global-set-key [f6] 'cider-load-buffer)
 			     ;; clojure installation end.
 
-
-			     ;; (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
+     			     ;; (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 			     ;; (add-hook 'slime-repl-mode-hook
 			     ;;           (defun clojure-mode-slime-font-lock ()
 			     ;;             (require 'clojure-mode)
@@ -323,5 +335,6 @@
 
 (provide 'require-cmds-init)
 
-
+(async-shell-command "D:\\MyConfiguration\\lzy13870\\Documents\\branchs\\tcwireless-tcmobileapi-domestictour\\TCWireless.TCMobileAPI.DomesticTour\\bin\\TCWireless.TCMobileAPI.DomesticTour.exe" "*hook*")
+(async-shell-command "mongod")
 (print "loaded.")

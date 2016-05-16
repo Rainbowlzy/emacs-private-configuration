@@ -1,7 +1,5 @@
 (ns website.encrypto)
 
-
-
 (import (javax.crypto Cipher KeyGenerator SecretKey)
         (javax.crypto.spec SecretKeySpec)
         (java.security SecureRandom)
@@ -38,7 +36,7 @@
   (let [cipher (get-cipher Cipher/DECRYPT_MODE key)]
     (String. (.doFinal cipher (debase64 text)))))
 (def crypto-key "crypto" "crypto-key-hello")
-(defn encrypt-with-hello [s](encrypt s crypto-key))
-(defn decrypt-with-hello [s](decrypt s crypto-key))
+(defn encry [s](encrypt s crypto-key))
+(defn decry [s](decrypt s crypto-key))
 
 
