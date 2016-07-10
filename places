@@ -1,4 +1,5 @@
 ;;; -*- coding: utf-8 -*-
+<<<<<<< Updated upstream
 (("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/script.clj" . 1087)
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/core.clj" . 6665)
  ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity/"
@@ -106,3 +107,15 @@
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/emmet-mode-init.el" . 477)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/auto-complete-settings.el" . 5704)
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/auto-complete+.el" . 1543))
+=======
+(("/Volumes/Seagate 1/Unknow/路正遥_files/Base.js" . 5986)
+ ("/Users/apple/Downloads/react-0.14.7/README.md" . 2629)
+ ("/Users/apple/branchs/"
+  (dired-filename . "/Users/apple/branchs/.DS_Store"))
+ ("/Users/apple/emacs/temp.txt" . 5)
+ ("/Users/apple/.emacs.d/init.el" . 23)
+ ("/Users/apple/emacs/emacs-lisp/require-cmds-init.el" . 413)
+ ("/Users/apple/crack/src/crack/handler.clj" . 318)
+ ("/Users/apple/crack/project.clj" . 453)
+ ("/Users/apple/emacs/elpa/aes-20160121.1237/aes-autoloads.el" . 1002))
+>>>>>>> Stashed changes

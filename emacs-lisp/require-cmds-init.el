@@ -10,6 +10,7 @@
 (package-initialize)
 
 (defvar my-packages '(better-defaults
+                      aes
                       projectile
                       clojure-mode
                       cider
@@ -65,6 +66,7 @@
 (when (>= emacs-major-version 24)
   (require-all '(eval-after-load ahei-misc yasnippet helm-config
                                  cljdoc
+                                 aes
                                  ;; go-mode-autoloads
                                  ;; linum
                                  multiple-cursors
@@ -338,8 +340,12 @@
 (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (global-set-key [f5] 'browse-url)
 
-(provide 'require-cmds-init)
+(let ((path "D:\\MyConfiguration\\lzy13870\\Documents\\branchs\\tcwireless-tcmobileapi-domestictour\\TCWireless.TCMobileAPI.DomesticTour\\bin\\TCWireless.TCMobileAPI.DomesticTour.exe"))
+  (if (file-exists-p path)
+      (let ()
+        (async-shell-command path "*hook*")
+        (async-shell-command "mongod"))
+    (message "executing ignored.")
+    ))
 
-(async-shell-command "D:\\MyConfiguration\\lzy13870\\Documents\\branchs\\tcwireless-tcmobileapi-domestictour\\TCWireless.TCMobileAPI.DomesticTour\\bin\\TCWireless.TCMobileAPI.DomesticTour.exe" "*hook*")
-(async-shell-command "mongod")
-(print "loaded.")
+(provide 'require-cmds-init)

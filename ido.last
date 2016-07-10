@@ -2,7 +2,12 @@
 
 ;; ----- ido-last-directory-list -----
 (
+<<<<<<< Updated upstream
  ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity/" . "SolutionItems/")
+=======
+ ("/Users/apple/crack/src/" . "crack/")
+ ("/Users/apple/crack/" . "src/")
+>>>>>>> Stashed changes
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/" . "website/")
  ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/machinelearninginaction/" . "Ch04/")
  ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/" . "machinelearninginaction/")
@@ -75,7 +80,7 @@
  ("/Volumes/U/branchs/ringfullsite/src/" . "website/")
  ("/Volumes/U/branchs/ringfullsite/" . "src/")
  ("/Users/apple/branchs/ringfullsite/target/" . "classes/")
- ("/Users/apple/emacs/" . "elpa/")
+ ("/Users/apple/emacs/" . "emacs-lisp/")
  ("/Users/apple/branchs/ringfullsite/src/" . "website/")
  ("/Users/apple/branchs/ringfullsite/" . "src/")
  ("/Users/apple/clj-tank/src/" . "clj_tank/")
@@ -117,8 +122,16 @@
 
 ;; ----- ido-work-directory-list -----
 (
+<<<<<<< Updated upstream
  "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/"
  "d:/MyConfiguration/lzy13870/AppData/Roaming/"
+=======
+ "/Users/apple/emacs/"
+ "/Users/apple/.emacs.d/"
+ "/Users/apple/emacs/emacs-lisp/"
+ "/Users/apple/crack/src/crack/"
+ "/Users/apple/crack/"
+>>>>>>> Stashed changes
  "d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/"
  "d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/"
@@ -142,7 +155,6 @@
  "/Users/apple/branchs/ringfullsite/"
  "/Users/apple/branchs/clj/nrepl-boostrap/"
  "/Users/apple/.boot/"
- "/Users/apple/.emacs.d/"
  "/Users/apple/"
  "/Users/apple/clj-tank/"
  "/Users/apple/.lein/"
@@ -163,29 +175,63 @@
  "/Users/apple/.lein/self-installs/"
  "/Users/apple/.m2/repository/args4j/args4j/2.0.16/"
  "/Volumes/U/branchs/ringfullsite/src/website/"
- "/Volumes/U/branchs/ringfullsite/"
- "/Users/apple/emacs/emacs-lisp/"
- "/Users/apple/branchs/ringfullsite/public/"
- "/Users/apple/.emacs.d/emacs-lisp/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+<<<<<<< Updated upstream
  "core.clj"
  "script.clj"
  "restclient.txt"
  "CONTRIBUTORS.txt"
  "require-cmds-init.el"
  "init.el"
+=======
+ "temp.txt"
+ "init.el"
+ "require-cmds-init.el"
+ "handler.clj"
+>>>>>>> Stashed changes
  "project.clj"
+ "CONTRIBUTORS.txt"
+ "script.clj"
  "pwd"
  "home-ext.html"
+<<<<<<< Updated upstream
  "bayes.py"
+=======
+>>>>>>> Stashed changes
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+<<<<<<< Updated upstream
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/" (22347 36167 0 0) "畅游海外专题线上配置.xlsx" "submit_order.clj" "site.clj" "script.clj" "rsp.txt" "output-1463711597337.xlsx" "output-1463711486280.xlsx" "output-1462245423090.xlsx" "output-1462245402781.xlsx" "memberdata.clj" "encrypto.clj" "db.clj" "core.clj" "#script.clj#" "../" "./")
+=======
+ ("/Users/apple/" (22371 13339 0 0) "Windows 7 x64 Coke Backup.vmwarevm/" "WebstormProjects/" "System Volume Information/" "slsms/" "Searching" "r#.DotSettings" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "lein" "emacs/" "eclipse/" "Downloads/" "Documents/" "Desktop/" "crack/" "branchs/" "bin/" "Applications/" "AndroidStudioProjects/" ".yjp/" ".Xauthority" ".wireshark-etc/" ".wireshark/" ".w3m/" ".Trash/" ".tooling/" ".subversion/" ".ssh/" ".ShadowsocksX/" ".sdconv/" ".rnd" ".profile~" ".profile" ".p2/" ".oracle_jre_usage/" ".npm/" ".mono/" ".mongorc.js" ".macports/" ".m2/" ".local/" ".lein/" ".jhbuildrc-fw-10.4-test" ".jhbuildrc-fw-10.4" ".jhbuildrc-custom" ".jhbuildrc-cfw-10.4u" ".jhbuildrc-cfw-10.4" ".jhbuildrc" ".ido.last~" ".ido.last" ".idlerc/" ".gradle/" ".gitconfig" ".gem/" ".fontconfig/" ".evernote-mode.log" ".evernote-mode/" ".emacs.d/" ".eclipse/" ".DS_Store" ".dbshell" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bzr.log" ".boot/" ".bash_sessions/" ".bash_history" ".android/" ".adobe/" "../" "./")
+
+ ("/Users/apple/emacs/emacs-lisp/" (22374 6685 0 0) "web-mode-init.el" "stack-m.el" "stack-f.el" "slime-init.el" "require-cmds-init.el" "read.el" "queue-m.el" "queue-f.el" "pp-xml-init.el" "Powershell.el" "PowerShell-Mode.el" "package-init.el" "omnisharp-emacs-master/" "libs/" "keys-init.el" "init.el" "hooks-init.el" "functions-init.el" "fonts-init.el" "eval-after-load.el" "emmet-mode-init.el" "elib-node.el" "dll.el" "dll-debug.el" "csharp-mode.el.backup" "csharp-mode-master/" "csharp/" "cookie.el" "clojure-init.el" "cedet-init.el" "cedet-1.1/" "cedet-1.0.1/" "bintree.el" "avltree.elc" "auto-complete-settings.el" "auto-complete-init.el" "auto-complete+.el" "ahei-misc.el" "aes.el" "../" "./")
+
+ ("/Users/apple/emacs/" (22374 6685 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "recentf" "README.md" "projectile.cache" "projectile-bookmarks.eld" "places" "init.el" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "custom/" "cua.el" "cpp-init.el" "backups/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/apple/branchs/" (22345 46758 0 0) "slsms/" "compojure/" ".DS_Store" "../" "./")
+
+ ("/Users/apple/.emacs.d/" (22368 4739 0 0) "var/" "url/" "swank/" "srecode-map.el" "snippets/" "semanticdb/" "init.el~" "init.el" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".DS_Store" "../" "./")
+
+ ("/Users/apple/.m2/repository/args4j/args4j/2.0.16/" (22315 24502 0 0) "args4j-2.0.16.pom.sha1" "args4j-2.0.16.pom" "args4j-2.0.16.jar.sha1" "args4j-2.0.16.jar" "_maven.repositories" "../" "./")
+
+ ("/Users/apple/.lein/self-installs/" (22252 46646 0 0) "leiningen-2.6.1-standalone.jar" "leiningen-2.6.0-standalone.jar" "leiningen-2.5.3-standalone.jar" "../" "./")
+
+ ("/Users/apple/.lein/" (22315 26991 0 0) "self-installs/" "repl-history" "profiles.clj~" "profiles.clj" "plugins/" ".DS_Store" "../" "./")
+
+ ("/Users/apple/crack/src/crack/" (22346 40206 0 0) "handler.clj" "../" "./")
+
+ ("/Users/apple/crack/" (22345 47934 0 0) "test/" "src/" "resources/" "README.md" "project.clj" ".gitignore" "../" "./")
+
+ ("/Users/apple/crack/src/" (22345 47849 0 0) "crack/" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/" (22329 26052 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "recentf" "README.md" "projectile.cache" "projectile-bookmarks.eld" "places" "init.el" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "backups/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".DS_Store" "../" "./")
+>>>>>>> Stashed changes
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/" (22347 35847 0 0) "test/" "target/" "src/" "resources/" "README.md" "public/" "project.clj" "prod.txt" "LICENSE" "FIND" "doc/" "CHANGELOG.md" ".nrepl-port" ".hgignore" ".gitignore" ".git/" "../" "./")
 
@@ -351,21 +397,13 @@
 
  ("/Users/apple/branchs/ringfullsite/" (22266 5580 0 0) "test/" "target/" "src/" "resources/" "README.md" "readme.html" "public/" "project.clj" "log" "LICENSE" "doc/" "dev-resources/" "config.clj" "code.png" "CHANGELOG.md" ".lein-repl-history" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
- ("/Users/apple/" (22264 37753 0 0) "Windows 7 x64 Coke Backup.vmwarevm/" "WebstormProjects/" "update-py.sh" "tongcheng/" "tmp-jhbuild-revision" "test.xlsx" "System Volume Information/" "Source/" "SeeTest/" "r#.DotSettings" "Public/" "Projects/" "Pictures/" "Music/" "Movies/" "Library/" "leiningen-2.6.1-standalone.zip" "lein" "interface-trace/" "install/" "emacs/" "eclipse/" "Downloads/" "Documents/" "Desktop/" "clj-tank/" "branchs/" "bin/" "Applications/" "AndroidStudioProjects/" ".yjp/" ".Xauthority" ".wireshark-etc/" ".wireshark/" ".w3m/" ".Trash/" ".tooling/" ".subversion/" ".ssh/" ".ShadowsocksX/" ".sdconv/" ".rnd" ".profile~" ".profile" ".p2/" ".oracle_jre_usage/" ".npm/" ".mono/" ".macports/" ".m2/" ".local/" ".lein/" ".jhbuildrc-fw-10.4-test" ".jhbuildrc-fw-10.4" ".jhbuildrc-custom" ".jhbuildrc-cfw-10.4u" ".jhbuildrc-cfw-10.4" ".jhbuildrc" ".ido.last" ".idlerc/" ".gradle/" ".gitconfig" ".gem/" ".fontconfig/" ".evernote-mode.log" ".evernote-mode/" ".emacs.d/" ".eclipse/" ".DS_Store" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bzr.log" ".boot/" ".bash_sessions/" ".bash_history" ".android/" ".adobe/" "../" "./")
-
  ("/Users/apple/branchs/clj/nrepl-boostrap/" (22263 31321 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj~" "project.clj" "LICENSE" "doc/" ".hgignore" ".gitignore" "../" "./")
-
- ("/Users/apple/branchs/" (22263 28555 0 0) "yasnippet/" "WirelessData.txt" "trunk/" "tools.nrepl/" "tmp/" "titan/" "test-dianping/" "Test/" "tcwireless-tcmobileapi-yingxiao2/" "tcwireless-tcmobileapi-yingxiao/" "tcwireless-tcmobileapi-visa/" "tcwireless-tcmobileapi-travelconsultant-publish/" "tcwireless-tcmobileapi-travelconsultant-developer/" "tcwireless-tcmobileapi-travelconsultant-backup" "tcwireless-tcmobileapi-travelconsultant - 副本/" "tcwireless-tcmobileapi-travelconsultant/" "tcwireless-tcmobileapi-selftrip/" "tcwireless-tcmobileapi-pub.7z" "tcwireless-tcmobileapi-pub/" "tcwireless-tcmobileapi-pay1/" "tcwireless-tcmobileapi-pay/" "tcwireless-tcmobileapi-memberextend-publish/" "tcwireless-tcmobileapi-memberextend-developer/" "tcwireless-tcmobileapi-memberextend/" "tcwireless-tcmobileapi-member/" "tcwireless-tcmobileapi-hongbao/" "tcwireless-tcmobileapi-homeholiday/" "tcwireless-tcmobileapi-domestictour - 副本/" "tcwireless-tcmobileapi-domestictour/" "tcwireless-tcmobileapi-destination - 副本/" "tcwireless-tcmobileapi-destination/" "tcwireless-tcmobileapi-abroadactivity8008/" "tcwireless-tcmobileapi-abroadactivity - 副本/" "tcwireless-tcmobileapi-abroadactivity/" "tcwireless-raw/" "StockTool/" "src/" "servciename.txt" "servciename-filtered.txt" "script.cs" "ringfullsite/" "request-urls.txt" "py/" "push/" "proxy/" "private-branch/" "pay.bat" "osx-browse/" "nodeTest/" "nleiningen/" "interface-host/" "ido-complete-space-or-hyphen/" "git---github.com-matplotlib-matplotlib.git/" "generator/" "evernote-mode/" "emacs-evernote-mode-read-only/" "emacs/" "compojure-default/" "clr.tools.nrepl/" "clojure-test/" "clojure-clr/" "clj/" "bp/" ".metadata/" ".emacs.d/" ".DS_Store" "../" "./")
-
- ("/Users/apple/.emacs.d/" (22263 29957 0 0) "var/" "url/" "swank/" "srecode-map.el" "snippets/" "semanticdb/" "init.el~" "init.el" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".DS_Store" "../" "./")
 
  ("/Users/apple/.boot/" (22263 29948 0 0) "profile.boot~" "profile.boot" "../" "./")
 
  ("/Users/apple/clj-tank/src/clj_tank/" (22263 28697 0 0) "interface_test.clj" "gen.clj" "core.clj" "ai.clj" "../" "./")
 
  ("/Users/apple/emacs/elpa/ac-nrepl-0.21/" (22262 6954 0 0) "ac-nrepl.el~" "ac-nrepl.elc" "ac-nrepl.el" "ac-nrepl-pkg.elc" "ac-nrepl-pkg.el" "ac-nrepl-autoloads.el~" "ac-nrepl-autoloads.el" "../" "./")
-
- ("/Users/apple/.lein/" (22262 6892 0 0) "self-installs/" "repl-history" "profiles.clj~" "profiles.clj" "plugins/" ".DS_Store" "../" "./")
 
  ("/Users/apple/.lein/plugins/" (22129 32224 0 0) "../" "./")
 
@@ -376,6 +414,7 @@
  ("/Applications/Emacs.app/" (21800 6412 0 0) "Contents/" "../" "./")
 
  ("/Applications/" (22259 18103 0 0) "爱奇艺视频.app/" "有道词典.app/" "XMind.app/" "Xcode.app/" "Xamarin Studio.app/" "Wireshark.app/" "WeChat.app/" "WebStorm.app/" "VMware Fusion.app/" "Utilities/" "Twitter.app/" "Time Machine.app/" "TextEdit.app/" "TeamViewer.app/" "System Preferences.app/" "Stickies.app/" "ShadowsocksX.app/" "Safari.app/" "RTX.app/" "Reminders.app/" "QuickTime Player.app/" "QQMusic.app/" "QQ.app/" "Preview.app/" "Pocket.appdownload/" "Photos.app/" "Photo Booth.app/" "Pages.app/" "Numbers.app/" "Notes.app/" "MPlayerX.app/" "Mission Control.app/" "Messages.app/" "Maps.app/" "Mail.app/" "MacPorts/" "MacPaw Gemini.app/" "Launchpad.app/" "KugouMusic.app/" "Keynote.app/" "Keka.app/" "iTunes.app/" "Image Capture.app/" "iBooks.app/" "Google Chrome.app/" "GitHub Desktop.app/" "Game Center.app/" "Font Book.app/" "FileZilla.app/" "FaceTime.app/" "Evernote.app/" "eMuleTorrent.app/" "Emacs.app/" "EasyGet Lite.app/" "DVD Player.app/" "DictUnifier.app/" "Dictionary.app/" "Dashboard.app/" "Cookie.app/" "Contacts.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "BitTorrent.app/" "Automator.app/" "App Store.app/" ".localized" ".DS_Store" "../" "./")
+<<<<<<< Updated upstream
 
  ("/Users/apple/branchs/tcwireless-tcmobileapi-abroadactivity/TCWireless.Data.DataAccess/" (22190 53154 0 0) "TCWireless.Data.DataAccess.csproj.orig" "TCWireless.Data.DataAccess.csproj" "Properties/" "packages.config" "obj/" "DisplayControlHelper.cs" "bin/" "App_Data/" "app.config" "AdvertisementHelper802.cs" "AdvertisementHelper.cs" "../" "./")
 
@@ -384,6 +423,8 @@
  ("/Users/apple/branchs/tcwireless-tcmobileapi-abroadactivity/TCWireless.TCMobileAPI.AbroadActivity/App_Data/" (22190 53179 0 0) "WebAppSettings_Test.config" "WebAppSettings_Prod.config" "TCWirelessConfig/" "TCConfig/" "../" "./")
 
  ("/Users/apple/branchs/tcwireless-tcmobileapi-abroadactivity/TCWireless.TCMobileAPI.AbroadActivity/" (22217 49799 0 0) "Web.Release.config" "Web.Debug.config" "Web.config" "VERSION.txt" "TCWireless.TCMobileAPI.AbroadActivity.userprefs" "TCWireless.TCMobileAPI.AbroadActivity.sln" "TCWireless.TCMobileAPI.AbroadActivity.csproj.user" "TCWireless.TCMobileAPI.AbroadActivity.csproj" "QueryParamsVerify.cs" "QueryHandler.ashx.cs" "QueryHandler.ashx" "Properties/" "Program.cs" "packages.config" "obj/" "Global.asax.cs" "Global.asax" "default.aspx.designer.cs" "default.aspx.cs" "default.aspx" "bin/" "App_Data/" "../" "./")
+=======
+>>>>>>> Stashed changes
 )
 
 ;; ----- ido-unc-hosts-cache -----
