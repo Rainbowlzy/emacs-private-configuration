@@ -12,10 +12,7 @@
 (defvar my-packages '(better-defaults
                       aes
                       projectile
-                      clojure-mode
-                      cider
                       paredit
-                      ac-cider
                       ;; paredit-menu
                       which-key
                       ibuffer
@@ -33,7 +30,12 @@
                       noctilux-theme
                       ac-nrepl
                       ac-helm
+
+
+                      clojure-mode
+                      cider
                       helm-clojuredocs
+                      ac-cider
                       ))
 
 (dolist (p my-packages)
