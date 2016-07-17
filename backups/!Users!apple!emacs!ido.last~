@@ -2,8 +2,12 @@
 
 ;; ----- ido-last-directory-list -----
 (
+<<<<<<< Updated upstream
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity/" . "SolutionItems/")
+=======
  ("/Users/apple/crack/src/" . "crack/")
  ("/Users/apple/crack/" . "src/")
+>>>>>>> Stashed changes
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/" . "website/")
  ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/machinelearninginaction/" . "Ch04/")
  ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/" . "machinelearninginaction/")
@@ -118,16 +122,19 @@
 
 ;; ----- ido-work-directory-list -----
 (
+<<<<<<< Updated upstream
+ "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/"
+ "d:/MyConfiguration/lzy13870/AppData/Roaming/"
+=======
  "/Users/apple/emacs/"
  "/Users/apple/.emacs.d/"
  "/Users/apple/emacs/emacs-lisp/"
  "/Users/apple/crack/src/crack/"
  "/Users/apple/crack/"
+>>>>>>> Stashed changes
  "d:/MyConfiguration/lzy13870/AppData/Roaming/.emacs.d/"
  "d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/"
- "d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/"
- "d:/MyConfiguration/lzy13870/AppData/Roaming/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/resources/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/src/website/"
  "d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/"
@@ -172,20 +179,35 @@
 
 ;; ----- ido-work-file-list -----
 (
+<<<<<<< Updated upstream
+ "core.clj"
+ "script.clj"
+ "restclient.txt"
+ "CONTRIBUTORS.txt"
+ "require-cmds-init.el"
+ "init.el"
+=======
  "temp.txt"
  "init.el"
  "require-cmds-init.el"
  "handler.clj"
+>>>>>>> Stashed changes
  "project.clj"
  "CONTRIBUTORS.txt"
  "script.clj"
  "pwd"
- "core.clj"
  "home-ext.html"
+<<<<<<< Updated upstream
+ "bayes.py"
+=======
+>>>>>>> Stashed changes
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+<<<<<<< Updated upstream
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/" (22347 36167 0 0) "畅游海外专题线上配置.xlsx" "submit_order.clj" "site.clj" "script.clj" "rsp.txt" "output-1463711597337.xlsx" "output-1463711486280.xlsx" "output-1462245423090.xlsx" "output-1462245402781.xlsx" "memberdata.clj" "encrypto.clj" "db.clj" "core.clj" "#script.clj#" "../" "./")
+=======
  ("/Users/apple/" (22371 13339 0 0) "Windows 7 x64 Coke Backup.vmwarevm/" "WebstormProjects/" "System Volume Information/" "slsms/" "Searching" "r#.DotSettings" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "lein" "emacs/" "eclipse/" "Downloads/" "Documents/" "Desktop/" "crack/" "branchs/" "bin/" "Applications/" "AndroidStudioProjects/" ".yjp/" ".Xauthority" ".wireshark-etc/" ".wireshark/" ".w3m/" ".Trash/" ".tooling/" ".subversion/" ".ssh/" ".ShadowsocksX/" ".sdconv/" ".rnd" ".profile~" ".profile" ".p2/" ".oracle_jre_usage/" ".npm/" ".mono/" ".mongorc.js" ".macports/" ".m2/" ".local/" ".lein/" ".jhbuildrc-fw-10.4-test" ".jhbuildrc-fw-10.4" ".jhbuildrc-custom" ".jhbuildrc-cfw-10.4u" ".jhbuildrc-cfw-10.4" ".jhbuildrc" ".ido.last~" ".ido.last" ".idlerc/" ".gradle/" ".gitconfig" ".gem/" ".fontconfig/" ".evernote-mode.log" ".evernote-mode/" ".emacs.d/" ".eclipse/" ".DS_Store" ".dbshell" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bzr.log" ".boot/" ".bash_sessions/" ".bash_history" ".android/" ".adobe/" "../" "./")
 
  ("/Users/apple/emacs/emacs-lisp/" (22374 6685 0 0) "web-mode-init.el" "stack-m.el" "stack-f.el" "slime-init.el" "require-cmds-init.el" "read.el" "queue-m.el" "queue-f.el" "pp-xml-init.el" "Powershell.el" "PowerShell-Mode.el" "package-init.el" "omnisharp-emacs-master/" "libs/" "keys-init.el" "init.el" "hooks-init.el" "functions-init.el" "fonts-init.el" "eval-after-load.el" "emmet-mode-init.el" "elib-node.el" "dll.el" "dll-debug.el" "csharp-mode.el.backup" "csharp-mode-master/" "csharp/" "cookie.el" "clojure-init.el" "cedet-init.el" "cedet-1.1/" "cedet-1.0.1/" "bintree.el" "avltree.elc" "auto-complete-settings.el" "auto-complete-init.el" "auto-complete+.el" "ahei-misc.el" "aes.el" "../" "./")
@@ -209,14 +231,25 @@
  ("/Users/apple/crack/src/" (22345 47849 0 0) "crack/" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/" (22329 26052 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "recentf" "README.md" "projectile.cache" "projectile-bookmarks.eld" "places" "init.el" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "backups/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".DS_Store" "../" "./")
+>>>>>>> Stashed changes
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/" (22347 35847 0 0) "test/" "target/" "src/" "resources/" "README.md" "public/" "project.clj" "prod.txt" "LICENSE" "FIND" "doc/" "CHANGELOG.md" ".nrepl-port" ".hgignore" ".gitignore" ".git/" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/" (22347 34517 0 0) "Zoom/" "XMind/" "Wireshark/" "WinRAR/" "travelconsultant_request.txt" "travelconsultant_request.js" "tmp.json" "text2.txt" "text1.txt" "test.log" "Tencent/" "tasklist.org" "Sun/" "submit_order.json" "submit_order.js" "SQL Assistant/" "SogouWP/" "SogouWallPaper/" "SGWPUpgrade/" "SGWPCommon/" "SGWallPaperDT/" "sendredpackage.js" "seetest/" "restclient.txt" "response.txt" "requirement.txt" "requests/" "request1.txt" "request.json" "request-ashx.txt" "redpackage-shareurl.txt" "qmdr/" "pwd" "pub.js" "projecttagsMapping.txt" "projectTags.txt" "projectList.org" "profile.clj" "problem.org" "pay.txt" "order_submit_interface.txt" "order.org" "NVIDIA/" "NuGet/" "Nuance/" "npm-cache/" "npm/" "Nox/" "notexistlineid.txt" "Notepad++/" "News/" "Mozilla/" "Microsoft FxCop/" "Microsoft/" "MemberExtend.txt" "member.org" "member-verify-code.txt" "member-verify-code.org" "member-todo-list.org" "Media Center Programs/" "Maxthon3/" "Macromedia/" "JetBrains/" "interface_name_list.txt" "interface_name_list.org" "Identities/" "ICSharpCode/" "hosts.txt" "hongbao.org" "hongbao-request.js" "Handler1.txt" "GitHub/" "GitExtensions/" "Everything/" "emacs/" "diff2.txt" "diff1.txt" "DFEFQQ.DLL" "deviceid.txt" "DestinationProjectList.org" "DataInterface.txt" "clientinfo.js" "cityList2.txt" "cityList.txt" "cake.clj" "branchs/" "baidu.txt" "Baidu/" "afterBuild.bat" "Adobe/" "761requirement.txt" "760request.txt" "760request.js" "360se6/" "2.txt" "1.txt" "1.html" "1.csv" "1.bat" ".ssh/" ".srecode/" ".semanticdb/" ".newsrc-dribble" ".lein/" ".ido.last" ".history" ".emacs.d/" ".boot/" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity/SolutionItems/" (22343 47511 0 0) "TCSmartFrameWork/" "SOA/" "HtmlAgilityPack.XML" "HtmlAgilityPack.dll" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/" (22344 900 0 0) "WirelessData.txt" "Web.config" "tools.nrepl/" "tmp/" "test-dianping/" "Test/" "TCWireless.TCMobileAPI.AbroadActivity/" "tcwireless-tcmobileapi-yingxiao2/" "tcwireless-tcmobileapi-yingxiao/" "tcwireless-tcmobileapi-visa/" "tcwireless-tcmobileapi-travelconsultant-publish/" "tcwireless-tcmobileapi-travelconsultant-developer/" "tcwireless-tcmobileapi-travelconsultant-backup" "tcwireless-tcmobileapi-travelconsultant - 副本/" "tcwireless-tcmobileapi-travelconsultant/" "tcwireless-tcmobileapi-selftrip/" "tcwireless-tcmobileapi-scenery/" "tcwireless-tcmobileapi-pub.7z" "tcwireless-tcmobileapi-pub/" "tcwireless-tcmobileapi-pay1/" "tcwireless-tcmobileapi-pay/" "tcwireless-tcmobileapi-memberextend-publish/" "tcwireless-tcmobileapi-memberextend-developer/" "tcwireless-tcmobileapi-memberextend/" "tcwireless-tcmobileapi-member/" "tcwireless-tcmobileapi-hongbao/" "tcwireless-tcmobileapi-homeholiday/" "tcwireless-tcmobileapi-domestictour - 副本/" "tcwireless-tcmobileapi-domestictour/" "tcwireless-tcmobileapi-destination - 副本/" "tcwireless-tcmobileapi-destination/" "tcwireless-tcmobileapi-abroadactivity8008/" "tcwireless-tcmobileapi-abroadactivity - 副本.rar" "tcwireless-tcmobileapi-abroadactivity - 副本/" "tcwireless-tcmobileapi-abroadactivity/" "tcwireless-raw/" "slsms/" "servciename.txt" "servciename-filtered.txt" "search.bat" "script.cs" "ringfullsite/" "request-urls.txt" "README.md" "push/" "proxy/" "private-branch/" "pay.bat" "packages.config" "Packages/" "output.txt" "obj/" "nodeTest/" "nleiningen/" "keys.txt" "interface-test/" "hook/" "go/" "generator/" "favicon.ico" "extensions.txt" "emacs-private-configuration/" "emacs/" "Default.aspx" "DataServices/" "clr.tools.nrepl/" "clr/" "clojure-test/" "clojure-clr/" "bin/" ".emacs.d/" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity/" (22344 16447 0 0) "TCWireless.Utility.UnitTest/" "TCWireless.Utility/" "TCWireless.TCMobileAPI.AbroadActivity.v11.suo" "TCWireless.TCMobileAPI.AbroadActivity.sln.DotSettings" "TCWireless.TCMobileAPI.AbroadActivity.sln" "TCWireless.TCMobileAPI.AbroadActivity/" "TCWireless.Parameter/" "TCWireless.Model/" "TCWireless.Enums/" "TCWireless.Domain.AbroadActivity/" "TCWireless.Distributed.AbroadActivity/" "TCWireless.Data.DataAccess/" "TCWireless.Data.AbroadActivity/" "TCWireless.AutoTest.AbroadActivity/" "SolutionItems/" "servicename.txt" "packages/" "deploy/" ".nuget/" ".gitignore" ".git/" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/Documents/branchs/tcwireless-tcmobileapi-abroadactivity/TCWireless.Data.DataAccess/" (22344 16447 0 0) "TCWireless.Data.DataAccess.csproj.orig" "TCWireless.Data.DataAccess.csproj" "Properties/" "packages.config" "obj/" "NoticeDA.cs" "Generator/" "DisplayControlHelper.cs" "bin/" "App_Data/" "app.config" "AdvertisementHelper802.cs" "AdvertisementHelper.cs" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/" (22332 6810 0 0) "web-mode-init.el" "stack-m.el" "stack-f.el" "slime-init.el" "require-cmds-init.el" "read.el" "queue-m.el" "queue-f.el" "pp-xml-init.el" "Powershell.el" "PowerShell-Mode.el" "package-init.el" "omnisharp-emacs-master/" "libs/" "keys-init.el" "init.el" "hooks-init.el" "functions-init.el" "fonts-init.el" "eval-after-load.el" "emmet-mode-init.el" "elib-node.el" "dll.el" "dll-debug.el" "csharp-mode.el.backup" "csharp-mode-master/" "csharp/" "cookie.el" "clojure-init.el" "cedet-init.el" "cedet-1.1/" "cedet-1.0.1/" "bintree.el" "avltree.elc" "auto-complete-settings.el" "auto-complete-init.el" "auto-complete+.el" "ahei-misc.el" "aes.el" "../" "./")
+
+ ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/" (22329 26052 0 0) "var/" "url/" "srecode-map.el" "snippets/" "semanticdb/" "recentf" "README.md" "projectile.cache" "projectile-bookmarks.eld" "places" "init.el" "ido.last" "ido.el" "eshell/" "emacs-lisp/" "elpa/" "ede-projects.el" "dict/" "custom/" "cua.el" "cpp-init.el" "backups/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/" (22329 25691 0 0) "「开始」菜单/" "workspace/" "vmlog.log" "Videos/" "tmp3.js" "tmp1.js" "tmp.xml" "tmp.js" "Templates/" "TCWireless.UnitTest.YingXiao/" "TC.InterVacation.SOA.Product.Entities.dll" "stuff/" "sqlserver/" "sql/" "SendTo/" "Searches/" "Saved Games/" "reverse.bat" "Recent/" "push.bat" "public" "ps.bat" "private.ppk" "PrintHood/" "Pictures/" "output/" "ntuser.pol" "ntuser.ini" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "npm-debug.log" "NetHood/" "My Documents/" "Music/" "Microsoft FxCop 1.35.7z" "Local Settings/" "Links/" "kill.bat" "key.pub" "key" "jee-latest-released2/" "jee-latest-released/" "git.txt" "Favorites/" "eclipse-installer/" "Downloads/" "Documents/" "developer.bat~" "developer.bat" "Desktop/" "Cookies/" "Contacts/" "build.bat" "Applications/" "Application Data/" "AppData/" "AndroidStudioProjects/" ".WebStorm9/" ".WebStorm10/" ".ssh/" ".p2/" ".oracle_jre_usage/" ".mongorc.js" ".m2/" ".lein/" ".kdiff3rc" ".idlerc/" ".gradle/" ".gitconfig.backup" ".gitconfig" ".emacs.d/" ".eclipse/" ".DS_Store" ".dir" ".dbshell" ".BigNox/" ".bash_history" ".AndroidStudioPreview2.0/" ".android/" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/" (22329 25790 0 0) "web-mode-init.el" "stack-m.el" "stack-f.el" "slime-init.el" "require-cmds-init.el" "read.el" "queue-m.el" "queue-f.el" "pp-xml-init.el" "Powershell.el" "PowerShell-Mode.el" "package-init.el" "omnisharp-emacs-master/" "libs/" "keys-init.el" "init.el" "hooks-init.el" "functions-init.el" "fonts-init.el" "eval-after-load.el" "emmet-mode-init.el" "elib-node.el" "dll.el" "dll-debug.el" "csharp-mode.el.backup" "csharp-mode-master/" "csharp/" "cookie.el" "clojure-init.el" "cedet-init.el" "cedet-1.1/" "cedet-1.0.1/" "bintree.el" "avltree.elc" "auto-complete-settings.el" "auto-complete-init.el" "auto-complete+.el" "ahei-misc.el" "aes.el" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/" (22329 25691 0 0) "Zoom/" "XMind/" "Wireshark/" "WinRAR/" "travelconsultant_request.txt" "travelconsultant_request.js" "text2.txt" "text1.txt" "test.log" "Tencent/" "tasklist.org" "Sun/" "submit_order.json" "submit_order.js" "SQL Assistant/" "SogouWP/" "SogouWallPaper/" "SGWPUpgrade/" "SGWPCommon/" "SGWallPaperDT/" "sendredpackage.js" "seetest/" "restclient.txt" "response.txt" "requirement.txt" "requests/" "request1.txt" "request.json" "request-ashx.txt" "redpackage-shareurl.txt" "qmdr/" "pwd" "pub.js" "projecttagsMapping.txt" "projectTags.txt" "projectList.org" "profile.clj" "problem.org" "pay.txt" "order_submit_interface.txt" "order.org" "NVIDIA/" "NuGet/" "Nuance/" "npm-cache/" "npm/" "Nox/" "notexistlineid.txt" "Notepad++/" "News/" "Mozilla/" "Microsoft FxCop/" "Microsoft/" "MemberExtend.txt" "member.org" "member-verify-code.txt" "member-verify-code.org" "member-todo-list.org" "Media Center Programs/" "Maxthon3/" "Macromedia/" "JetBrains/" "interface_name_list.txt" "interface_name_list.org" "Identities/" "ICSharpCode/" "hosts.txt" "hongbao.org" "hongbao-request.js" "Handler1.txt" "GitHub/" "GitExtensions/" "Everything/" "emacs/" "DFEFQQ.DLL" "deviceid.txt" "DestinationProjectList.org" "DataInterface.txt" "clientinfo.js" "cityList2.txt" "cityList.txt" "cake.clj" "branchs/" "baidu.txt" "Baidu/" "afterBuild.bat" "Adobe/" "761requirement.txt" "760request.txt" "760request.js" "360se6/" "2.txt" "1.txt" "1.html" "1.csv" "1.bat" ".ssh/" ".srecode/" ".semanticdb/" ".newsrc-dribble" ".lein/" ".ido.last" ".history" ".emacs.d/" ".boot/" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/src/interface_test/" (22329 25768 0 0) "畅游海外专题线上配置.xlsx" "submit_order.clj" "site.clj" "script.clj" "rsp.txt" "output-1462245423090.xlsx" "output-1462245402781.xlsx" "memberdata.clj" "encrypto.clj" "db.clj" "core.clj" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/src/website/" (22329 25683 0 0) "tmp.gif" "temp.clj" "sls.clj" "roul.clj" "ring.clj" "notification_send.clj" "gen.clj" "gaussian.clj" "excel-test.clj" "encrypto.clj" "db.clj" "core.clj" "config.clj" "ai.clj" ".#temp.clj" ".#.#temp.clj" "#temp.clj#" "../" "./")
 
@@ -234,8 +267,6 @@
 
  ("d:/MyConfiguration/lzy13870/Documents/branchs/slsms/ringfullsite/ringfullsite/resources/" (22321 36329 0 0) "tr.html" "th.html" "template.html~" "template.html" "td.html" "table.html" "old-home.html" "new-product.html" "login.html" "interface-test-0.1.0-SNAPSHOT.jar/" "insert.html" "home.html" "home-ext.html" "cdn.html" "base.html" "../" "./")
 
- ("d:/MyConfiguration/lzy13870/Documents/branchs/interface-test/" (22321 36200 0 0) "test/" "target/" "src/" "resources/" "README.md" "public/" "project.clj" "prod.txt" "LICENSE" "FIND" "doc/" "CHANGELOG.md" ".nrepl-port" ".hgignore" ".gitignore" ".git/" "../" "./")
-
  ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/machinelearninginaction/Ch04/" (22320 2743 0 0) "EXTRAS/" "email.zip" "email/" "bayes.pyc" "bayes.py" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/机器学习实战源代码/machinelearninginaction/" (20950 26730 0 0) "README.rst" "Ch15/" "Ch14/" "Ch13/" "Ch12/" "Ch11/" "Ch10/" "Ch09/" "Ch08/" "Ch07/" "Ch06/" "Ch05/" "Ch04/" "Ch03/" "Ch02/" ".git/" "../" "./")
@@ -245,8 +276,6 @@
  ("d:/MyConfiguration/lzy13870/Documents/机器学习实战（中文版%2B英文版%2B源代码）/" (22319 60229 0 0) "机器学习实战源代码.rar" "机器学习实战源代码/" "机器学习实战.pdf" "Machine Learning in Action.pdf" "../" "./")
 
  ("d:/MyConfiguration/lzy13870/Documents/" (22319 60196 0 0) "项目列表 & 城市列表.xlsx" "项目ID.xlsx" "需要的数据.txt" "需求列表.xlsx" "问题整理.docx" "调用路径.xlsx" "调用大数据接口.xlsx" "营销接口.xlsx" "营销3个接口.docx" "营销/" "缓存使用.docx" "统计.docx" "统计(1).xlsx" "红包领取开关.txt" "红包业务演进.vsdx" "红包.7z" "红包/" "省流量专项（国内游）.xlsx" "目的地表结构设计1.1.xlsx" "目的地表结构设计1.1(1).xlsx" "目的地表结构设计.xlsx" "目的地v1.0.30/" "电话卡.png" "生日.rtf" "玩乐产品8.0.5客户端开发评估表1.xlsx" "特权录入(1).xlsx" "海玩值班交接.xlsx" "海外目的地配置 2.5.xlsx" "海外目的地配置 2.5.csv" "海外玩乐首页 品类URL(1)(1).rtf" "海外玩乐表结构.xlsx" "海外玩乐产品下单字段列表.xlsx" "海外玩乐--压测.txt" "测试-营销-火车站国庆节测试过程.docx" "流程文档.xlsx" "机器学习实战（中文版%2B英文版%2B源代码）.rar" "机器学习实战（中文版%2B英文版%2B源代码）/" "未命名.zip" "旅游顾问.7z" "旅游顾问/" "新建文本文档.txt" "新建文本文档 (2).txt" "数据报表_20160229184351527.csv" "支付.7z" "支付/" "搜索接口代码.txt" "搜索埋点/" "搜索.saz" "接口文档表.xlsx" "接口文档导出.xlsx" "接口们.xlsx" "接入问题汇总.docx" "报备问题.docx" "护国表情包.eip" "当前订单状态不可支付.saz" "常用邮寄地址" "工时预估.xlsx" "工作簿1.xlsx" "大数据接口文档/" "培训-路正遥.txt" "培训/" "同程旅游APP760-运营产品部需求-09231635.xlsx" "同程旅游APP760-运营产品部需求-09231635(3).xlsx" "同程故事接口文档_20151121(1).doc" "同程中间层_任务_20151008182504_导出模板.xls" "参数错误.saz" "十一中间层接口下预案示例代码.txt" "十一中间层接口下预案示例代码(2).txt" "动态机票 11月23日更新(1).zip" "副本热搜词跳转链接3 14 (4).xlsx" "副本803海外玩乐需求0118.xlsx" "副本802需求-1224（2）.xlsx" "副本8 0 2接口字段整理 (2).xlsx" "内存片段.txt" "关于海外玩乐803的需求细节核实确认.docx" "关于多点登录功能的描述.xlsx" "值班/" "会员账单接口文档_20151121.doc" "会员账单接口文档_20151121(1).doc" "会员/" "任务清单.xmind" "任务列表.xlsx" "代码Review--路正遥.docx" "仍需要确认的803海外玩乐需求0118.xlsx" "产品标签/" "中间层接口优化进度汇总.xlsx" "上传流程检查单-海外玩乐-路正遥-802.xlsx" "上传流程检查单-海外玩乐-路正遥-802-2016-1-28.xlsx" "WeChat Files/" "webp.xlsx" "webp.saz" "WalletDA.cs" "Visual Studio 2012/" "Visual Studio 2008/" "Visual Studio 2005/" "UnitTest.el" "UI/" "U/" "ThoughtWorks.QRCode.dll" "temp.xml" "temp.txt" "TCWireless.TCMobileAPI.AbroadActivity.zip" "Tasks.xlsx" "t.js" "summary.txt" "submitabroadorder.json" "String.ToQRCode.cs" "sql.txt" "SQL Server Management Studio/" "slsms-eclipse/" "search.txt" "script.sql" "scenery.txt" "RTXC File List/" "ringfullsite.zip" "ringfullsite.rar" "response.txt" "ResharperCustomisedSettings/" "requests.webtest" "requests.har" "requests.bat" "requests.appcache" "request.txt" "ProjectId.xlsx" "productIds.txt" "privilege.xlsx" "pic3.txt" "pay_dlls/" "output.txt" "orderlist.saz" "Nox_share/" "notice.txt" "NET+4.0面向对象编程漫谈++基础篇_12802405.pdf" "My Web Sites/" "My Videos/" "My Pictures/" "My Music/" "My Kindle Content/" "memory.txt" "memberExtend耗时统计.xlsx" "log.txt" "log.rtf" "iocn1-11.rar" "ImageController.cs" "image1.JPG" "IISExpress/" "gitkey/" "getspecialdetail.json" "getphonecard.json" "getdetailforcomments.json" "getabroadproductlistwifi.json" "getabroadproductlistnew.json" "getabroadorderpayment.json" "getabroadorder.json" "getabroaddetail.json" "GC和内存管理.zip" "GC和内存管理/" "func.txt" "Fiddler2/" "export.xls" "DotNet_SDK_V3.0.3/" "Documents.7z" "deviceids.txt" "desktop.ini" "defaultConfig.txt" "Default.rdp" "d8a7e17d4909366646d9b712cc990c4.png" "contract-list.xls" "contract-list-2.xls" "contract-list-1.xls" "code_sent.txt" "code.cs" "clojure-cookbook.pdf" "cityList.json" "cid=182月结单资源接口(1).docx" "cid=152app度周末目的地接口文档.docx" "Checklist.xlsx" "branchs/" "ba.txt" "aq.rtf" "API.xlsx" "android-studio/" "Altova/" "9月10日晚-11日凌晨中间层压测值班表.xlsx" "805海外玩乐需求0309/" "805海外玩乐需求0308/" "805海外玩乐需求0304.xlsx" "805海外玩乐需求0304/" "805海外玩乐需求0301(9).xlsx" "805海外玩乐需求0222.xlsx" "805海外玩乐-0308/" "804接口问题汇总.xlsx" "803表结构.xlsx" "803海外玩乐需求0126/" "803海外玩乐需求0118.xlsx" "803海外玩乐需求--项目.docx" "803海外玩乐/" "801/" "8008output/" "8.0.4接口字段整理.xlsx" "8.0.2版本.rar" "8.0.2版本/" "761问题列表.xlsx" "761/" "7.6玩乐优化需求0921/" "571493341531218632.jpg" "2018-8-4.zip" "2018-8-4/" "2016011117101192520738.png" "165716428749151268.jpg" "1340_Request.txt" "1.jpg" "04Git使用文档-吴乐章.docx" "#request.txt#" "../" "./")
-
- ("d:/MyConfiguration/lzy13870/Documents/branchs/" (22314 46386 0 0) "WirelessData.txt" "Web.config" "tools.nrepl/" "tmp/" "test-dianping/" "Test/" "TCWireless.TCMobileAPI.AbroadActivity/" "tcwireless-tcmobileapi-yingxiao2/" "tcwireless-tcmobileapi-yingxiao/" "tcwireless-tcmobileapi-visa/" "tcwireless-tcmobileapi-travelconsultant-publish/" "tcwireless-tcmobileapi-travelconsultant-developer/" "tcwireless-tcmobileapi-travelconsultant-backup" "tcwireless-tcmobileapi-travelconsultant - 副本/" "tcwireless-tcmobileapi-travelconsultant/" "tcwireless-tcmobileapi-selftrip/" "tcwireless-tcmobileapi-scenery/" "tcwireless-tcmobileapi-pub.7z" "tcwireless-tcmobileapi-pub/" "tcwireless-tcmobileapi-pay1/" "tcwireless-tcmobileapi-pay/" "tcwireless-tcmobileapi-memberextend-publish/" "tcwireless-tcmobileapi-memberextend-developer/" "tcwireless-tcmobileapi-memberextend/" "tcwireless-tcmobileapi-member/" "tcwireless-tcmobileapi-hongbao/" "tcwireless-tcmobileapi-homeholiday/" "tcwireless-tcmobileapi-domestictour - 副本/" "tcwireless-tcmobileapi-domestictour/" "tcwireless-tcmobileapi-destination - 副本/" "tcwireless-tcmobileapi-destination/" "tcwireless-tcmobileapi-abroadactivity8008/" "tcwireless-tcmobileapi-abroadactivity - 副本.rar" "tcwireless-tcmobileapi-abroadactivity - 副本/" "tcwireless-raw/" "slsms/" "servciename.txt" "servciename-filtered.txt" "search.bat" "script.cs" "ringfullsite/" "request-urls.txt" "README.md" "push/" "proxy/" "private-branch/" "pay.bat" "packages.config" "Packages/" "output.txt" "nodeTest/" "nleiningen/" "keys.txt" "interface-test/" "hook/" "go/" "generator/" "favicon.ico" "extensions.txt" "emacs-private-configuration/" "emacs/" "Default.aspx" "DataServices/" "clr.tools.nrepl/" "clr/" "clojure-test/" "clojure-clr/" "bin/" ".emacs.d/" "../" "./")
 
  ("c:/Python27/Lib/site-packages/pip/" (22320 1471 0 0) "__main__.pyc" "__main__.py" "__init__.pyc" "__init__.py" "_vendor/" "wheel.pyc" "wheel.py" "vcs/" "utils/" "status_codes.pyc" "status_codes.py" "req/" "pep425tags.pyc" "pep425tags.py" "operations/" "models/" "locations.pyc" "locations.py" "index.pyc" "index.py" "exceptions.pyc" "exceptions.py" "download.pyc" "download.py" "compat/" "commands/" "cmdoptions.pyc" "cmdoptions.py" "baseparser.pyc" "baseparser.py" "basecommand.pyc" "basecommand.py" "../" "./")
 
@@ -385,6 +414,17 @@
  ("/Applications/Emacs.app/" (21800 6412 0 0) "Contents/" "../" "./")
 
  ("/Applications/" (22259 18103 0 0) "爱奇艺视频.app/" "有道词典.app/" "XMind.app/" "Xcode.app/" "Xamarin Studio.app/" "Wireshark.app/" "WeChat.app/" "WebStorm.app/" "VMware Fusion.app/" "Utilities/" "Twitter.app/" "Time Machine.app/" "TextEdit.app/" "TeamViewer.app/" "System Preferences.app/" "Stickies.app/" "ShadowsocksX.app/" "Safari.app/" "RTX.app/" "Reminders.app/" "QuickTime Player.app/" "QQMusic.app/" "QQ.app/" "Preview.app/" "Pocket.appdownload/" "Photos.app/" "Photo Booth.app/" "Pages.app/" "Numbers.app/" "Notes.app/" "MPlayerX.app/" "Mission Control.app/" "Messages.app/" "Maps.app/" "Mail.app/" "MacPorts/" "MacPaw Gemini.app/" "Launchpad.app/" "KugouMusic.app/" "Keynote.app/" "Keka.app/" "iTunes.app/" "Image Capture.app/" "iBooks.app/" "Google Chrome.app/" "GitHub Desktop.app/" "Game Center.app/" "Font Book.app/" "FileZilla.app/" "FaceTime.app/" "Evernote.app/" "eMuleTorrent.app/" "Emacs.app/" "EasyGet Lite.app/" "DVD Player.app/" "DictUnifier.app/" "Dictionary.app/" "Dashboard.app/" "Cookie.app/" "Contacts.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "BitTorrent.app/" "Automator.app/" "App Store.app/" ".localized" ".DS_Store" "../" "./")
+<<<<<<< Updated upstream
+
+ ("/Users/apple/branchs/tcwireless-tcmobileapi-abroadactivity/TCWireless.Data.DataAccess/" (22190 53154 0 0) "TCWireless.Data.DataAccess.csproj.orig" "TCWireless.Data.DataAccess.csproj" "Properties/" "packages.config" "obj/" "DisplayControlHelper.cs" "bin/" "App_Data/" "app.config" "AdvertisementHelper802.cs" "AdvertisementHelper.cs" "../" "./")
+
+ ("/Users/apple/branchs/tcwireless-tcmobileapi-abroadactivity/TCWireless.TCMobileAPI.AbroadActivity/App_Data/TCConfig/" (22190 53179 0 0) "TongChengConfig.config" "TongCheng.SOA.Interface_Prod.Config" "TongCheng.SOA.Interface.Config.orig" "TongCheng.SOA.Interface.Config" "TCSmartFramework.Memcatched.config" "TCSmartFrameWork.DataAccess_Prod.config" "TCSmartFrameWork.DataAccess.config" "TCSmartFramework.CommonInterface.config" "TCSmartFramework.CommonBase.config" "TCBase.MessageQueue.config" "CatConfig.xml" "../" "./")
+
+ ("/Users/apple/branchs/tcwireless-tcmobileapi-abroadactivity/TCWireless.TCMobileAPI.AbroadActivity/App_Data/" (22190 53179 0 0) "WebAppSettings_Test.config" "WebAppSettings_Prod.config" "TCWirelessConfig/" "TCConfig/" "../" "./")
+
+ ("/Users/apple/branchs/tcwireless-tcmobileapi-abroadactivity/TCWireless.TCMobileAPI.AbroadActivity/" (22217 49799 0 0) "Web.Release.config" "Web.Debug.config" "Web.config" "VERSION.txt" "TCWireless.TCMobileAPI.AbroadActivity.userprefs" "TCWireless.TCMobileAPI.AbroadActivity.sln" "TCWireless.TCMobileAPI.AbroadActivity.csproj.user" "TCWireless.TCMobileAPI.AbroadActivity.csproj" "QueryParamsVerify.cs" "QueryHandler.ashx.cs" "QueryHandler.ashx" "Properties/" "Program.cs" "packages.config" "obj/" "Global.asax.cs" "Global.asax" "default.aspx.designer.cs" "default.aspx.cs" "default.aspx" "bin/" "App_Data/" "../" "./")
+=======
+>>>>>>> Stashed changes
 )
 
 ;; ----- ido-unc-hosts-cache -----
