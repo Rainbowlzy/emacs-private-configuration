@@ -1,3 +1,5 @@
+(setq ring-bell-function (lambda () (message "*woop*")))
+
 (print "loading...")
 
 
@@ -9,33 +11,36 @@
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
 (package-initialize)
 
-(defvar my-packages '(better-defaults
-                      aes
-                      projectile
-                      paredit
+(defvar my-packages '(paredit
                       ;; paredit-menu
                       which-key
                       ibuffer
                       ido
                       ido-vertical-mode
                       auto-complete
-                      ;; auto-complete+
-                      
-                      ;; ahei-misc
                       yasnippet
                       multiple-cursors
                       icicles
                       ido
                       ido-vertical-mode
-                      noctilux-theme
-                      ac-nrepl
-                      ac-helm
+                      web-mode
+                      ;; ahei-misc
+                      js2-refactor
+                      ;; Not required
+                      ;; auto-complete+
+                      
+                      ;; aes                      
+                      ;; better-defaults
 
+                      ;; projectile
+                      ;; ac-nrepl
+                      ;; ac-helm
 
-                      clojure-mode
-                      cider
-                      helm-clojuredocs
-                      ac-cider
+                      ;; noctilux-theme
+                      ;; clojure-mode
+                      ;; cider
+                      ;; helm-clojuredocs
+                      ;; ac-cider
                       ))
 
 (dolist (p my-packages)
@@ -44,8 +49,6 @@
 
 (dolist (f (directory-files "~/emacs/emacs-lisp/" t))
   (add-to-list 'load-path f))
-
-
 
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell
@@ -66,18 +69,23 @@
   (setq completion-at-point-functions '(auto-complete)))
 
 (when (>= emacs-major-version 24)
-  (require-all '(eval-after-load ahei-misc yasnippet helm-config
-                                 cljdoc
-                                 aes
-                                 ;; go-mode-autoloads
-                                 ;; linum
-                                 multiple-cursors
-                                 icicles
-                                 ido
-                                 ido-vertical-mode
-                                 ac-emmet
-                                 auto-complete-settings
-                                 ))
+  (require-all '(eval-after-load
+                    ahei-misc
+                  yasnippet
+                  multiple-cursors
+                  icicles
+                  ido
+                  ido-vertical-mode
+                  auto-complete-settings
+
+                  ;; Not required
+                  ;; ac-emmet
+                  ;; helm-config
+                  ;; cljdoc
+                  ;; aes
+                  ;; go-mode-autoloads
+                  ;; linum
+                  ))
   (when window-system (set-exec-path-from-shell-PATH))
   (fset 'yes-or-no-p 'y-or-n-p)
   (custom-set-variables
@@ -224,12 +232,12 @@
 ;; (setq inferior-lisp-program "/opt/local/bin/clisp")
 ;; (setq slime-contribs '(slime-fancy))
 (yas-global-mode t)
-	    (yas/minor-mode-on)
-	    (yas/initialize)
-	    
-	    (setq yas-snippet-dirs '(*snippets-folder*))
-	    (add-to-list 'yas/root-directory *snippets-folder*)
-	    
+(yas/minor-mode-on)
+(yas/initialize)
+
+(setq yas-snippet-dirs '(*snippets-folder*))
+(add-to-list 'yas/root-directory *snippets-folder*)
+
 (add-hook 'progn-hook
 	  (defun progn-hook-func ()
 	    ""
@@ -259,7 +267,7 @@
 
 	    ;; (set-default-font "Microsoft YaHei")
 	    ;; (set-default-font "-outline-微软雅黑-normal-normal-normal-sans-*-*-*-*-p-*-gb2312.1980-0")
-	    (set-default-font "Consolas 14")
+	    (set-default-font "Consolas 16")
 	    (toggle-truncate-lines)
 	    (global-auto-complete-mode t)
             (setq ac-sources (append '(ac-source-yasnippet) ac-sources))
@@ -341,6 +349,10 @@
 (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (global-set-key [f5] 'browse-url)
+(global-set-key (kbd "s-r") (defun run-ios ()
+                              (set-exec-path-from-shell-PATH)
+                              (async-shell-command "react-native" " run-ios --simulator=\"iPhone 4s\"" "run-ios-buffer")))
+
 
 (let ((path "D:\\MyConfiguration\\lzy13870\\Documents\\branchs\\tcwireless-tcmobileapi-domestictour\\TCWireless.TCMobileAPI.DomesticTour\\bin\\TCWireless.TCMobileAPI.DomesticTour.exe"))
   (if (file-exists-p path)
@@ -349,5 +361,33 @@
         (async-shell-command "mongod"))
     (message "executing ignored.")
     ))
+
+
+(let ()
+  "Only for react-native environment."
+  (ignore-errors
+    (add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
+    (setq web-mode-markup-indent-offset 2
+          web-mode-css-indent-offset 2
+          web-mode-code-indent-offset 2)
+    (setq js-indent-level 2)
+    (require 'js2-refactor)
+    (add-hook 'js2-mode-hook #'js2-refactor-mode)
+    (require 'nvm)
+    (nvm-use (caar (last (nvm--installed-versions))))
+
+    (add-hook 'projectile-after-switch-project-hook 'mjs/setup-local-eslint)
+
+    (defun mjs/setup-local-eslint ()
+      "If ESLint found in node_modules directory - use that for flycheck.
+Intended for use in PROJECTILE-AFTER-SWITCH-PROJECT-HOOK."
+      (interactive)
+      (let ((local-eslint (expand-file-name "./node_modules/.bin/eslint")))
+        (setq flycheck-javascript-eslint-executable
+              (and (file-exists-p local-eslint) local-eslint))))
+    (with-eval-after-load 'flycheck
+      (push 'web-mode (flycheck-checker-get 'javascript-eslint 'modes))))
+  )
+
 
 (provide 'require-cmds-init)
