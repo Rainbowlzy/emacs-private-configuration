@@ -1,8 +1,6 @@
 
 *.el~
 
-*.el~
-
 projectile-bookmarks.eld
 
 places
@@ -23,4 +21,4 @@ ido.last
 
 *.profile~
 
-*.last~
+backups/*
