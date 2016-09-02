@@ -2,3 +2,12 @@
 *.el~
 
 *.el~
+*.clj~
+backups\*
+ac-comphist.dat
+%backup%~
+projectile.cache
+places
+*.last
+eshell/lastdir
+eshell/history
