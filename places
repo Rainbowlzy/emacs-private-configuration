@@ -1,7 +1,0 @@
-;;; -*- coding: utf-8 -*-
-(("d:/MyConfiguration/lzy13870/Applications/emacs-24.5-bin-i686-mingw32/share/emacs/24.5/lisp/emacs-lisp/package.el" . 44555)
- ("d:/MyConfiguration/lzy13870/Applications/emacs-24.5-bin-i686-mingw32/share/emacs/24.5/lisp/international/mule.el" . 10442)
- ("d:/MyConfiguration/lzy13870/Applications/emacs-24.5-bin-i686-mingw32/share/emacs/24.5/lisp/startup.el" . 20805)
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/emacs-lisp/require-cmds-init.el" . 1369)
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/.ido.last" . 79873)
- ("d:/MyConfiguration/lzy13870/AppData/Roaming/emacs/elpa/ido-ubiquitous-20160623.815/ido-ubiquitous-autoloads.el" . 1632))

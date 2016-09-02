@@ -1,26 +1,7 @@
-;; in ~\.emacs-live.el
-;;
-;; start Cmd with M-shell:
-(setq shell-file-name "cmdproxy.exe")
-(setq explicit-shell-file-name shell-file-name)
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-;;
-;; Powershell configuration:
-;; download the *.el files from http://www.emacswiki.org/emacs/PowerShell
-;; place them in ~\.emacs.d\vendor
-;;
-;; start Powershell with M-x powershell
-(load-file "~/emacs/elpa/powershell-20160210.1858/powershell.el")
-;;
-;; (optional) file mode for editing PowerShell .psl files
-;; (load-file "~/emacs/elpa/powershell-20160210.1858/powershell.el.emacs.d/")
-;;
-;; make Emacs aware of a customised Leiningen start script ~\bin\lein-clr.bat
-;;
-(setq inferior-lisp-program "lein-clr")
-(global-set-key [C-return] 'lisp-eval-last-sexp)
+(setq ring-bell-function (lambda () (message "*woop*")))
 
 (print "loading...")
+
 
 ;; Load package melpa
 (require 'package)
@@ -31,29 +12,35 @@
 (package-initialize)
 
 (defvar my-packages '(paredit
+                      ;; paredit-menu
                       which-key
                       ibuffer
                       ido
                       ido-vertical-mode
-                      ido-ubiquitous
                       auto-complete
-                      ;; auto-complete+
-                      
-                      ;; ahei-misc
                       yasnippet
                       multiple-cursors
                       icicles
-                      noctilux-theme
+                      ido
+                      ido-vertical-mode
+                      web-mode
+                      ;; ahei-misc
+                      js2-refactor
+                      ;; Not required
+                      ;; auto-complete+
                       
-                      better-defaults
-                      projectile
-                      clojure-mode
-                      cider
-                      ac-cider
-                      paredit-menu
-                      ac-nrepl
-                      ac-helm
-                      helm-clojuredocs
+                      ;; aes                      
+                      ;; better-defaults
+
+                      ;; projectile
+                      ;; ac-nrepl
+                      ;; ac-helm
+
+                      ;; noctilux-theme
+                      ;; clojure-mode
+                      ;; cider
+                      ;; helm-clojuredocs
+                      ;; ac-cider
                       ))
 
 (dolist (p my-packages)
@@ -85,26 +72,28 @@
   (require-all '(eval-after-load
                     ahei-misc
                   yasnippet
-                  
-                  ;; helm-config
-                  ;; cljdoc
-                  ;; go-mode-autoloads
-                  ;; linum
-                  
                   multiple-cursors
                   icicles
                   ido
                   ido-vertical-mode
                   auto-complete-settings
+
+                  ;; Not required
+                  ;; ac-emmet
+                  ;; helm-config
+                  ;; cljdoc
+                  ;; aes
+                  ;; go-mode-autoloads
+                  ;; linum
                   ))
   (when window-system (set-exec-path-from-shell-PATH))
   (fset 'yes-or-no-p 'y-or-n-p)
   (custom-set-variables
    '(column-number-mode t)
    ;; '(display-battery-mode t)
-   ;; '(inhibit-default-init t)
-   ;; '(inhibit-startup-buffer-menu t)
-   ;; '(inhibit-startup-screen t)
+   '(inhibit-default-init t)
+   '(inhibit-startup-buffer-menu t)
+   '(inhibit-startup-screen t)
    ;; '(initial-buffer-choice t)
    '(initial-scratch-message "")
    ;; '(size-indication-mode t)
@@ -135,6 +124,7 @@
   (global-set-key [f7] 'paredit-mode)
 
   ;; clojure-mode
+  (global-set-key [f9] 'cider-jack-in)
   (add-hook 'clojure-mode-hook 'turn-on-eldoc-mode)
   (add-hook 'clojure-mode-hook 'auto-complete-mode)
 
@@ -248,49 +238,48 @@
 (setq yas-snippet-dirs '(*snippets-folder*))
 (add-to-list 'yas/root-directory *snippets-folder*)
 
-;; (add-hook 'progn-hook
-;; 	  (defun progn-hook-func ()
-;; 	    ""
-;; 	    (interactive)
-;; (setq linum-format 'linum-format-func)
-;; (put 'upcase-region 'disabled nil)
+(add-hook 'progn-hook
+	  (defun progn-hook-func ()
+	    ""
+	    (interactive)
+	    ;; (setq linum-format 'linum-format-func)
+	    ;; (put 'upcase-region 'disabled nil)
 
-;; (autoload 'ibuffer "ibuffer" "List buffers." t)
+	    ;; (autoload 'ibuffer "ibuffer" "List buffers." t)
+	    
+	    (ido-mode t)
+	    (ido-vertical-mode 1)
+	    ;; (ido-ubiquitous-mode t)
+	    ;; (ido-everywhere 1)			
+	    ;; (ido-sort-mtime-mode 1)
 
-(ido-mode t)
-(ido-vertical-mode 1)
-(ido-ubiquitous-mode t)
-;; (ido-everywhere 1)			
+            (yas-global-mode t)
+            ;; (global-ede-mode t)
+	    ;; (display-battery-mode t)
+            ;;	    (global-linum-mode 1)
+	    ;; (setq org-completion-use-ido t)
+	    ;; (setq magit-completing-read-function 'magit-ido-completing-read)
+	    ;; (setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
+	    (auto-complete-settings)
+	    
+	    ;; Show parenthesis mode
+	    (show-paren-mode 1)
 
-(ido-sort-mtime-mode 1)
-
-(yas-global-mode t)
-;; (global-ede-mode t)
-;; (display-battery-mode t)
-;;	    (global-linum-mode 1)
-;; (setq org-completion-use-ido t)
-;; (setq magit-completing-read-function 'magit-ido-completing-read)
-;; (setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
-(auto-complete-settings)
-
-;; Show parenthesis mode
-(show-paren-mode 1)
-
-;; (set-default-font "Microsoft YaHei")
-;; (set-default-font "-outline-微软雅黑-normal-normal-normal-sans-*-*-*-*-p-*-gb2312.1980-0")
-(set-default-font "Consolas 14")
-;; (toggle-truncate-lines)
-(global-auto-complete-mode t)
-(setq ac-sources (append '(ac-source-yasnippet) ac-sources))
-(setq ac-source-yasnippet nil)
-(which-key-mode t)
-;; (which-key-setup-side-window-right)
-;; ))
+	    ;; (set-default-font "Microsoft YaHei")
+	    ;; (set-default-font "-outline-微软雅黑-normal-normal-normal-sans-*-*-*-*-p-*-gb2312.1980-0")
+	    (set-default-font "Consolas 16")
+	    (toggle-truncate-lines)
+	    (global-auto-complete-mode t)
+            (setq ac-sources (append '(ac-source-yasnippet) ac-sources))
+	    (setq ac-source-yasnippet nil)
+	    (which-key-mode t)
+	    ;; (which-key-setup-side-window-right)
+	    ))
 
 (add-hook 'emacs-lisp-mode-hook
 	  (defun emacs-lisp-mode-hook-func ()
 	    (interactive)
-	    ;; (progn-hook-func)
+	    (progn-hook-func)
 	    (paredit-mode t)
 	    (global-set-key (kbd "s-.") 'eval-buffer)))
 
@@ -327,34 +316,30 @@
 
 (add-hook 'clojure-mode-hook (defun clojure-mode-hook-func ()
 			       (interactive)
-                               (require 'ac-cider)
-                               (paredit-mode t)
-                               (projectile-global-mode)
-                               (setq projectile-completion-system 'helm)
-                               (setq projectile-indexing-method 'alien)
-                               (helm-projectile-on)
-                               (setq projectile-switch-project-action 'helm-projectile-find-file)
-                               (setq projectile-switch-project-action 'helm-projectile)
-                               (add-hook 'cider-mode-hook 'ac-flyspell-workaround)
-                               (add-hook 'cider-mode-hook 'ac-cider-setup)
-                               (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
-                               
 			       (eldoc-mode t)
 			       (emacs-lisp-mode-hook-func)
                                (cider-mode)
 			       ))
 
-(add-hook 'html-mode-hook
-          (defun html-mode-hook-func ()
-            (interactive)
-            (require 'ac-emmet)
-            (emmet-mode t)
-            ))
+(add-hook 'html-mode-hook (defun html-mode-hook-func ()
+			    (interactive)
+			    (emmet-mode t)))
 
 ;; (add-hook 'js2-mode-hook 'skewer-mode)
 ;; (add-hook 'css-mode-hook 'skewer-css-mode)
 ;; (add-hook 'html-mode-hook 'skewer-html-mode)
 ;; (add-hook 'lisp-mode-hook (lambda () "for lisp mode" (interactive) (slime)))
+
+(require 'ac-cider)
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+(setq projectile-indexing-method 'alien)
+(helm-projectile-on)
+(setq projectile-switch-project-action 'helm-projectile-find-file)
+(setq projectile-switch-project-action 'helm-projectile)
+(add-hook 'cider-mode-hook 'ac-flyspell-workaround)
+(add-hook 'cider-mode-hook 'ac-cider-setup)
+(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
 
 (eval-after-load "auto-complete"
   '(progn
@@ -364,10 +349,45 @@
 (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (global-set-key [f5] 'browse-url)
-(global-set-key [f7] 'paredit-mode)
+(global-set-key (kbd "s-r") (defun run-ios ()
+                              (set-exec-path-from-shell-PATH)
+                              (async-shell-command "react-native" " run-ios --simulator=\"iPhone 4s\"" "run-ios-buffer")))
+
+
+(let ((path "D:\\MyConfiguration\\lzy13870\\Documents\\branchs\\tcwireless-tcmobileapi-domestictour\\TCWireless.TCMobileAPI.DomesticTour\\bin\\TCWireless.TCMobileAPI.DomesticTour.exe"))
+  (if (file-exists-p path)
+      (let ()
+        (async-shell-command path "*hook*")
+        (async-shell-command "mongod"))
+    (message "executing ignored.")
+    ))
+
+
+(let ()
+  "Only for react-native environment."
+  (ignore-errors
+    (add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
+    (setq web-mode-markup-indent-offset 2
+          web-mode-css-indent-offset 2
+          web-mode-code-indent-offset 2)
+    (setq js-indent-level 2)
+    (require 'js2-refactor)
+    (add-hook 'js2-mode-hook #'js2-refactor-mode)
+    (require 'nvm)
+    (nvm-use (caar (last (nvm--installed-versions))))
+
+    (add-hook 'projectile-after-switch-project-hook 'mjs/setup-local-eslint)
+
+    (defun mjs/setup-local-eslint ()
+      "If ESLint found in node_modules directory - use that for flycheck.
+Intended for use in PROJECTILE-AFTER-SWITCH-PROJECT-HOOK."
+      (interactive)
+      (let ((local-eslint (expand-file-name "./node_modules/.bin/eslint")))
+        (setq flycheck-javascript-eslint-executable
+              (and (file-exists-p local-eslint) local-eslint))))
+    (with-eval-after-load 'flycheck
+      (push 'web-mode (flycheck-checker-get 'javascript-eslint 'modes))))
+  )
+
 
 (provide 'require-cmds-init)
-
-;; (async-shell-command "D:\\MyConfiguration\\lzy13870\\Documents\\branchs\\tcwireless-tcmobileapi-domestictour\\TCWireless.TCMobileAPI.DomesticTour\\bin\\TCWireless.TCMobileAPI.DomesticTour.exe" "*hook*")
-;; (async-shell-command "mongod")
-(print "loaded.")

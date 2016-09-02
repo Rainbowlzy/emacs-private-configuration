@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "web-beautify" "web-beautify.el" (22442 32766
+;;;### (autoloads nil "web-beautify" "web-beautify.el" (22329 58584
 ;;;;;;  0 0))
 ;;; Generated autoloads from web-beautify.el
 
