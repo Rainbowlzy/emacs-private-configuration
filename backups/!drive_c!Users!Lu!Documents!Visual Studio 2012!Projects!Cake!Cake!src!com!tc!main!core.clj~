@@ -1,0 +1,29 @@
+﻿(ns src.com.tc.main.core
+	(:gen-class (:main t))
+	(:require [clojure.core]))
+	
+(import System.Net.Sockets.Socket)
+(import System.Net.Sockets.AddressFamily)
+(import System.Net.Sockets.SocketType)
+(import System.Net.Sockets.ProtocolType)
+(import System.Net.Sockets.SocketShutdown)
+(import System.Text.Encoding)
+(import System.Text.StringBuilder)
+
+(defn -main []
+	"main function clojure"
+	(println "hello"))
+
+(let [*socket* (Socket. AddressFamily/InterNetwork SocketType/Stream ProtocolType/Tcp)
+	*arr*]
+	(.Connect *socket* "www.baidu.com" 80)
+	(println "connected.")
+	(.Send *socket* (.GetBytes Encoding/UTF8 "GET"))
+	(println "sending.")
+	(.Receive *socket* *arr*)
+	(println "receiving.")
+	(.Close *socket*)
+	(println "closing.")
+	(println (String. (.GetChars Encoding/UTF8 *arr*))))
+
+(println "loaded.")

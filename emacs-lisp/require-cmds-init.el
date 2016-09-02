@@ -9,6 +9,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
+
 (package-initialize)
 
 (defvar my-packages '(paredit
@@ -352,15 +353,6 @@
 (global-set-key (kbd "s-r") (defun run-ios ()
                               (set-exec-path-from-shell-PATH)
                               (async-shell-command "react-native" " run-ios --simulator=\"iPhone 4s\"" "run-ios-buffer")))
-
-
-(let ((path "D:\\MyConfiguration\\lzy13870\\Documents\\branchs\\tcwireless-tcmobileapi-domestictour\\TCWireless.TCMobileAPI.DomesticTour\\bin\\TCWireless.TCMobileAPI.DomesticTour.exe"))
-  (if (file-exists-p path)
-      (let ()
-        (async-shell-command path "*hook*")
-        (async-shell-command "mongod"))
-    (message "executing ignored.")
-    ))
 
 
 (let ()

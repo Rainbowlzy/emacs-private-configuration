@@ -1,0 +1,43 @@
+;; Copyright (c) Stuart Sierra, 2012. All rights reserved.  The use
+;; and distribution terms for this software are covered by the Eclipse
+;; Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php)
+;; which can be found in the file epl-v10.html at the root of this
+;; distribution.  By using this software in any fashion, you are
+;; agreeing to be bound by the terms of this license.  You must not
+;; remove this notice, or any other, from this software.
+
+
+(ns website.core
+  (:use [ring.adapter.jetty]
+        [ring.util.response]
+        [website.encrypto]
+        [clojure.pprint]
+        [clj.qrgen]
+        [net.cgrand.enlive-html]
+        [ring.middleware.session         :refer [wrap-session]]
+        [ring.middleware.params         :refer [wrap-params]]
+        [ring.middleware.cookies        :refer [wrap-cookies]]
+        [ring.middleware.keyword-params :refer [wrap-keyword-params]]
+        [selmer.parser])
+  
+  (:import
+   [javax.crypto Cipher KeyGenerator SecretKey]
+   [javax.crypto.spec SecretKeySpec]
+   [java.security SecureRandom]
+   [org.apache.commons.codec.binary Base64]
+   [com.mongodb MongoOptions ServerAddress]
+   [org.bson.types ObjectId]
+   [com.mongodb DB WriteConcern])
+  
+  (:require [net.cgrand.enlive-html :as html]
+            [clojure.data.json :as json]
+            [clojure.string :as string]
+            [clj-http.client :as client]
+            [compojure.handler :as handler]
+            [compojure.route :as route]
+            [compojure.core :refer [GET POST defroutes]]
+            [monger.core :as mg]
+            [monger.collection :as mc]
+            [selmer.parser :refer [render-file]]))
+
+

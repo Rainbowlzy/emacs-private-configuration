@@ -1,0 +1,63 @@
+<html ng-app>
+  <head>
+    <title>{{title|title}}</title>
+    <script src="/js/jquery-2.2.3.min.js" ></script>
+    <script src="/js/angular.min.js"></script>
+    <!-- <script src="/bootstrap/js/jquery-2.2.3.js"></script> -->
+    <!-- CDN begin -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/js/bootstrap.min.js" ></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
+
+
+    <script>
+      
+      function postform(){
+      if($.validate())
+      $("form").submit();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>{{title|title}}</h1>
+    <dir class="container" >
+      <div class="row">
+        <div class="col-xs-4">
+          {% for sv in service-names %}
+          <div class="row">sv</div>
+          {% endfor %}
+        </div>
+      </div>
+      <form action="/call" method="post">
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-default">submit</button>
+          </div>
+        </div>
+        <div class="row"><input
+                            name="url"
+                            type="text"
+                            value=""
+                            style="width:800px"
+                            data-validation="required" 
+                            /></div>
+        <div class="row">
+          <textarea
+             ng-change="postform()"
+             cols="30" id="" name="request" rows="10" style="width:800px;height:400px"></textarea>
+        </div>
+        <div class="row">
+          <textarea cols="30" id="" name="response" rows="10" style="width:800px;height:400px"></textarea>
+        </div>
+      </form>
+    </dir>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+USE tcwirelessresource
+GO
+
+SELECT SSName,
+       SSType,
+       SSCategory,
+       SSDesc,
+       SSImgUrl,
+       SSIntro
+FROM   tcwirelessresource.dbo.OPSpecialSet /*专题表*/
+WHERE  SSIsValid = 1
+       AND SSIsDel = 0
+
+SELECT SCSpecialId,
+       SCCityName,
+       SCDesc,
+       SCImgUrl
+FROM   tcwirelessresource.dbo.OPSpecialCityRelation /*专题城市关系表*/
+WHERE  SCIsDel = 0
+
+SELECT CPCityName,
+       CPProductId,
+       CPProductName,
+       CPSort
+FROM   tcwirelessresource.dbo.OPCityProductRelation /*城市产品关系表*/
+WHERE  CPIsDel = 0
+ORDER BY
+       CPSort
+
+SELECT SAName,
+       SAType,
+       SAImgUrl,
+       SASort,
+       SASpecialId,
+       SAJumpUrl,
+       SADesc
+FROM   tcwirelessresource.dbo.OPSpecialAreaSet /*专题区表*/
+WHERE  SAIsDel = 0
+       AND SAIsValid = 1
+
+SELECT RPProductId,
+       RPProductName,
+       RPImgUrl,
+       RPStartTime,
+       RPEndTime
+FROM   tcwirelessresource.dbo.OPRecommendProduct/*今日推荐表*/
+WHERE  RPIsDel = 0 AND RPStartTime<=GETDATE() AND RPEndTime>=GETDATE()
+ORDER BY
+       RPSort
+       
+SELECT DSAreaId,
+       DSAreaName,
+       DSDestinationId,
+       DSDestinationCNName,
+       DSDestinationENName,
+       DSJumpUrl,
+       DSImgUrl
+FROM   tcwirelessresource.dbo.OPDestinationSet /*目的地*/
+WHERE DSIsOnLine=1 AND DSIsDel=0
+ORDER BY DSSort
