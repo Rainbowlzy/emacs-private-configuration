@@ -23,3 +23,6 @@ ido.last
 
 backups/*
 .DS_Store
+elpa/.DS_Store
+
+.DS_Store

@@ -25,6 +25,16 @@
                       ido
                       ido-vertical-mode
                       web-mode
+                      ac-js2
+                      ac-python
+                      ac-etags
+                      ac-html-angular
+                      ac-html-csswatcher
+                      angular-mode
+                      angular-snippets
+                      cider-decompile
+                      cider-profile
+                      cider-spy
                       ;; ahei-misc
                       js2-refactor
                       ;; Not required
