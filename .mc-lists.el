@@ -5,6 +5,7 @@
       '(
         beginning-of-buffer
         c-electric-paren
+        c-electric-semi&comma
         downcase-region
         emmet-expand-line
         end-of-buffer
