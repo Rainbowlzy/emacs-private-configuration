@@ -28,3 +28,4 @@ elpa/.DS_Store
 .DS_Store
 *.last~
 projectile.cache
+auto-save-list/*
