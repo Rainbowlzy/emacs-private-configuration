@@ -21,7 +21,7 @@
                       auto-complete
                       yasnippet
                       multiple-cursors
-                      icicles
+                      ;;icicles
                       ido
                       ido-vertical-mode
                       web-mode
@@ -32,9 +32,9 @@
                       ac-html-csswatcher
                       angular-mode
                       angular-snippets
-                      cider-decompile
-                      cider-profile
-                      cider-spy
+                      ;;cider-decompile
+                      ;;cider-profile
+                      ;;cider-spy
                       ;; ahei-misc
                       js2-refactor
                       ;; Not required
@@ -54,12 +54,17 @@
                       ;; ac-cider
                       ))
 
+
+
 (dolist (p my-packages)
   (unless (package-installed-p p)      
     (package-install p)))
 
-(dolist (f (directory-files "~/emacs/emacs-lisp/" t))
-  (add-to-list 'load-path f))
+(dolist (path-to-search '("~/emacs/emacs-lisp/" "C:\\Users\\WangXF\\code\emacs-private-configuration\\emacs-lisp/"))
+  (dolist (f (directory-files path-to-search t))
+    (add-to-list 'load-path f))
+  )
+
 
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell
@@ -74,7 +79,9 @@
   (dolist (item coll)
     ;;    (unless (package-installed-p item)      
     ;;      (package-install item))
-    (require item)))
+    (ignore-errors
+      (require item))
+    ))
 
 (defun set-auto-complete-as-completion-at-point-function ()
   (setq completion-at-point-functions '(auto-complete)))
@@ -84,10 +91,10 @@
                     ahei-misc
                   yasnippet
                   multiple-cursors
-                  icicles
+                  ;;icicles
                   ido
                   ido-vertical-mode
-                  auto-complete-settings
+                  ;;auto-complete-settings
 
                   ;; Not required
                   ;; ac-emmet
@@ -110,8 +117,6 @@
    ;; '(size-indication-mode t)
    '(tool-bar-mode nil)
    '(tooltip-mode nil))
-
-
 
   ;; Auto complete
   (require 'auto-complete-config)
@@ -160,7 +165,7 @@
   (add-hook 'nrepl-mode-hook 'paredit-mode)
 
   ;; ac-nrepl
-  (require 'ac-nrepl)
+  ;;(require 'ac-nrepl)
   (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
   (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
   (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'nrepl-mode))
@@ -181,7 +186,7 @@
 ;; (let ((evernote-enabled nil))
 ;;   (when evernote-enabled
 ;;     (setq evernote-username "rainbowlzy@gmail.com")
-;;     (setq evernote-developer-token "S=s184:U=14bf882:E=157aa56d3a9:C=15052a5a598:P=1cd:A=en-devtoken:V=2:H=4b2b39311130513ccb80da469bb3a024")
+;;     (setq evernote-developer-token "")
 ;;     (setq browse-url-browser-function 'w3m-browse-url)
 ;;     (setq w3m-use-cookies t)
 ;;     (setq w3m-coding-system 'utf-8
@@ -341,7 +346,7 @@
 ;; (add-hook 'html-mode-hook 'skewer-html-mode)
 ;; (add-hook 'lisp-mode-hook (lambda () "for lisp mode" (interactive) (slime)))
 
-(require 'ac-cider)
+;;(require 'ac-cider)
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
 (setq projectile-indexing-method 'alien)
@@ -352,10 +357,10 @@
 (add-hook 'cider-mode-hook 'ac-cider-setup)
 (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
 
-(eval-after-load "auto-complete"
-  '(progn
-     (add-to-list 'ac-modes 'cider-mode)
-     (add-to-list 'ac-modes 'cider-repl-mode)))
+;;(eval-after-load "auto-complete"
+;;  '(progn
+;;     (add-to-list 'ac-modes 'cider-mode)
+;;     (add-to-list 'ac-modes 'cider-repl-mode)))
 
 (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
@@ -393,5 +398,8 @@ Intended for use in PROJECTILE-AFTER-SWITCH-PROJECT-HOOK."
       (push 'web-mode (flycheck-checker-get 'javascript-eslint 'modes))))
   )
 
+(show-paren-mode 1)
+(ido-mode 1)
+(ido-everywhere)
 
 (provide 'require-cmds-init)
